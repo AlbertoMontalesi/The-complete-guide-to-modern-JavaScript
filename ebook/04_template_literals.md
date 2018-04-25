@@ -1,3 +1,5 @@
+# Chapter 4: template literals
+
 Prior to ES6 they were called *template strings*, now we call them  *template literals*. Let's have a look at what changed in the way we interpolate strings in ES6.
 
 &nbsp;

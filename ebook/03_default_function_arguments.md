@@ -1,3 +1,5 @@
+# Chapter 3: default function arguments
+
 ## Default function arguments
 
 ES6 makes it very easy to set default function arguments. Let's look at an example:

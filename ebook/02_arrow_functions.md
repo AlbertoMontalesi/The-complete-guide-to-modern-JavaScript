@@ -1,3 +1,5 @@
+# Chapter 2: arrow functions
+
 
 ## What is an arrow function
 
