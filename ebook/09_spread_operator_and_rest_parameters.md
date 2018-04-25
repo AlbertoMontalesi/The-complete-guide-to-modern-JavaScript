@@ -147,4 +147,4 @@ console.log(...losers);
 // Mark Luke
 ```
 
-We stored the first two values inside the const first and second and whatever was left we put it inside losers using the rest parameter.
+We stored the first two values inside the `const` first and second and whatever was left we put it inside losers using the rest parameter.

@@ -1,4 +1,4 @@
-# Chapter 1: Var vs Let vs Const & the temporal dead zone
+# Chapter 1: `Var` vs `Let` vs `Const` & the temporal dead zone
 
 With the introduction of `let` and `const` in **ES6** we can know better define our variable depending on our needs. Let's have a look at the major differences between them.
 

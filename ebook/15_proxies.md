@@ -49,4 +49,4 @@ When setting a new value we step in again and log a short message before setting
 
 Proxies can be very useful for example if your object is a phone number.
 
-You can take the value given by the user and format it to match the standand formatting of your country.
+You can take the value given by the user and format it to match the standard formatting of your country.
