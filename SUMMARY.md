@@ -1,7 +1,7 @@
 # Table of contents
 
 * [JavaScript ES6 for beginners](README.md)
-* ebook
+* JavaScript ES6 for Beginners
   * [Chapter 1: Var vs Let vs Const & the temporal dead zone](ebook/01_var_let_const.md)
   * [Chapter 2: Arrow functions](ebook/02_arrow_functions.md)
   * [Chapter 3: Default function arguments](ebook/03_default_function_arguments.md)
