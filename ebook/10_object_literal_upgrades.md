@@ -1,4 +1,4 @@
-# Chapter 10: object literal upgrades
+# Chapter 10: Object literal upgrades
 
 In this article we will look at the many upgrades brought by ES6 to the Object literal notation.
 

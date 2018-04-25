@@ -1,4 +1,4 @@
-# Chapter 8: array improvements
+# Chapter 8: Array improvements
 
 ## `Array.from()`
 

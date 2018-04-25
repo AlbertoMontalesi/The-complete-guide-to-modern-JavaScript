@@ -1,4 +1,4 @@
-# Chapter 2: arrow functions
+# Chapter 2: Arrow functions
 
 
 ## What is an arrow function

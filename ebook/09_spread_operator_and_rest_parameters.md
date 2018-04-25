@@ -1,4 +1,4 @@
-# Chapter 9: spread operator and rest parameters
+# Chapter 9: Spread operator and rest parameters
 
 ## The Spread operator
 

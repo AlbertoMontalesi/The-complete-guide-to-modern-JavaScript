@@ -1,4 +1,4 @@
-# Chapter 7: iterables and looping
+# Chapter 7: Iterables and looping
 
 ES6 introduced a new type of loop, the `for of` loop.
 

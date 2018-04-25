@@ -1,4 +1,4 @@
-# Chapter 3: default function arguments
+# Chapter 3: Default function arguments
 
 ## Default function arguments
 
