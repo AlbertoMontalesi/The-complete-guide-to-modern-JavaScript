@@ -1,4 +1,4 @@
-# Chatpter 5: Additional string methods
+# Chapter 5: Additional string methods
 
 We are going to cover 4 new strings method:
 
