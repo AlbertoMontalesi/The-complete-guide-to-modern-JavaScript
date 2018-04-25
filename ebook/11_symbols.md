@@ -6,7 +6,7 @@ Symbols are **always unique** and we can use them as identifiers for object prop
 
 Let's create a `Symbol` together:
 
-``` js
+```javascript
 const me = Symbol("Alberto");
 console.log(me);
 // Symbol(Alberto)
@@ -14,7 +14,7 @@ console.log(me);
 
 We said that they are always unique, let's try to create a new symbol with the same value and see what happens:
 
-``` js
+```javascript
 const me = Symbol("Alberto");
 console.log(me);
 // Symbol(Alberto)
@@ -33,7 +33,7 @@ They both have the same value but we will never have naming collisions with Symb
 
 As we mentioned earlier we can use them to create as identifiers for object properties, so let's see an example:
 
-``` js 
+```javascript
 const office = {
   "Tom" : "CEO",
   "Mark": "CTO",
@@ -47,10 +47,9 @@ for (person in office){
 // Mark
 ```
 
-Here we have our office object with 3 people, two of which share the same name, a common situation.
-To avoid naming collisions we can use symbols.
+Here we have our office object with 3 people, two of which share the same name, a common situation. To avoid naming collisions we can use symbols.
 
-``` js
+```javascript
 const office = {
   [Symbol("Tom")] : "CEO",
   [Symbol("Mark")] : "CTO",
@@ -67,7 +66,7 @@ We got undefined when we tried to loop over the symbols because they are **not e
 
 If we want to retrieve their object properties we can use `Object.getOwnPropertySymbols()`.
 
-``` js
+```javascript
 const office = {
   [Symbol("Tom")] : "CEO",
   [Symbol("Mark")] : "CTO",
@@ -84,7 +83,7 @@ console.log(symbols);
 
 We retrieved the array but to be able to access the properties we to use `map`.
 
-```js
+```javascript
 const symbols = Object.getOwnPropertySymbols(office);
 const value = symbols.map(symbol => office[symbol]);
 console.log(value);
@@ -95,3 +94,4 @@ console.log(value);
 ```
 
 Now we finally got the array containing all the values of our symbols.
+

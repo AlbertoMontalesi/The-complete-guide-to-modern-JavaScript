@@ -1,13 +1,12 @@
 # Chapter 12: Classes
 
-
 Quoting MDN:
-> classes are primarily syntactical sugar over js's existing prototype-based inheritance. The class syntax **does not** introduce a new object-oriented inheritance model to JavaScript.
 
+> classes are primarily syntactical sugar over js's existing prototype-based inheritance. The class syntax **does not** introduce a new object-oriented inheritance model to JavaScript.
 
 That being said, let's review prototypal inheritance before we jump into classes.
 
-``` js
+```javascript
 function Person(name,age) {
   this.name = name;
   this.age = age;
@@ -30,17 +29,14 @@ We added a new method to the prototype in order to make it accessible to all the
 
 Ok, now that I refreshed your knowledge of prototypal inheritance, let's have a look at classes.
 
-&nbsp;
-
 ## Create a `Class`
 
 There are two way of creating a class:
 
-- class declaration
-- class expression
+* class declaration
+* class expression
 
-
-``` js
+```javascript
 // class declaration
 class Person {
 
@@ -53,13 +49,13 @@ const person = class Person {
 }
 ```
 
->Remember: class declaration (and expression) and **not hoisted** which means that unless you want to get a **ReferenceError** you need to declare your class before you access it.
+> Remember: class declaration \(and expression\) and **not hoisted** which means that unless you want to get a **ReferenceError** you need to declare your class before you access it.
 
 Let's start creating our first `Class`.
 
-We only need a method called `constructor` (remember to add only one constructor, a `SyntaxError` will be thrown if the class contains more than one constructor methods).
+We only need a method called `constructor` \(remember to add only one constructor, a `SyntaxError` will be thrown if the class contains more than one constructor methods\).
 
-``` js
+```javascript
 class Person {
   constructor(name,age){
     this.name = name;
@@ -83,13 +79,11 @@ alberto.farewell();
 
 As you can see everything works just like before. As we mentioned at the beginning, Classes are just a syntactical sugar, a nicer way of doing inheritance.
 
-&nbsp;
-
 ## Static methods
 
 Right now the two new methods that we created, `greet()` and `farewell()` can be accessed by every new instance of `Person`, but what if we want a method that can only be accessed by the class itself, similarily to `Array.of()` for arrays?
 
-```js
+```javascript
 static info(){
   console.log("I am a Person class, nice to meet you");
 }
@@ -101,13 +95,11 @@ Person.info();
 // I am a Person class, nice to meet you
 ```
 
-&nbsp;
-
 ## `set` and `get`
 
 We use setter and getter methods to set and get values inside our `Class`.
 
-```js
+```javascript
 class Person {
   constructor(name,surname) {
     this.name = name;
@@ -133,14 +125,11 @@ alberto.nicknames;
 // "Your nickname is Albi"
 ```
 
-&nbsp;
-
 ## Extending our `Class`
 
 What if we want to have a new `Class` that inherits from our previous one? We use `extends`:
 
-
-``` js
+```javascript
 // our initial class
 class Person {
   constructor(name,age){
@@ -167,13 +156,13 @@ const alberto = new Adult("Alberto",25,"teacher");
 
 We created a new `Class Adult` that inherits from `Person` but if you try to run this code you will get an error:
 
-```js
+```javascript
 ReferenceError: must call super constructor before using |this| in Adult class constructor
 ```
-The error message tells us to call `super()` before using `this` in our new `Class`.
-What it means is that we basically have to create a new Person before we create a new Adult and the `super()` constructor will do exactly that.
 
-``` js
+The error message tells us to call `super()` before using `this` in our new `Class`. What it means is that we basically have to create a new Person before we create a new Adult and the `super()` constructor will do exactly that.
+
+```javascript
 class Adult extends Person {
   constructor(name,age,work){
     super(name,age);
@@ -182,12 +171,11 @@ class Adult extends Person {
 }
 ```
 
-Why did we set `super(name,age)` ? Because our `Adult` class inherits name and age from the `Person` therefore we don't need to redeclare them. 
-Super will simply create a new Person for us.
+Why did we set `super(name,age)` ? Because our `Adult` class inherits name and age from the `Person` therefore we don't need to redeclare them. Super will simply create a new Person for us.
 
 If we now run the code again we will get this:
 
-``` js
+```javascript
 alberto.age
 // 25
 alberto.work
@@ -198,13 +186,11 @@ alberto.greet();
 
 As you can see our `Adult` inherited all the properties and methods from the `Person` class.
 
-&nbsp;
-
 ## Extending Arrays
 
 We want to create something like this, something similar to an array where the first value is a property to define our Classroom and the rest are our students and their marks.
 
-``` js
+```javascript
 // we create a new Classroom
 const myClass = new Classroom('1A', 
   {name: "Tim", mark: 6},
@@ -216,7 +202,7 @@ const myClass = new Classroom('1A',
 
 What we can do is create a new `Class` that extends the array.
 
-``` js
+```javascript
 class Classroom extends Array {
   // we use rest operator to grab all the students
   constructor(name, ...students){
@@ -250,3 +236,4 @@ for(const student of myClass) {
 // Object { name: "Jon", grade: 10 }
 // Object { name: "Timmy", grade: 7 }
 ```
+
