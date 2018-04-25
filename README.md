@@ -11,6 +11,11 @@ This book is intended for somebody already familiar with the basics of JavaScrip
 My name is Alberto, I'm from Italy and I love programming.
 As I was studying ES6 I decided that the best way for me to test my understanding of it was to write articles about it. I have now packaged those articles in a free ebook that you can read here or on my blog [here](http://albertomontalesi.github.io/).
 
+## Contributions & Donations
+
+Any contributions you make are of course greatly appreciated.
+
+If you enjoy my content and you want to donate me a cup of coffe, you can do [here](paypal.me/albertomontalesi).
 
 ## Table of contents
 
@@ -30,3 +35,8 @@ As I was studying ES6 I decided that the best way for me to test my understandin
 * [Chapter 14: Generators](https://github.com/AlbertoMontalesi/JavaScript-ES6-for-beginners-ebook/blob/master/ebook/14_generators.md)
 * [Chapter 15: Proxies](https://github.com/AlbertoMontalesi/JavaScript-ES6-for-beginners-ebook/blob/master/ebook/15_proxies.md)
 * [Chapter 16: Sets, WeakSets, Maps and WeakMaps](https://github.com/AlbertoMontalesi/JavaScript-ES6-for-beginners-ebook/blob/master/ebook/16_sets_weaksets_maps_weakmaps.md)
+
+
+## License
+
+This book is licensed under a [Creative Commons Attribution 4.0 - cc-by-4.0](https://creativecommons.org/licenses/by/4.0/)
