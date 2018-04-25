@@ -15,7 +15,7 @@ As I was studying ES6 I decided that the best way for me to test my understandin
 
 Any contributions you make are of course greatly appreciated.
 
-If you enjoy my content and you want to donate me a cup of coffe, you can do [here](paypal.me/albertomontalesi).
+If you enjoy my content and you want to donate me a cup of coffee, you can do [here](paypal.me/albertomontalesi).
 
 ## Table of contents
 
