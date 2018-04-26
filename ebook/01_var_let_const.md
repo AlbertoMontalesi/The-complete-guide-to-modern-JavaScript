@@ -62,7 +62,7 @@ console.log(y);
 // expected output: block-scoped
 ```
 
-As you can see, when we assigned a new value to our `let` inside our block-scope it **did not** change the value in the global scope, wherease when did the same with our `var` it leaked outside of the block-scope and also change it in the global scope.
+As you can see, when we assigned a new value to our `let` inside our block-scope it **did not** change the value in the global scope, whereas when did the same with our `var` it leaked outside of the block-scope and also change it in the global scope.
 
 &nbsp;
 
