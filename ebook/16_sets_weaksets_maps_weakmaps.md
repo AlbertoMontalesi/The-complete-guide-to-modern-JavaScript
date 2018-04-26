@@ -1,10 +1,10 @@
-# Chapter 16: `Sets`, `WeakSets`, `Maps` and `WeakMaps`
+# Chapter 16: Sets, WeakSets, Maps and WeakMaps
 
 ## What is a `Set`?
 
 A `Set` is an object where we can store **unique values** of any type.
 
-```js
+```javascript
 // create our set
 const family = new Set();
 
@@ -30,15 +30,15 @@ As you can see, at the end we tried to add "Dad" again but the `Set` still remai
 
 Let's continue using the same `Set` and see what methd we can use on it.
 
-``` js
+```javascript
 family.size;
 // 3
 family.keys();
-// SetIterator {"Dad", "Mom", "Son"}
+// SetIterator {"Dad", "Mom", "Son"}
 family.entries();
-// SetIterator {"Dad", "Mom", "Son"}
+// SetIterator {"Dad", "Mom", "Son"}
 family.values();
-// SetIterator {"Dad", "Mom", "Son"}
+// SetIterator {"Dad", "Mom", "Son"}
 family.delete("Dad");
 // true
 family;
@@ -52,13 +52,11 @@ As you can see a `Set` has a `size` property and we can `delete` an item from it
 
 We can also notice that a `Set` does not have keys so when we call `.keys()` we get the same as calling `.values()` or `.entries()`.
 
-&nbsp;
-
 ### Loop over a `Set`
 
 We have two ways of iterating over a `Set`: using `.next()` or using a `for of` loop.
 
-``` js
+```javascript
 // using `.next()`
 const iterator = family.values();
 iterator.next();
@@ -76,13 +74,11 @@ for(const person of family) {
 // Son
 ```
 
-&nbsp;
-
 ### Remove duplicates from an array
 
 We can use a `Set` to remove duplicates from an Array since we know it can only hold unique values.
 
-```js
+```javascript
 const myArray = ["dad", "mom", "son", "dad", "mom", "daughter"];
 
 const set = new Set(myArray);
@@ -100,14 +96,11 @@ const uniqueArray = Array.from(new Set(myArray));
 
 As you can see the new array only contains the unique values from the original array.
 
-&nbsp;
-
 ## What is a `WeakSet` ?
 
 A `WeakSet` is similar to a `Set` but it can **only** contain Objects.
 
-
-``` js
+```javascript
 let dad = {name: "Daddy", age: 50};
 let mom = {name: "Mummy", age: 45};
 
@@ -123,7 +116,7 @@ We created our new `WeakSet` but when we tried to use a `for of` loop it did not
 
 Another big difference that we can see is by trying to use `.clear` on a `WeakSet`: nothing will happen because a `WeakSet` cleans itself up after we delete an element from it.
 
-```js
+```javascript
 dad = null;
 family;
 // WeakSet [ {…}, {…} ]
@@ -133,16 +126,13 @@ family;
 // WeakSet [ {…} ]
 ```
 
-As you can see after a few seconds **dad** was removed and *garbage collected*. That happened because the reference to it was lost when we set the value to `null`.
-
-
-&nbsp;
+As you can see after a few seconds **dad** was removed and _garbage collected_. That happened because the reference to it was lost when we set the value to `null`.
 
 ## What is a `Map` ?
 
 A `Map` is similar to a `Set` but they have key and value pairs.
 
-```js
+```javascript
 const family = new Map();
 
 family.set("Dad", 40);
@@ -169,16 +159,13 @@ for(const [key,val] of family){
 
 If you remember, we could iterate over a `Set` only with a `for of` loop while we can iterate over a `Map` with both a `for of` and a `forEach` loop.
 
-
-&nbsp;
-
 ## What is a `WeakMap` ?
 
-A `WeakMap` is a collection of key/value pairs and similarly to a `WeakSet`, even in a `WeakMap` the keys are *weakly* referenced, which means that when the reference is lost the value will be removed from the `WeakMap` and *garbage collected*.
+A `WeakMap` is a collection of key/value pairs and similarly to a `WeakSet`, even in a `WeakMap` the keys are _weakly_ referenced, which means that when the reference is lost the value will be removed from the `WeakMap` and _garbage collected_.
 
 A `WeakMap` is **not** enumerable therefore we cannot loop over it.
 
-```js
+```javascript
 let dad = { name: "Daddy" };
 let mom = { name: "Mommy" };
 
@@ -192,9 +179,10 @@ dad = null;
 mom = null;
 
 myMap;
-// Map(1) {{…}}
+// Map(1) {{…}}
 myWeakMap;
-// WeakMap {}
+// WeakMap {}
 ```
 
-As you can see *mom* was garbage collected after we set the its value to `null` whilst *dad* still remains inside our `Map`.
+As you can see _mom_ was garbage collected after we set the its value to `null` whilst _dad_ still remains inside our `Map`.
+
