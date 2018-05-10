@@ -1,6 +1,6 @@
-# JavaScript ES6 for beginners
+# JavaScript ES6 and beyond: Discover all the new features introduced to JavaScript from 2015 to 2018
 
-![](.gitbook/assets/cover.png)
+![book-cover](.gitbook/assets/cover.png)
 
 ## Disclaimer
 
@@ -14,7 +14,7 @@ My name is Alberto, I'm from Italy and I love programming. As I was studying ES6
 
 Any contributions you make are of course greatly appreciated.
 
-If you enjoy my content and you want to donate me a cup of coffee, you can do [here](https://github.com/AlbertoMontalesi/JavaScript-ES6-for-beginners-ebook/tree/33fc6a922b67c3f7e105bd14b3828b77a67ebdb4/paypal.me/albertomontalesi/README.md).
+If you enjoy my content and you want to donate me a cup of coffee, you can do so [here](https://github.com/AlbertoMontalesi/JavaScript-ES6-for-beginners-ebook/tree/33fc6a922b67c3f7e105bd14b3828b77a67ebdb4/paypal.me/albertomontalesi/README.md).
 
 ## License
 
