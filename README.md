@@ -6,6 +6,8 @@
 
 This book is intended for somebody already familiar with the basics of JavaScript, as I am only focusing on the new features introduced by ES6 and I won't be explaining what is a `var`, how to create a function, etc...
 
+Additional chapters cover the new features introduced post ES6 all the way to the most recent version, ES9(ES2018).
+
 ## About me
 
 My name is Alberto, I'm from Italy and I love programming. As I was studying ES6 I decided that the best way for me to test my understanding of it was to write articles about it. I have now packaged those articles in a free ebook that you can read here or on my blog [here](http://albertomontalesi.github.io/).
