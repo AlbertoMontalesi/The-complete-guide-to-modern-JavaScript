@@ -5,7 +5,7 @@ You can find the list on [github](https://github.com/tc39/proposals/blob/master/
 
 &nbsp;
 
-## Rest / Spred for objects
+## Rest / Spread for objects
  
 Now we can use the rest/spread syntax for objects, let's look at how:
 
