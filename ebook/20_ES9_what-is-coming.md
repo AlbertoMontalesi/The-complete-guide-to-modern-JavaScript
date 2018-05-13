@@ -1,6 +1,6 @@
-# Chapter 20: ES9 what is coming?
+# Chapter 20: ES2018 what is coming?
 
-ES 2018 (ES9) has not been released yet but we can look at the proposals for features that have reached the stage 4 (the final stage) and that will be included in the new upcoming version of ECMAScript. 
+ES 2018 has not been released yet but we can look at the proposals for features that have reached the stage 4 (the final stage) and that will be included in the new upcoming version of ECMAScript. 
 You can find the list on [github](https://github.com/tc39/proposals/blob/master/finished-proposals.md).
 
 &nbsp;

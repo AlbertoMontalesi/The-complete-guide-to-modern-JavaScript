@@ -1,8 +1,8 @@
-# Chapter 17: Everything new in ES7 (ES2016)
+# Chapter 17: Everything new in ES2016 (ES7)
 
 
 
-ES7 (or ES 2016) introduced only two new features :
+ES2016 introduced only two new features :
 
 - `Array.prototype.includes()`
 - the exponential operator
@@ -52,7 +52,7 @@ array.includes(11,-3);
 
 ## The exponential operator
 
-Prior to ES7 we would have done this:
+Prior to ES2016 we would have done this:
 
 ``` js
 Math.pow(2,2);

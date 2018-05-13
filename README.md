@@ -6,7 +6,7 @@
 
 This book is intended for somebody already familiar with the basics of JavaScript, as I am only focusing on the new features introduced by ES6 and I won't be explaining what is a `var`, how to create a function, etc...
 
-Additional chapters cover the new features introduced post ES6 all the way to the most recent version, ES9(ES2018).
+Additional chapters cover the new features introduced post ES6 (ES2015) all the way to the most recent version, ES2018.
 
 ## About me
 
@@ -16,7 +16,7 @@ My name is Alberto, I'm from Italy and I love programming. As I was studying ES6
 
 Any contributions you make are of course greatly appreciated.
 
-If you enjoy my content and you want to donate me a cup of coffee, you can do so [here](https://github.com/AlbertoMontalesi/JavaScript-ES6-for-beginners-ebook/tree/33fc6a922b67c3f7e105bd14b3828b77a67ebdb4/paypal.me/albertomontalesi/README.md).
+If you enjoy my content and you want to donate me a cup of coffee, you can do so [here](https://www.paypal.me/albertomontalesi).
 
 ## License
 

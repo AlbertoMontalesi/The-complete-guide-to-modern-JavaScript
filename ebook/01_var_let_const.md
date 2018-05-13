@@ -1,20 +1,20 @@
 # Chapter 1: Var vs Let vs Const & the temporal dead zone
 
-With the introduction of `let` and `const` in **ES6**, we can now better define our variable depending on our needs. Let's have a look at the major differences between them.
+With the introduction of `let` and `const` in **ES6**, we can now better define our variables depending on our needs. Let's have a look at the major differences between them.
 
 &nbsp;
 
 ## `Var`
 
-`var` are **function scoped**, which means that if we declare them inside a `for` loop (which is a **block** scope) they will be available globally.
+`var` are **function scoped**, which means that if we declare them inside a `for` loop (which is a **block** scope) they will be available even outside of it.
 
 ``` javascript 
 for (var i = 0; i < 10; i++) {
-  var global = "I am available globally";
+  var leak = "I am available outside of the loop";
 }
 
-console.log(global);
-// I am available globally
+console.log(leak);
+// I am available outside of the loop
 
 function myFunc(){
   var functionScoped = "I am available inside this function";
@@ -26,7 +26,7 @@ console.log(functionScoped);
 // ReferenceError: functionScoped is not defined
 ```
 
-In the first example the value of the `var` global leaked out of the block-scope and could be accessed from the global scope, whereas in the second example `var` was confined inside a function-scope and we could not access it from outside.
+In the first example the value of the `var`  leaked out of the block-scope and could be accessed from outside, whereas in the second example `var` was confined inside a function-scope and we could not access it from outside.
 
 &nbsp;
 
@@ -148,5 +148,3 @@ The second opinion comes from [Kyle Simpson:]( blog.getify.com/constantly-confus
 - Refactor `let` to `const` only after some code has to be written, and you're reasonably sure that you've got a case where there shouldn't be variable reassignment.
 
 Which opinion to follow is entirely up to you. As always, do your own research and figure out which one you think is the best.
-
-You may want to [read this article](https://medium.com/@sbakkila/javascript-es-6-let-and-the-dreaded-temporal-dead-zone-85b89314d168) to understand how `let` affects your performances compared to `var` before you choose to follow either [Mathias Bynes](https://mathiasbynens.be/notes/es6-const) or [Kyle Simpson]( blog.getify.com/constantly-confusing-const/).

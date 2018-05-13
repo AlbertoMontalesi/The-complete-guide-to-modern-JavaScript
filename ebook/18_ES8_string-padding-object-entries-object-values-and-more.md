@@ -1,6 +1,6 @@
-# Chapter 18: ES8 string padding, `Object.entries()`, `Object.values()` and more
+# Chapter 18: ES2017 string padding, `Object.entries()`, `Object.values()` and more
 
-ES8 (ES2017) introduced many new cool features, which we are going to see here. I will discuss `Async` and `Await` later as they deserve more attention.
+ES2017 introduced many new cool features, which we are going to see here. I will discuss `Async` and `Await` later as they deserve more attention.
 
 ## String padding(`padStart` and `padEnd`)
 

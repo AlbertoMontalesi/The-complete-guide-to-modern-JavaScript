@@ -1,6 +1,6 @@
-# Chapter 19: ES8 Async and Await
+# Chapter 19: ES2017 Async and Await
 
-ES8 (ES2017) introuced a new way of working with promises, called "async/await".
+ES2017 introduced a new way of working with promises, called "async/await".
 
 &nbsp;
 
