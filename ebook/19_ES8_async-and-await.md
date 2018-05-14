@@ -111,7 +111,7 @@ Let's break down what we just did:
 - the keyword will tell JavaScript to always return a promise
 - if we specify to `return <non-promise>` it will return a value wrapped inside a promise
 - the `await` keyword only works inside an `async` function.
-- as the name implies, `await` will tell JavaScript to wait until the promie returns its result
+- as the name implies, `await` will tell JavaScript to wait until the promise returns its result
 
 Let's see what happens if we try to use `await` outside an `async` function
 
