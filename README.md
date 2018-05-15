@@ -1,3 +1,16 @@
+[![](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/albertomontalesi)
+[![](https://img.shields.io/badge/Follow-Medium-green.svg)](https://medium.com/@labby92)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2FAlbertoMontalesi%2FJavaScript-es6-and-beyond-ebook)
+
+[![GitHub stars](https://img.shields.io/github/stars/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook.svg)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook.svg)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/network)
+[![GitHub issues](https://img.shields.io/github/issues/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook.svg)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/issues)
+[![Github All Releases](https://img.shields.io/github/downloads/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/total.svg)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook)
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/pulls)
+[![HitCount](http://hits.dwyl.io/albertomontalesi/JavaScript-es6-and-beyond-ebook.svg)](http://hits.dwyl.io/albertomontalesi/JavaScript-es6-and-beyond-ebook)
+
+
 # JavaScript ES6 and beyond: Discover all the new features introduced to JavaScript from 2015 to 2018
 
 ![book-cover](.gitbook/assets/cover.png)
@@ -12,7 +25,8 @@ Additional chapters cover the new features introduced post ES6 (ES2015) all the 
 
 My name is Alberto, I'm from Italy and I love programming. As I was studying ES6 I decided that the best way for me to test my understanding of it was to write articles about it. I have now packaged those articles in a free ebook that you can read here or on my blog [here](http://albertomontalesi.github.io/).
 
-## Contributions & Donations
+## Contributions & Donations [![](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/albertomontalesi)
+
 
 Any contributions you make are of course greatly appreciated.
 
