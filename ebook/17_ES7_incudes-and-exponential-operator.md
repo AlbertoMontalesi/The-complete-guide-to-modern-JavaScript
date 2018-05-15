@@ -67,7 +67,7 @@ Now with the new exponential operator we can do this:
 2**2;
 // 4
 2**3;
-// 4
+// 8
 ```
 
 It will get pretty useful when combining multiple operations like in this example:

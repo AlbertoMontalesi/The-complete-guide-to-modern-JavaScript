@@ -52,7 +52,7 @@ const person = class Person {
 }
 ```
 
->Remember: class declaration (and expression) and **not hoisted** which means that unless you want to get a **ReferenceError** you need to declare your class before you access it.
+>Remember: class declaration (and expression) are **not hoisted** which means that unless you want to get a **ReferenceError** you need to declare your class before you access it.
 
 Let's start creating our first `Class`.
 
