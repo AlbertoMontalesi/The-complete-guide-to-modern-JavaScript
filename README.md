@@ -21,6 +21,10 @@ This book is intended for somebody already familiar with the basics of JavaScrip
 
 Additional chapters cover the new features introduced post ES6 (ES2015) all the way to the most recent version, ES2018.
 
+## Download
+
+Download the ebook in PDF or EPUB format from [here](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/releases)
+
 ## About me
 
 My name is Alberto, I'm from Italy and I love programming. As I was studying ES6 I decided that the best way for me to test my understanding of it was to write articles about it. I have now packaged those articles in a free ebook that you can read here or on my blog [here](http://albertomontalesi.github.io/).
