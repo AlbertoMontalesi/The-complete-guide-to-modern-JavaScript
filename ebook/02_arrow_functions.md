@@ -1,6 +1,6 @@
 # Chapter 2: Arrow functions
 
-## What is an arrow function
+## What is an arrow function?
 
 ES6 introduced fat arrows (`=>`) as a way to declare functions.
 This is how we would normally declare a function in ES5:
@@ -43,7 +43,7 @@ const greeting = () => {
 With arrow functions we can skip the explicit return and return like this:
 
 ``` javascript
-const greeting = (name) => `hello ${name}` ;
+const greeting = name => `hello ${name}`;
 ```
 
 Let's say we want to implicitly return an **object literal**, we would do like this:
@@ -52,7 +52,7 @@ Let's say we want to implicitly return an **object literal**, we would do like t
 const race = "100m dash";
 const runners = [ "Usain Bolt", "Justin Gatlin", "Asafa Powell" ];
 
-const winner = runners.map(( runner, i) =>  ({ name: runner, race, place: i + 1}));
+const winner = runners.map((runner, i) =>  ({ name: runner, race, place: i + 1}));
 
 console.log(winner);
 // 0: {name: "Usain Bolt", race: "100m dash", place: 1}
@@ -63,7 +63,7 @@ console.log(winner);
 
 To tell JavaScript that what's inside the curly braces is an **object literal** that we want to implicitly return, we need to wrap everything inside parenthesis.
 
-Writing `race` or `race:race` is the same.
+Writing `race` or `race: race` is the same.
 
 &nbsp;
 
@@ -74,7 +74,7 @@ As you can see from the previous examples, arrow functions are **anonymous**.
 If we want to have a name to reference them we can bind them to a variable:
 
 ``` javascript
-const greeting = (name) => `hello ${name}`;
+const greeting = name => `hello ${name}`;
 
 greeting("Tom");
 ```
@@ -94,14 +94,14 @@ This can be useful in cases like this one:
 // grab our div with class box
 const box = document.querySelector(".box");
 // listen for a click event 
-box.addEventListener("click",function() {
+box.addEventListener("click", function() {
   // toggle the class opening on the div
   this.classList.toggle("opening");
   setTimeout(function(){
     // try to toggle again the class
     this.classList.toggle("open");
-    })
-})
+    });
+});
 ```
 
 
@@ -117,14 +117,14 @@ Since we know that **arrow functions** inherit the value of `this` from the pare
 // grab our div with class box
 const box = document.querySelector(".box");
 // listen for a click event 
-box.addEventListener("click",function() {
+box.addEventListener("click", function () {
   // toggle the class opening on the div
   this.classList.toggle("opening");
   setTimeout(() => {
-    // try to  toggle again the class
+    // try to toggle again the class
     this.classList.toggle("open");
-    })
-})
+   });
+});
 ```
 
 Here, the second `this` will inherit from its parent, and will be therefore set to the `const` box.
@@ -151,20 +151,19 @@ const person = {
   age: 10,
   grow: () => {
     // error: *this* refers to the window
-    this.age ++,
-    },
+    this.age++,
+  },
 }
 ```
 
-Here's another example of when you should use a normal function instead of an arrow.
+One other difference between Arrow functions and normal functions is access to the `arguments`. 
 
-``` javascript
+```javascript
 const orderRunners = () => {
   const runners = Array.from(arguments);
   return runners.map((runner, i) => {
-    return ` #{runner} was number #{i +1}`;
-    })
-    console.log(arguments);
+    return `#{runner} was number #{i +1}`;
+   })
 }
 ```
 
@@ -174,4 +173,16 @@ This code will return:
 ReferenceError: arguments is not defined
 ```
 
-We don't have access to the `arguments` object in arrow functions, we need to use a normal function.
+To access all the arguments of an array, use old function notation, or the splat syntax. The name of the parameter does not matter (here it is called args to reduce confusion with `arguments`). 
+
+```javascript
+const orderRunners = (...args) => {
+  const runners = Array.from(args);
+  console.log(runners);
+  return runners.map((runner, i) => {
+    return `#{runner} was number #{i +1}`;
+  })
+}
+
+```
+
