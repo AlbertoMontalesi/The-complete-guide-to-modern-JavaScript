@@ -62,7 +62,7 @@ fruitGenerator.next();
 fruitGenerator.next();
 // Object { value: "I like to eat Apple", done: false }
 fruitGenerator.next().value;
-// "I like to eat Melon"
+// "I like to eat Orange"
 ```
 
 - Our new generator will loop over the array and print one value at a time every time we call `.next()`.
