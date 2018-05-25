@@ -84,7 +84,7 @@ greeting("Tom");
 
 ## Arrow function and the `this` keyword
 
-You need to be careful when using arrow functions in conjunction with the this keyword, as they behave differently from normal functions.
+You need to be careful when using arrow functions in conjunction with the `this` keyword, as they behave differently from normal functions.
 
 When you use an arrow function, the `this` keyword is inherited from the parent scope.
 
@@ -151,8 +151,8 @@ const person = {
   age: 10,
   grow: () => {
     // error: *this* refers to the window
-    this.age++,
-  },
+    this.age++;
+  }
 }
 ```
 

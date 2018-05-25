@@ -23,7 +23,6 @@ Additional chapters cover the new features introduced post ES6 (ES2015) all the 
 
 ## Download
 
-Download the ebook in PDF or EPUB format from [here](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/releases)
 
 ## About me
 
