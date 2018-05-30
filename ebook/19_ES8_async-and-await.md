@@ -14,15 +14,15 @@ fetch('api.github.com/user/AlbertoMontalesi').then( res => {
   // return the data in json format
   return res.json();
 }).then(res => {
-  // if everything went well, log the data
+  // if everything went well, print the data
   console.log(res);
 }).catch( err => {
-  // or log the error
+  // or print the error
   console.log(err);
 })
 ```
 
-This is a very simple promise to fetch a user from github and print it to the console.
+This is a very simple promise to fetch a user from GitHub and print it to the console.
 
 Let's see a different example:
 
@@ -61,7 +61,7 @@ walk(1000).then(res => {
 // you walked for 700ms 
 // you walked for 800ms 
 // uncaught exception: the value is too small
-``` 
+```
 
 Let's see how we can rewrite this `Promise` with the new async/await syntax.
 
@@ -81,7 +81,7 @@ function walk(amount) {
 
 // create an async function
 async function go() {
-  // use the keyword await to wait for the response
+  // use the keyword `await` to wait for the response
   const res = await walk(500);
   console.log(res);
   const res2 = await walk(900);
@@ -110,13 +110,13 @@ Let's break down what we just did:
 - to create an async function we need to put the `async` keyword in front of it
 - the keyword will tell JavaScript to always return a promise
 - if we specify to `return <non-promise>` it will return a value wrapped inside a promise
-- the `await` keyword only works inside an `async` function.
+- the `await` keyword **only** works inside an `async` function.
 - as the name implies, `await` will tell JavaScript to wait until the promise returns its result
 
 Let's see what happens if we try to use `await` outside an `async` function
 
 ```js
-// use async inside a normal function
+// use await inside a normal function
 function func() {
   let promise = Promise.resolve(1);
   let result = await promise; 
@@ -125,13 +125,13 @@ func();
 // SyntaxError: await is only valid in async functions and async generators
 
 
-// use async in the top-level code
+// use await in the top-level code
 let response = Promise.resolve("hi");
 let result = await response;
 // SyntaxError: await is only valid in async functions and async generators
 ```
 
-> *Remember*: you can only use `await` inside an `async` function.
+> **Remember** that you can only use `await` inside an `async` function.
 
 &nbsp;
 
@@ -145,16 +145,16 @@ async function asyncFunc() {
 
   try {
     let response = await fetch('http:your-url');
-  } catch(err) {
-    }
-    console.log(err); 
+    } catch(err) {
+        console.log(err);
+      }
 }
 
 asyncFunc();
 // TypeError: failed to fetch
 ```
 
-We use `try...catch` to grab the error but in a case where  we do not have them we can still catch the error like this:
+We use `try...catch` to grab the error, but in a case where  we do not have them we can still catch the error like this:
 
 
 ``` js

@@ -48,7 +48,6 @@ fs.readdir(source, function (err, files) {
     })
   }
 })
-
 ```
 
 We try to write our code in a way where executions happens visually from top to bottom, causing excessive nesting on functions and result in what you can see above.
@@ -227,12 +226,12 @@ promise1.then(data => {
   console.log(data);
 });
 // after 500 ms
-// my first value
+// first value
 promise2.then(data => {
   console.log(data);
 });
 // after 1000 ms
-// my second value 
+// second value
 ```
 
 They will resolve independently from one another but look at what happens when we use `Promise.all().`
@@ -245,10 +244,10 @@ Promise
     console.log(promise1data, promise2data);
   });
 // after 1000 ms
-// my first value my second value
+// first value second value
 ```
 
-Our values returned together, after 1000ms (the timeout of the *second* promise) meanin that the first one had to wait the completion of the second one.
+Our values returned together, after 1000ms (the timeout of the *second* promise) meaning that the first one had to wait the completion of the second one.
 
 If we were to pass an empty iterable then it will return an already resolved promise.
 

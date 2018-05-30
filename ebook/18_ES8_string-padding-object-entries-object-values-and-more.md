@@ -4,7 +4,7 @@ ES2017 introduced many new cool features, which we are going to see here. I will
 
 ## String padding(`padStart` and `padEnd`)
 
-We can now add some padding to our strings, either at the end (`padEnd`) or at the beginning (`padStart`).
+We can now add some padding to our strings, either at the end (`padEnd`) or at the beginning (`padStart`) of them.
 
 ```js
 "hello".padStart(6);
@@ -13,10 +13,10 @@ We can now add some padding to our strings, either at the end (`padEnd`) or at t
 // "hello "
 ```
 
-We said we want 6 as our padding, but why in both cases we got only 1 space?
-It happens because `padStart` and `padEnd` will go and fill the empty spaces. In our example "hello" is 5 letters, and our padding is 6, which leaves only 1 empty space.
+We specified that we want 6 as our padding, but why in both cases we got only 1 space?
+It happens because `padStart` and `padEnd` will go and fill the **empty spaces**. In our example "hello" is 5 letters, and our padding is 6, which leaves only 1 empty space.
 
-Look at this example
+Look at this example:
 
 ```js
 "hi".padStart(10);
@@ -36,7 +36,8 @@ We can use `padStart` if we want to right align something.
 ```js
 const strings = ["short", "medium length", "very long string"];
 
-const longestString = strings.sort(str => str.length).map(str => str.length)[0];
+const longestString = strings.sort(str => str.length)
+                              .map(str => str.length)[0];
 
 strings.forEach(str => console.log(str.padStart(longestString)));
 
@@ -80,7 +81,7 @@ In previous versions of JavaScript we would have accessed the values inside the 
 
 ```js
 Object.keys(family);
-// (3) ["father", "mother", "son"]
+// ["father", "mother", "son"]
 family.father;
 "Jonathan Kent"
 ```
@@ -91,12 +92,12 @@ We now have two more ways of accessing our objects:
 
 ```js
 Object.values(family);
-// (3) ["Jonathan Kent", "Martha Kent", "Clark Kent"]
+// ["Jonathan Kent", "Martha Kent", "Clark Kent"]
 
 Object.entries(family);
-// (2) ["father", "Jonathan Kent"]
-// (2) ["mother", "Martha Kent"]
-// (2) ["son", "Clark Kent"]
+// ["father", "Jonathan Kent"]
+// ["mother", "Martha Kent"]
+// ["son", "Clark Kent"]
 ```
 
 `Object.values()` returns an array of all the values whilst `Object.entries()` returns an array of arrays containing both keys and values.
@@ -145,7 +146,7 @@ const object = {
 ```
 
 Notice how I wrote a comma at the end of the second property.
-It will not throw any error if you don't put it but it's a better practice to follow as it will make the life easier to your colleague or team members.
+It will not throw any error if you don't put it, but it's a better practice to follow as it will make the life easier to your colleague or team members.
 
 ```js
 // I write
@@ -160,7 +161,7 @@ const object = {
   prop2: "propop"
   prop3: "propopop"
 }
-// suddenly he gets an error because he did not notice that I forgot to leave a comma at the end of the last parameter.
+// suddenly, he gets an error because he did not notice that I forgot to leave a comma at the end of the last parameter.
 ```
 
 

@@ -1,11 +1,11 @@
 # Chapter 20: ES2018 what is coming?
 
-ES 2018 has not been released yet but we can look at the proposals for features that have reached the stage 4 (the final stage) and that will be included in the new upcoming version of ECMAScript. 
+ES 2018 has not been released yet but we can look at the proposals for features that have reached the stage 4 (the final stage) and that will be included in the new upcoming version of ECMAScript.
 You can find the list on [github](https://github.com/tc39/proposals/blob/master/finished-proposals.md).
 
 &nbsp;
 
-## Rest / Spread for objects
+## Rest / Spread for Objects
  
 Now we can use the rest/spread syntax for objects, let's look at how:
 
@@ -24,7 +24,7 @@ console.log(a);      // 1
 console.log(b);      // 3
 console.log(z);   // {c: 5, d: 8}
 
-// using the spread syntax we cloned our Object 
+// using the spread syntax we cloned our Object
 let clone = { ...myObj };
 console.log(clone);
 // {a: 1, b: 3, c: 5, d: 8}
@@ -91,7 +91,8 @@ This introduces a new `s` flag for ECMAScript regular expressions that makes `.`
 /foo.bar/s.test('foo\nbar');
 // → true
 ```
-&nbsp; 
+
+&nbsp;
 
 ### RegExp named capture groups
 

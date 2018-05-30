@@ -30,7 +30,7 @@ It works, but it's not very nice, how to improve it?
 With **destructuring** we can write this:
 
 ``` javascript
-const Bill = calculatePrice({ tip: 0.15, total:150});
+const Bill = calculatePrice({ tip: 0.15, total:150 });
 ```
 
 We don't even have to pass the parameters in the same order as when we declared our function, since we are calling them the same way as the arguments JavaScript will know how to match them.

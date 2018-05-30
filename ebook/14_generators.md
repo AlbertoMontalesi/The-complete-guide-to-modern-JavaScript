@@ -1,6 +1,6 @@
 # Chapter 14: Generators
 
-## What is a Generator ?
+## What is a Generator?
 
 A generator function is a function that we can start and stop, for an indefinite amount of time, and restart with the possibility of passing additional data at a later point in time.
 
@@ -66,7 +66,7 @@ fruitGenerator.next().value;
 ```
 
 - Our new generator will loop over the array and print one value at a time every time we call `.next()`.
-- if you are only concerned about getting the value then use `.next().value` and it will not print the status of the generator
+- if you are only concerned about getting the value, then use `.next().value` and it will not print the status of the generator
 
 &nbsp;
 
@@ -120,12 +120,13 @@ As you can see when we called `.throw()` the `generator` returned us the error a
 
 &nbsp;
 
-
 ## Combining Generators with Promises
 
-As we have previously seen, Promises are very useful for asynchronous programming and by combining them with generators we can have a very powerful tool at our disposal to avoid problems like the *callback hell*.
+As we have previously seen, Promises are very useful for asynchronous programming, and by combining them with generators we can have a very powerful tool at our disposal to avoid problems like the *callback hell*.
 
-As we are solely discussing ES6, I won't be talking about `async functions` as they were introduce in ES8 (ES2017) but know that the way they work is based on what you will see now.
+As we are solely discussing ES6, I won't be talking about async functions as they were introduce in ES8 (ES2017) but know that the way they work is based on what you will see now.
+
+You can read more about async functions in Chapter 19.
 
 Using a Generator in combination with a Promise will allow us to write asynchronous code that feels like synchronous.
 
@@ -148,8 +149,9 @@ function* gen() {
 const asyncFunc = gen();
 asyncFunc.next();
 // call the promise and wait for it to resolve
+// {value: Promise, done: false}
 asyncFunc.next();
 // Object { value: "our value is... 2", done: false }
 ```
 
-The first time we call `.next()` it will call our promise and wait for it to resolve( in our simple example it resolves immediately) and when we call `.next()` again it will utilize the value returned by the promise to do something else(in this case just interpolate a string).
+The first time we call `.next()` it will call our promise and wait for it to resolve (in our simple example it resolves immediately) and when we call `.next()` again it will utilize the value returned by the promise to do something else (in this case just interpolate a string).

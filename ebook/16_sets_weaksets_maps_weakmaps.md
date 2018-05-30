@@ -26,9 +26,9 @@ console.log(family);
 // Set [ "Dad", "Mom", "Son" ]
 ```
 
-As you can see, at the end we tried to add "Dad" again but the `Set` still remained the same because a `Set` can only take **unique values**.
+As you can see, at the end we tried to add "Dad" again,but the `Set` still remained the same because a `Set` can only take **unique values**.
 
-Let's continue using the same `Set` and see what methd we can use on it.
+Let's continue using the same `Set` and see what method we can use on it.
 
 ``` js
 family.size;
@@ -95,14 +95,14 @@ console.log(uniqueArray);
 
 // write the same but in a single line
 const uniqueArray = Array.from(new Set(myArray));
-// // Array [ "dad", "mom", "son", "daughter" ]
+// Array [ "dad", "mom", "son", "daughter" ]
 ```
 
 As you can see the new array only contains the unique values from the original array.
 
 &nbsp;
 
-## What is a `WeakSet` ?
+## What is a `WeakSet`?
 
 A `WeakSet` is similar to a `Set` but it can **only** contain Objects.
 
@@ -138,9 +138,9 @@ As you can see after a few seconds **dad** was removed and *garbage collected*. 
 
 &nbsp;
 
-## What is a `Map` ?
+## What is a `Map`?
 
-A `Map` is similar to a `Set` but they have key and value pairs.
+A `Map` is similar to a `Set`, but they have key and value pairs.
 
 ```js
 const family = new Map();
@@ -167,14 +167,13 @@ for(const [key,val] of family){
 // Son 20
 ```
 
-If you remember, we could iterate over a `Set` only with a `for of` loop while we can iterate over a `Map` with both a `for of` and a `forEach` loop.
-
+If you remember, we could iterate over a `Set` only with a `for of` loop, while we can iterate over a `Map` with both a `for of` and a `forEach` loop.
 
 &nbsp;
 
-## What is a `WeakMap` ?
+## What is a `WeakMap`?
 
-A `WeakMap` is a collection of key/value pairs and similarly to a `WeakSet`, even in a `WeakMap` the keys are *weakly* referenced, which means that when the reference is lost the value will be removed from the `WeakMap` and *garbage collected*.
+A `WeakMap` is a collection of key/value pairs and similarly to a `WeakSet`, even in a `WeakMap` the keys are *weakly* referenced, which means that when the reference is lost, the value will be removed from the `WeakMap` and *garbage collected*.
 
 A `WeakMap` is **not** enumerable therefore we cannot loop over it.
 
