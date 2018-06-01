@@ -21,8 +21,6 @@ This book is intended for somebody already familiar with the basics of JavaScrip
 
 Additional chapters cover the new features introduced post ES6 (ES2015) all the way to the most recent version, ES2018.
 
-## Download
-
 
 ## About me
 

@@ -2,6 +2,8 @@
 
 In this article we will look at the many upgrades brought by ES6 to the Object literal notation.
 
+&nbsp;
+
 ## Deconstructing variables into keys and values
 
 This is our initial situation:
@@ -38,7 +40,6 @@ console.log(person);
 ```
 
 As our `const` is named the same way as the properties we are using we can reduce our typing by a lot.
-
 
 &nbsp;
 
@@ -86,7 +87,7 @@ const person2 = {
 
 &nbsp;
 
-##  Dynamically define properties of an Object
+## Dynamically define properties of an Object
 
 This is how we would dynamically define properties of an Object in ES5:
 
@@ -98,7 +99,7 @@ var person = {}
 person[name] = "Alberto";
 console.log(person.name);
 // Alberto
-``` 
+```
 
 First we created the Object and then we modified it.
 
@@ -112,4 +113,3 @@ const person = {
 console.log(person.name);
 // Alberto
 ```
-

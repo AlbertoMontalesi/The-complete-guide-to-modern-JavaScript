@@ -142,7 +142,6 @@ const markup = `
 
 &nbsp;
 
-
 ## Tagged template literals
 
 By tagging a function to a template literal we can run the template literal through the function, providing it with everything that's inside of the template.
@@ -170,7 +169,6 @@ console.log(sentence);
 
 We captured the value of the variable age and used a ternary operator to decide what to print.
 `strings` will take all the strings of our `let` sentence whilst the other parameters will hold the variables.
-
 
 &nbsp;
 

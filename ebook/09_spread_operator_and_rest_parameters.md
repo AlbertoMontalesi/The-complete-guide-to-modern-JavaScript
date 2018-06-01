@@ -21,6 +21,7 @@ console.log(menu);
 The `...` is the spread syntax, and it allowed us to grab all the individual values of the arrays veggie and meat and put them inside the array menu and at the same time add a new item in between them.
 
 &nbsp;
+
 ### Copy arrays
 
 The spread syntax is very helpful if we want to create a copy of an array.
@@ -55,7 +56,6 @@ And this is how we would do the same using the spread syntax:
 const veggie = ["tomato","cucumber","beans"];
 const newVeggie = [...veggie];
 ```
-
 
 &nbsp;
 
@@ -115,7 +115,7 @@ We provided 3 values inside our array but only have 2 arguments in our function 
 
 ### Spread in Object Literals (ES 2018 / ES9)
 
-This feature is not part of ES6, but as we are already discussing this topic, it is worth mentioning that ES9 will introduce the Spread operator for Objects. 
+This feature is not part of ES6, but as we are already discussing this topic, it is worth mentioning that ES2018 will introduce the Spread operator for Objects.
 Let's look at an example:
 
 ``` js
@@ -130,6 +130,7 @@ console.log(clone);
 // Object { name: "Alberto", surname: "Montalesi", age: 25 }
 ```
 
+You can read more about ES2018 in Chapter 20.
 
 ---
 &nbsp;
@@ -147,5 +148,4 @@ console.log(...losers);
 // Mark Luke
 ```
 
-We stored the first two values inside the const first and second and whatever was left we put it inside losers using the rest parameter.
-
+We stored the first two values inside the `const` first and second and whatever was left we put it inside losers using the rest parameter.

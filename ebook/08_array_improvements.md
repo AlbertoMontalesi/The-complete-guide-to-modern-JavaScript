@@ -69,7 +69,6 @@ console.log(digits);
 // Array [ 1, 2, 3, 4, 5];
 ```
 
-
 &nbsp;
 
 ## `Array.find()`
@@ -126,4 +125,3 @@ console.log(arrayEvery);
 ```
 
 Simply put, the first condition is true, because there are **some** elements greater than 2, but the second is false because **not every element** is greater than 2.
-

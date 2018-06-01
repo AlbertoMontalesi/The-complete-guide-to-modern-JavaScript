@@ -106,8 +106,7 @@ go();
 
 Let's break down what we just did:
 
-
-- to create an async function we need to put the `async` keyword in front of it
+- to create an `async` function we need to put the `async` keyword in front of it
 - the keyword will tell JavaScript to always return a promise
 - if we specify to `return <non-promise>` it will return a value wrapped inside a promise
 - the `await` keyword **only** works inside an `async` function.
@@ -155,7 +154,6 @@ asyncFunc();
 ```
 
 We use `try...catch` to grab the error, but in a case where  we do not have them we can still catch the error like this:
-
 
 ``` js
 async function asyncFunc(){

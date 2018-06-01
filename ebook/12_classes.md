@@ -38,7 +38,6 @@ There are two way of creating a class:
 - class declaration
 - class expression
 
-
 ``` js
 // class declaration
 class Person {
@@ -46,9 +45,7 @@ class Person {
 }
 
 // class expression
-
 const person = class Person {
-
 }
 ```
 
@@ -250,4 +247,3 @@ for(const student of myClass) {
 // Object { name: "Jon", grade: 10 }
 // Object { name: "Timmy", grade: 7 }
 ```
-

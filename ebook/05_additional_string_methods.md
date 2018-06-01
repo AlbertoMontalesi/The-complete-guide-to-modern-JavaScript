@@ -92,4 +92,3 @@ let hello = "Hi";
 console.log(hello.repeat(10));
 // "HiHiHiHiHiHiHiHiHiHi"
 ```
-

@@ -95,4 +95,3 @@ console.log(value);
 ```
 
 Now we finally got the array containing all the values of our symbols.
-

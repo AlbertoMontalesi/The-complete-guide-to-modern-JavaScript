@@ -6,9 +6,9 @@ ES6 introduced fat arrows (`=>`) as a way to declare functions.
 This is how we would normally declare a function in ES5:
 
 ``` javascript
-var greeting = (function(name) {
+var greeting = function(name) {
   return "hello " + name;
-})
+}
 ```
 
 The new syntax with a fat arrow looks like this:
@@ -35,7 +35,6 @@ const greeting = () => {
 }
 ```
 
-
 &nbsp;
 
 ## Implicitly return
@@ -55,10 +54,9 @@ const runners = [ "Usain Bolt", "Justin Gatlin", "Asafa Powell" ];
 const winner = runners.map((runner, i) =>  ({ name: runner, race, place: i + 1}));
 
 console.log(winner);
-// 0: {name: "Usain Bolt", race: "100m dash", place: 1}
-// 1: {name: "Justin Gatlin", race: "100m dash", place: 2}
-// 2: {name: "Asafa Powell", race: "100m dash", place: 3}
-
+// {name: "Usain Bolt", race: "100m dash", place: 1}
+// {name: "Justin Gatlin", race: "100m dash", place: 2}
+// {name: "Asafa Powell", race: "100m dash", place: 3}
 ```
 
 To tell JavaScript that what's inside the curly braces is an **object literal** that we want to implicitly return, we need to wrap everything inside parenthesis.
@@ -116,7 +114,7 @@ Since we know that **arrow functions** inherit the value of `this` from the pare
 ``` javascript
 // grab our div with class box
 const box = document.querySelector(".box");
-// listen for a click event 
+// listen for a click event
 box.addEventListener("click", function () {
   // toggle the class opening on the div
   this.classList.toggle("opening");
@@ -127,8 +125,7 @@ box.addEventListener("click", function () {
 });
 ```
 
-Here, the second `this` will inherit from its parent, and will be therefore set to the `const` box.
-
+Here, the second `this` will inherit from its parent, and will be set to the `const` box.
 
 &nbsp;
 
@@ -141,7 +138,7 @@ The next 2 examples all show when to be careful using `this` inside of arrows.
 ``` javascript
 const button = document.querySelector("btn");
 button.addEventListener("click", () => {
-  // error: *this* refers to the window 
+  // error: *this* refers to the `Window` Object
   this.classList.toggle("on");
 })
 ```
@@ -150,7 +147,7 @@ button.addEventListener("click", () => {
 const person = {
   age: 10,
   grow: () => {
-    // error: *this* refers to the window
+    // error: *this* refers to the `Window` Object
     this.age++;
   }
 }
@@ -183,6 +180,4 @@ const orderRunners = (...args) => {
     return `#{runner} was number #{i +1}`;
   })
 }
-
 ```
-

@@ -9,7 +9,6 @@ You can find the list on [github](https://github.com/tc39/proposals/blob/master/
  
 Now we can use the rest/spread syntax for objects, let's look at how:
 
-
 ```js
 let myObj = { 
   a:1,
@@ -49,7 +48,6 @@ for await (const line of readLines(filePath)) {
 
 > During execution, an async iterator is created from the data source using the `[Symbol.asyncIterator]()` method.
 Each time we access the next value in the sequence, we implicitly await the promise returned from the iterator method.
-
 
 &nbsp;
 

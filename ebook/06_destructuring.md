@@ -6,7 +6,6 @@ MDN defines **destructuring** like this:
 
 Let's start with **destructuring objects** first.
 
-
 &nbsp;
 
 ## Destructuring Objects
@@ -95,7 +94,6 @@ console.log(name,surname);
 
 Let's say we want to grab all the other values remaining, we can use the **rest operator**:
 
-
 ```js
 const person = ["Alberto", "Montalesi", "pizza", "ice cream", "cheese cake"];
 // we use the **rest operator** to grab all the remaining values
@@ -104,13 +102,11 @@ console.log(food);
 // Array [ "pizza", "ice cream", "cheese cake" ]
 ```
 
-
 &nbsp;
 
 ## Swapping variables with destructuring
 
 The destructuring assignment makes it **extremely easy** to swap variables, just look at this example:
-
 
 ```js
 let hungry = "yes";
@@ -136,4 +132,4 @@ function totalBill({ total, tax = 0.1 }) {
 // as you see since we are using the same names, we don't have to pass the arguments in the same order as when we declared the function
 // we are also overriding the default value we set for the tax
 const bill = totalBill({ tax: 0.15, total: 150});
-
+```

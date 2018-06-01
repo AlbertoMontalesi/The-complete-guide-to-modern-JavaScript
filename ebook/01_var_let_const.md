@@ -26,7 +26,7 @@ console.log(functionScoped);
 // ReferenceError: functionScoped is not defined
 ```
 
-In the first example the value of the `var`  leaked out of the block-scope and could be accessed from outside, whereas in the second example `var` was confined inside a function-scope and we could not access it from outside.
+In the first example the value of the `var`  leaked out of the block-scope and could be accessed from outside of it, whereas in the second example `var` was confined inside a function-scope and we could not access it from outside.
 
 &nbsp;
 
@@ -68,7 +68,7 @@ As you can see, when we assigned a new value to our `let` inside our block-scope
 
 ## `Const`
 
-Similarly to `let`, `const` are **block-scoped**, but they differ in the fact that their value **can't change through re-assignment or can't be  redeclared**.
+Similarly to `let`, `const` are **block-scoped**, but they differ in the fact that their value **can't change through re-assignment or can't be re-declared**.
 
 
 ``` javascript
@@ -93,11 +93,13 @@ const person = {
 }
 
 person.age = 26;
-
+console.log(person.age);
+// 26
 // in this case no error will be raised, we are not re-assigning the variable but just one of its properties.
-``` 
+```
 
 ---
+
 &nbsp;
 
 ## The temporal dead zone
