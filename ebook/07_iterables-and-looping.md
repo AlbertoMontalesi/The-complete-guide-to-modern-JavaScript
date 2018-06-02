@@ -60,7 +60,7 @@ for (const prop of Object.keys(car)){
 
 ## The `for in` loop
 
-Even though it is not a new ES6 loop, let's look at the `for in` loop to understand what differentiate it compared to the `for of.
+Even though it is not a new ES6 loop, let's look at the `for in` loop to understand what differentiate it compared to the `for of`.
 
 The `for in` loop is a bit different because it will iterate over all the [enumerable properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object in no particular order.
 

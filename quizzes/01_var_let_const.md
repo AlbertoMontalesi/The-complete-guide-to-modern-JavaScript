@@ -1,8 +1,8 @@
 # Chapter 1: Var vs Let vs Const & the temporal dead zone
 
-## End of chapter quiz
+## End of Chapter 1 Quiz
 
-1) What is the correct output of this code?
+### 1.1 What is the correct output of the following code?
 
 ```js
 var greeting = "Hello";
@@ -10,20 +10,19 @@ var greeting = "Hello";
 greeting = "Farewell";
 
 for (var i = 0; i < 2; i++) {
-  var greeting = "Goodmorning";
+  var greeting = "Good morning";
 }
 
 console.log(greeting);
 ```
 
-- [] Hello
-- [*] Goodmorning
-- [] Farewell;
+- [ ] Hello
+- [ ] Good morning
+- [ ] Farewell;
 
 &nbsp;
 
-2) What is the correct output of this code?
-
+### 1.2 What is the correct output of the following code?
 
 ```js
 let value = 1;
@@ -36,12 +35,31 @@ if(true) {
 value = 3;
 ```
 
-- [] 1
-- [*] 2
-- [] 3
+- [ ] 1
+- [ ] 2
+- [ ] 3
 
+&nbsp;
 
-3) What is the correct output of this code?
+### 1.3 What is the correct output of the following code?
+
+```js
+let x = 100;
+
+if (x > 50) {
+  let x = 10;
+}
+
+console.log(x);
+```
+
+- [ ] 10
+- [ ] 100
+- [ ] 50
+
+&nbsp;
+
+### 1.4 What is the correct output of the following code?
 
 ```js
 console.log(constant);
@@ -49,7 +67,6 @@ console.log(constant);
 const constant = 1;
 ```
 
-- [] undefined
-- [*] ReferenceError
-- 1
-
+- [ ] undefined
+- [ ] ReferenceError
+- [ ] 1

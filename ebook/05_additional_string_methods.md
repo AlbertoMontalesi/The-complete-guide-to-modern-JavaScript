@@ -87,7 +87,6 @@ code.includes("CDE");
 As the name suggests, this new method will repeat what we pass in.
 
 ``` js
-
 let hello = "Hi";
 console.log(hello.repeat(10));
 // "HiHiHiHiHiHiHiHiHiHi"

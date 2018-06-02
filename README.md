@@ -11,9 +11,11 @@
 [![HitCount](http://hits.dwyl.io/albertomontalesi/JavaScript-es6-and-beyond-ebook.svg)](http://hits.dwyl.io/albertomontalesi/JavaScript-es6-and-beyond-ebook)
 
 
-# JavaScript ES6 and beyond: Discover all the new features introduced to JavaScript from 2015 to 2018
+# [The Complete Guide to Modern JavaScript ](https://www.amazon.com/dp/B07DGGFNS6)
 
-![book-cover](/assets/cover.png)
+## Discover all the new features introduced to JavaScript from 2015 to 2018
+
+![book-cover](/assets/cover.jpg)
 
 ## Disclaimer
 
@@ -24,14 +26,13 @@ Additional chapters cover the new features introduced post ES6 (ES2015) all the 
 
 ## About me
 
-My name is Alberto, I'm from Italy and I love programming. As I was studying ES6 I decided that the best way for me to test my understanding of it was to write articles about it. I have now packaged those articles in a free ebook that you can read here or on my blog [here](http://albertomontalesi.github.io/).
+My name is Alberto, I'm from Italy and I love programming. As I was studying ES6 I decided that the best way for me to test my understanding of it was to write articles about it. I have now packaged those articles in a ebook that you can purchase on amazon.com at this [link](https://www.amazon.com/dp/B07DGGFNS6) or click [here](http://bit.ly/2kGMwKn) if you are not in the US to find the right amazon store.
 
-## Contributions & Donations [![](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.me/albertomontalesi)
+The ebook contains 50+ extra quizzes for your to practice and test your knowledge after reading each chapter.
+You can have a look at the quizzes from the first two chapters in the `quizzes` folder.
 
+You can also read my articles on my blog [here](https://www.inspiredwebdev.com/).
 
-Any contributions you make are of course greatly appreciated.
-
-If you enjoy my content and you want to donate me a cup of coffee, you can do so [here](https://www.paypal.me/albertomontalesi).
 
 ## License
 
