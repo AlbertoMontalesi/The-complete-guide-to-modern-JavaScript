@@ -15,7 +15,7 @@
 
 ## Discover all the new features introduced to JavaScript from 2015 to 2018
 
-![book-cover](/assets/cover.jpg)
+![book-cover](/assets/Cover.jpg)
 
 ## Disclaimer
 
