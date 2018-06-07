@@ -23,15 +23,18 @@ This book is intended for somebody already familiar with the basics of JavaScrip
 
 Additional chapters cover the new features introduced post ES6 (ES2015) all the way to the most recent version, ES2018.
 
+## Where to buy it
 
-## About me
+You can purchase this ebook on amazon.com at this [link](https://www.amazon.com/dp/B07DGGFNS6) or click [here](http://bit.ly/2kGMwKn) if you are not in the US to find the right amazon store.
 
-My name is Alberto, I'm from Italy and I love programming. As I was studying ES6 I decided that the best way for me to test my understanding of it was to write articles about it. I have now packaged those articles in a ebook that you can purchase on amazon.com at this [link](https://www.amazon.com/dp/B07DGGFNS6) or click [here](http://bit.ly/2kGMwKn) if you are not in the US to find the right amazon store.
+You can also read my articles on my blog [here](https://www.inspiredwebdev.com/).
 
 The ebook contains 50+ extra quizzes for your to practice and test your knowledge after reading each chapter.
 You can have a look at the quizzes from the first two chapters in the `quizzes` folder.
 
-You can also read my articles on my blog [here](https://www.inspiredwebdev.com/).
+## About me
+
+My name is Alberto, I'm from Italy and I love programming. As I was studying ES6 I decided that the best way for me to test my understanding of it was to write articles about it. I have now packaged those articles in this ebook.
 
 
 ## License
