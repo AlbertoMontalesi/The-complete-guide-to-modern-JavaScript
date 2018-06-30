@@ -126,7 +126,7 @@ const fruit = ["apple","banana", "orange"];
 fruit.eat = "gnam gnam";
 
 for (const prop of fruit){
-  console.log(fruit);
+  console.log(prop);
 }
 // apple
 // banana
