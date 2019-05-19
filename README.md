@@ -15,7 +15,7 @@
 
 ## Discover all the new features introduced to JavaScript from 2015 to 2019
 
-![book-cover](/assets/Cover.png)
+![book-cover](/assets/banner.png)
 
 ## Who is this book for ?
 
