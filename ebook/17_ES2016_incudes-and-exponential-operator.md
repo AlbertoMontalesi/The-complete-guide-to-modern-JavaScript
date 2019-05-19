@@ -1,4 +1,4 @@
-# Chapter 17: Everything new in ES2016 (ES7)
+# Chapter 17: Everything new in ES2016
 
 ES2016 introduced only two new features :
 
@@ -32,10 +32,12 @@ The first value we pass in is the element to search and the second one is the in
 let array = [1,3,5,7,9,11];
 
 array.includes(3,1);
+// find the number 3 starting from array index 1
 // true
 array.includes(5,4);
 //false
 array.includes(1,-1);
+// find the number 1 starting from the ending of the array going backwards
 // false
 array.includes(11,-3);
 // true

@@ -1,5 +1,3 @@
-# Chapter 1: Var vs Let vs Const & the temporal dead zone
-
 ## End of Chapter 1 Quiz
 
 ### 1.1 What is the correct output of the following code?

@@ -39,7 +39,6 @@ for(const fruit of fruits){
 Objects are **non iterable** so how do we iterate over them?
 We have to first grab all the values of the object using something like `Object.keys()` or the new ES6 `Object.entries()`.
 
-
 ```js
 const car = {
   maker: "BMW",
@@ -49,11 +48,11 @@ const car = {
 
 for (const prop of Object.keys(car)){
   const value = car[prop];
-  console.log(value,prop);
+  console.log(prop,value);
 }
-// BMW maker
-// red color
-// 2010 year
+// maker BMW
+// color red
+// year 2010
 ```
 
 &nbsp;

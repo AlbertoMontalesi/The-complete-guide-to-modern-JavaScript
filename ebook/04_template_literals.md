@@ -88,7 +88,19 @@ const markup = `
 
 ## Add a ternary operator
 
-We can easily add some logic inside our template string by using a ternary operator:
+We can easily add some logic inside our template string by using a ternary operator.
+
+The syntax for a ternary operator looks like this:
+
+```js
+const isDiscounted = false
+
+return isFridgeEmpty ? "$10" : "20"
+// $20
+```
+
+If the condition before the `?` can be converted to `true` then the first value is returned, else it's the value after the `:` that get returned.
+
 
 ``` js
 // create an artist with name and age
@@ -104,6 +116,19 @@ const text = `
     </p>
   </div>
 `
+// <div>
+//  <p>  Bon Jovi is 56 years old
+//  </p>
+// </div>
+const artist = {
+  name: "Trent Reznor",
+  age: 53,
+  song: 'Hurt'
+};
+// <div>
+//   <p>  Trent Reznor is 53 years old and wrote the song Hurt
+//   </p>
+// </div>
 ```
 
 &nbsp;
@@ -132,12 +157,24 @@ function groceryList(others) {
 // display all our groceries in a p tag, the last one will include all the one from the array **others**
 const markup = `
   <div>
-    <p> ${groceries.meat} </p>
-    <p> ${groceries.veggie} </p>
-    <p> ${groceries.fruit} </p>
-    <p>${groceryList(groceries.others)} </p>
+    <p>${groceries.meat}</p>
+    <p>${groceries.veggie}</p>
+    <p>${groceries.fruit}</p>
+    <p>${groceryList(groceries.others)}</p>
   <div>
 `
+//  <div>
+//     <p>pork chop</p>
+//     <p>salad</p>
+//     <p>apple</p>
+//     <p>
+//     <p>
+//        <span> mushrooms</span>
+//         <span> instant noodles</span>
+//         <span> instant soup</span>
+//     </p>
+//   </p>
+//   <div>
 ```
 
 &nbsp;
@@ -148,8 +185,7 @@ By tagging a function to a template literal we can run the template literal thro
 
 The way it works is very simple: you just take the name of your function and put it in front of the template that you want to run it against.
 
-
- ```js
+```js
 let person = "Alberto";
 let age = 25;
 
@@ -170,7 +206,13 @@ console.log(sentence);
 We captured the value of the variable age and used a ternary operator to decide what to print.
 `strings` will take all the strings of our `let` sentence whilst the other parameters will hold the variables.
 
+In our example our string is divided in 3 pieces: `${person}`, `is a` and `${age}`.
+We use array notation to access the string in the middle like this:
+
+```js
+let str = strings[1];
+```
+
 &nbsp;
 
 To learn more about use cases of *template literals* check out [this article](https://codeburst.io/javascript-es6-tagged-template-literals-a45c26e54761).
-

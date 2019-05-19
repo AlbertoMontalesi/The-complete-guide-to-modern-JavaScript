@@ -39,7 +39,7 @@ console.log(person);
 // {name: "Alberto", surname: "Montalesi", age: 25, nationality: "Italian"}
 ```
 
-As our `const` is named the same way as the properties we are using we can reduce our typing by a lot.
+As our `const` are named the same way as the properties we are using, we can reduce our typing.
 
 &nbsp;
 
@@ -75,7 +75,7 @@ No more `function`, it's shorter and it does the same.
 **Remember** that **arrow functions** are anonymous, look at this example:
 
 ``` js
-// arrow functions are anonymous, in this case you need to have a key
+// this won't work, you need a key to access the function
 const person1 = {
   () => console.log("Hello"),
 };
@@ -83,6 +83,8 @@ const person1 = {
 const person2 = {
   greet: () => console.log("Hello"),
 }
+person2.greet()
+// Hello
 ```
 
 &nbsp;
@@ -92,7 +94,7 @@ const person2 = {
 This is how we would dynamically define properties of an Object in ES5:
 
 ``` js
-var name = "name";
+var name = "myname";
 // create empty object
 var person = {}
 // update the object
@@ -106,7 +108,7 @@ First we created the Object and then we modified it.
 In ES6 we can do both things at the same time, look here:
 
 ``` js
-const name = "name";
+const name = "myname";
 const person = {
   [name]:"Alberto",
 };

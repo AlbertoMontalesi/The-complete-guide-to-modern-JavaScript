@@ -1,16 +1,26 @@
-# Chapter 20: ES2018 what is coming?
+# Chapter 20: ES2018 Async Iteration and more?
 
-ES 2018 has not been released yet but we can look at the proposals for features that have reached the stage 4 (the final stage) and that will be included in the new upcoming version of ECMAScript.
-You can find the list on [github](https://github.com/tc39/proposals/blob/master/finished-proposals.md).
+In this chapter we will look at what was introduced with ES2018.
 
 &nbsp;
 
 ## Rest / Spread for Objects
- 
-Now we can use the rest/spread syntax for objects, let's look at how:
+
+Remember how ES6 (ES2015) allowed us to do this?
 
 ```js
-let myObj = { 
+const veggie = ["tomato","cucumber","beans"];
+const meat = ["pork","beef","chicken"];
+
+const menu = [...veggie, "pasta", ...meat];
+console.log(menu);
+// Array [ "tomato", "cucumber", "beans", "pasta", "pork", "beef", "chicken" ]
+```
+
+Now we can use the rest/spread syntax for objects too, let's look at how:
+
+```js
+let myObj = {
   a:1,
   b:3,
   c:5,
@@ -19,15 +29,22 @@ let myObj = {
 
 // we use the rest operator to grab everything else left in the object.
 let { a, b, ...z } = myObj;
-console.log(a);      // 1
-console.log(b);      // 3
-console.log(z);   // {c: 5, d: 8}
+console.log(a);     // 1
+console.log(b);     // 3
+console.log(z);     // {c: 5, d: 8}
 
 // using the spread syntax we cloned our Object
 let clone = { ...myObj };
 console.log(clone);
 // {a: 1, b: 3, c: 5, d: 8}
+myObj.e = 15;
+console.log(clone)
+// {a: 1, b: 3, c: 5, d: 8}
+console.log(myObj)
+// {a: 1, b: 3, c: 5, d: 8, e: 15}
 ```
+
+With the spread operator we can easily create a clone of our `Object` so that when we modify the original `Object`, the clone does not get modified, similarly to what we saw when we discusse about arrays.
 
 &nbsp;
 
@@ -72,7 +89,7 @@ fetch("your-url")
 
 ## RegExp features
 
-4 new RegExp related features will make it to the new version of ECMAScript. They are:
+4 new RegExp related features made it to the new version of ECMAScript. They are:
 
 - [`s (dotAll)` flag for regular expressions](https://github.com/tc39/proposal-regexp-dotall-flag)
 - [RegExp named capture groups](https://github.com/tc39/proposal-regexp-named-groups)
@@ -121,7 +138,7 @@ console.log(`one: ${one}, two: ${two}`);  // prints one: foo, two: bar
 
 > With lookbehind assertions, one can make sure that a pattern is or isn't preceded by another, e.g. matching a dollar amount without capturing the dollar sign. </br></br> Positive lookbehind assertions are denoted as `(?<=...)` and they ensure that the pattern contained within precedes the pattern following the assertion. For example, if one wants to match a dollar amount without capturing the dollar sign, `/(?<=\$)\d+(\.\d*)?/` can be used, matching `'$10.53'` and returning `'10.53'`. This, however, wouldn't match `€10.53`.</br></br> Negative lookbehind assertions are denoted as `(?<!...) `and, on the other hand, make sure that the pattern within doesn't precede the pattern following the assertion. For example, `/(?<!\$)\d+(?:\.\d*)/` wouldn't match `'$10.53'`, but would `'€10.53'`.
 
-&nbsp; 
+&nbsp;
 
 ### RegExp Unicode Property Escapes
 

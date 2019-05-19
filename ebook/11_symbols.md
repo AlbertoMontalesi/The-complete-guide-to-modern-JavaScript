@@ -31,7 +31,7 @@ console.log(me === clone);
 
 They both have the same value, but we will never have naming collisions with Symbols as they are always unique.
 
-As we mentioned earlier we can use them to create as identifiers for object properties, so let's see an example:
+As we mentioned earlier we can use them to create identifiers for object properties, so let's see an example:
 
 ``` js 
 const office = {
@@ -82,7 +82,7 @@ console.log(symbols);
 ​// length: 3
 ```
 
-We retrieved the array but to be able to access the properties we to use `map`.
+We retrieved the array but to be able to access the properties we havee to use `map`.
 
 ```js
 const symbols = Object.getOwnPropertySymbols(office);

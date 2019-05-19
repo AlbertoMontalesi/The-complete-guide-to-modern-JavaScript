@@ -17,7 +17,7 @@ var x = new Proxy(target,handler)
 ```
 
 - our `target` can be anything, from an object, to a function, to another `Proxy`
-- a `handler` is an object which will define the behavior of our `Proxy` when an operation is performed on it
+- a `handler` is an object which will define the behavior of our `Proxy` when an operation is performed on it.
 
 ``` js
 // our object
@@ -47,6 +47,30 @@ When we call the `get` method we step inside the normal flow and change the valu
 
 When setting a new value we step in again and log a short message before setting the value.
 
-Proxies can be very useful, for example if your object is a phone number.
+Proxies can be very useful for example to validate data. Look at this example.
 
-You can take the value given by the user and format it to match the standard formatting of your country.
+```js
+const validateAge = {
+  set: function(object,property,value){
+    if(property === 'age'){
+      if(value < 18){
+        throw new Error('you are too young!')
+      }
+    } else {
+      // default behaviour
+      object.property = value;
+      return true
+    }
+  }
+};
+
+const user =  new Proxy({},validateAge)
+
+user.age = 17
+// Uncaught Error: you are too young!
+
+user.age = 21
+// 21
+```
+
+When we set the `age` property of the `user Object` we pass it through our `validateAge` function which checks if it is more or less than 18 and throws an error if it's less than 18.

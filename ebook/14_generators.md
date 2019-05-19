@@ -4,7 +4,6 @@
 
 A generator function is a function that we can start and stop, for an indefinite amount of time, and restart with the possibility of passing additional data at a later point in time.
 
-
 To create a generator function we write like this:
 
 ``` js
@@ -37,7 +36,6 @@ Let's have a look at the code piece by piece:
 
 Our function is paused between each `.next()` call.
 
-
 &nbsp;
 
 ## Looping over an array with a generator
@@ -50,8 +48,8 @@ const fruitList = ['Banana','Apple','Orange','Melon','Cherry','Mango'];
 
 // create our looping generator
 function* loop(arr) {
-  for (const fruit of fruitList) {
-    yield `I like to eat ${fruit}`;
+  for (const item of arr) {
+    yield `I like to eat ${item}`;
   }
 }
 
@@ -93,7 +91,6 @@ In this case we got `value: undefined` because we did not pass anything in the `
 
 ## Catching errors with `.throw()`
 
-
 ``` js
 function* gen(){
   try {
@@ -124,11 +121,11 @@ As you can see when we called `.throw()` the `generator` returned us the error a
 
 As we have previously seen, Promises are very useful for asynchronous programming, and by combining them with generators we can have a very powerful tool at our disposal to avoid problems like the *callback hell*.
 
-As we are solely discussing ES6, I won't be talking about async functions as they were introduce in ES8 (ES2017) but know that the way they work is based on what you will see now.
+As we are solely discussing ES6, I won't be talking about async functions as they were introduce in ES2017 but know that the way they work is based on what you will see now.
 
 You can read more about async functions in Chapter 19.
 
-Using a Generator in combination with a Promise will allow us to write asynchronous code that feels like synchronous.
+Using a Generator in combination with a `Promise` will allow us to write asynchronous code that feels like synchronous.
 
 What we want to do is to wait for a promise to resolve and then pass the resolved value back into our generator in the `.next()` call.
 

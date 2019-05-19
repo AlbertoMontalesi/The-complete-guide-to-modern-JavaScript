@@ -31,7 +31,7 @@ const person = {
 }
 
 const { first, last } = person;
-``` 
+```
 
 Since our `const` have the same name as the properties we want to grab, we don't have to specify `person.first` and `person.last` anymore.
 
@@ -57,7 +57,7 @@ We are not limited to name our variable the same as the property of the object, 
 
 ```js
 const { facebook:fb } = person.links.social;
-// we rename the variable as *fb*
+// it will look for the property person.links.social.facebook and name the variable fb
 ```
 
 We can also pass in **default values** like this:
@@ -67,10 +67,7 @@ const { facebook:fb = "https://www.facebook.com"} = person.links.social;
 // we renamed the variable to *fb* and we also set a default value to it
 ```
 
-
----
 &nbsp;
-
 
 ## Destructuring Arrays
 
@@ -101,6 +98,10 @@ const [name,surname,...food] = person ;
 console.log(food);
 // Array [ "pizza", "ice cream", "cheese cake" ]
 ```
+
+In the example above the first two values of the array were bound to `name` and `surname` while the rest (that's why it's called the `rest operator`) get assigned to `food`
+
+The `...` is the syntax for the `rest operator`
 
 &nbsp;
 

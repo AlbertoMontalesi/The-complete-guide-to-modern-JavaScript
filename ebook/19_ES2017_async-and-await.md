@@ -57,9 +57,9 @@ walk(1000).then(res => {
 });
 
 // you walked for 1000ms
-// you walked for 500ms 
-// you walked for 700ms 
-// you walked for 800ms 
+// you walked for 500ms
+// you walked for 700ms
+// you walked for 800ms
 // uncaught exception: the value is too small
 ```
 

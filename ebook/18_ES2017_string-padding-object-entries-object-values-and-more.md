@@ -1,10 +1,10 @@
 # Chapter 18: ES2017 string padding, `Object.entries()`, `Object.values()` and more
 
-ES2017 introduced many new cool features, which we are going to see here. 
+ES2017 introduced many new cool features, which we are going to see here.
 
-## String padding(`padStart` and `padEnd`)
+## String padding (`.padStart()` and `.padEnd()`)
 
-We can now add some padding to our strings, either at the end (`padEnd`) or at the beginning (`padStart`) of them.
+We can now add some padding to our strings, either at the end (`.padEnd()`) or at the beginning (`.padStart()`) of them.
 
 ```js
 "hello".padStart(6);
@@ -36,8 +36,7 @@ We can use `padStart` if we want to right align something.
 ```js
 const strings = ["short", "medium length", "very long string"];
 
-const longestString = strings.sort(str => str.length)
-                              .map(str => str.length)[0];
+const longestString = strings.sort(str => str.length).map(str => str.length)[0];
 
 strings.forEach(str => console.log(str.padStart(longestString)));
 
@@ -129,7 +128,7 @@ Object.getOwnPropertyDescriptors(myObj);
 
 ## Trailing commas in function parameter lists and calls
 
-This is just a minor change to a syntax. Now, when writing objects we need to leave a trailing comma after each parameter, whether or not it is the last one.
+This is just a minor change to a syntax. Now, when writing objects we can to leave a trailing comma after each parameter, whether or not it is the last one.
 
 ``` js
 // from this

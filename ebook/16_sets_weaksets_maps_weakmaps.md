@@ -2,7 +2,7 @@
 
 ## What is a `Set`?
 
-A `Set` is an object where we can store **unique values** of any type.
+A `Set` is an `Object` where we can store **unique values** of any type.
 
 ```js
 // create our set
@@ -40,7 +40,6 @@ family.entries();
 family.values();
 // SetIterator {"Dad", "Mom", "Son"}
 family.delete("Dad");
-// true
 family;
 // Set [ "Mom", "Son" ]
 family.clear;
@@ -106,7 +105,6 @@ As you can see the new array only contains the unique values from the original a
 
 A `WeakSet` is similar to a `Set` but it can **only** contain Objects.
 
-
 ``` js
 let dad = {name: "Daddy", age: 50};
 let mom = {name: "Mummy", age: 45};
@@ -121,7 +119,7 @@ for(const person of family){
 
 We created our new `WeakSet` but when we tried to use a `for of` loop it did not work, we can't iterate over a `WeakSet`.
 
-Another big difference that we can see is by trying to use `.clear` on a `WeakSet`: nothing will happen because a `WeakSet` cleans itself up after we delete an element from it.
+A `WeakSet` cleans itself up after we delete an element from it.
 
 ```js
 dad = null;
@@ -134,7 +132,6 @@ family;
 ```
 
 As you can see after a few seconds **dad** was removed and *garbage collected*. That happened because the reference to it was lost when we set the value to `null`.
-
 
 &nbsp;
 

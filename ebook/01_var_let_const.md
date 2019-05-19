@@ -1,14 +1,14 @@
 # Chapter 1: Var vs Let vs Const & the temporal dead zone
 
-With the introduction of `let` and `const` in **ES6**, we can now better define our variables depending on our needs. Let's have a look at the major differences between them.
+With the introduction of `let` and `const` in **ES6**, we can now better define our variables depending on our needs. During our JavaScript primer we looked at the basic differences between these 3 keywords, now we will go into more detail.
 
 &nbsp;
 
 ## `Var`
 
-`var` are **function scoped**, which means that if we declare them inside a `for` loop (which is a **block** scope) they will be available even outside of it.
+Variables declared with the `var` keyword are **function scoped**, which means that if we declare them inside a `for` loop (which is a **block** scope) they will be available even outside of it.
 
-``` javascript 
+``` javascript
 for (var i = 0; i < 10; i++) {
   var leak = "I am available outside of the loop";
 }
@@ -26,13 +26,13 @@ console.log(functionScoped);
 // ReferenceError: functionScoped is not defined
 ```
 
-In the first example the value of the `var`  leaked out of the block-scope and could be accessed from outside of it, whereas in the second example `var` was confined inside a function-scope and we could not access it from outside.
+In the first example the value of the `var` leaked out of the block-scope and could be accessed from outside of it, whereas in the second example `var` was confined inside a function-scope and we could not access it from outside.
 
 &nbsp;
 
 ## `Let`
 
-`let` (and `const`) are **block scoped**, meaning that they will be available only inside of the block where they are declared and its sub-blocks.
+Variables declared with the `let` (and `const`) keyword are **block scoped**, meaning that they will be available only inside of the block where they are declared and its sub-blocks.
 
 ``` javascript
 // using `let`
@@ -62,7 +62,7 @@ console.log(y);
 // expected output: block-scoped
 ```
 
-As you can see, when we assigned a new value to our `let` inside our block-scope, it **did not** change its value in the global scope, whereas when did the same with our `var` it leaked outside of the block-scope and also changed it in the global scope.
+As you can see, when we assigned a new value to our `let` inside our block-scope, it **did not** change its value in the outer scope, whereas when did the same with our `var` it leaked outside of the block-scope and also changed it in the outer scope.
 
 &nbsp;
 
@@ -78,8 +78,7 @@ constant = " I can't be reassigned";
 // Uncaught TypeError: Assignment to constant variable
 ```
 
-
-**Important** 
+**Important**
 This **does not** mean that **const are immutable**.
 
 &nbsp;
@@ -95,8 +94,9 @@ const person = {
 person.age = 26;
 console.log(person.age);
 // 26
-// in this case no error will be raised, we are not re-assigning the variable but just one of its properties.
 ```
+
+In this case we are not reassigning the whole variable but just one of its properties, which is perfectly fine.
 
 ---
 
@@ -104,9 +104,9 @@ console.log(person.age);
 
 ## The temporal dead zone
 
-According to **MDN**:
+Now we will have a look at a very important concept which may sound complicate from its name, but i reassure you it is not.
 
-> In ECMAScript 2015, let bindings are not subject to **Variable Hoisting**, which means that let declarations do not move to the top of the current execution context. Referencing the variable in the block before the initialization results in a ReferenceError (contrary to a variable declared with var, which will just have the undefined value). The variable is in a “temporal dead zone” from the start of the block until the initialization is processed.
+First let's have a look at a simple example:
 
 Let's look at an example:
 
@@ -125,8 +125,9 @@ let j = "I am a let";
 `var` can be accessed **before** they are defined, but we can't access their **value**.
 `let` and `const` can't be accessed **before we define them**.
 
-This happens because `var` are subject to **hoisting**, which means that they are processed before any code is executed. Declaring a `var` anywhere is equivalent to **declaring it at the top**. This is why we can still access the `var` but we can't yet see its content, hence the `undefined` result.
+Despite what you may read on other sources, both `var` and `let`(and `const`) are subject to **hoisting** which measn thath they are processe before any code is executed and lifted up to the top of their scope (whether it's global or block).
 
+The main differences lays in the fact that `var` can still be accessed before they are defined, causing the value to be `undefined` while on the other hand, `let` variables sit in a **temporal dead zone** until they are declared, causing an error when accessed before initialization which makes it easier to debug code rather than having an `undefined` as the result.
 
 ---
 &nbsp;
@@ -136,7 +137,6 @@ This happens because `var` are subject to **hoisting**, which means that they ar
 There is no rule stating where to use each of them and people have different opinions. Here I am going to present to you two opinions from popular developers in the JavaScript community.
 
 The first opinion comes from [Mathias Bynes:](https://mathiasbynens.be/notes/es6-const)
-
 
 - use `const` by default
 - use `let` only if rebinding is needed.
@@ -150,3 +150,5 @@ The second opinion comes from [Kyle Simpson:]( blog.getify.com/constantly-confus
 - Refactor `let` to `const` only after some code has to be written, and you're reasonably sure that you've got a case where there shouldn't be variable reassignment.
 
 Which opinion to follow is entirely up to you. As always, do your own research and figure out which one you think is the best.
+
+My personal opinion is to always use `const` by default and then switch to `let` if you see yourself in need of rebinding the value.

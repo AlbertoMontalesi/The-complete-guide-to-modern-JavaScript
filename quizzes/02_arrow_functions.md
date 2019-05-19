@@ -1,5 +1,3 @@
-# Chapter 2: Arrow functions
-
 ## End of Chapter 2 Quiz
 
 ### 2.1 What is the correct syntax for an arrow function?

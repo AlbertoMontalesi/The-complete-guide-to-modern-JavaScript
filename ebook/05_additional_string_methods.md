@@ -1,8 +1,31 @@
 # Chapter 5: Additional string methods
 
+There are many methods that we can use againt strings. Here's a list of a few of them:
+
+```js
+// .length()
+const str = 'hello'
+str.length() // 5
+// .indexOf()
+const str2 = 'this is a short sentence'
+str2.indexOf('short'); // 10
+// slice()
+const str3 = 'pizza, orange, cereals'
+str3.slice(0,5) // 'pizza'
+// toUppercase() / toLowerCase()
+const str4 = 'lowercase'
+str4.toUpperCase(); // 'LOWERCASE'
+const str5 = 'UPPERCASE'
+str5.toLowerCase() // 'uppercase'
+```
+
+There are many more methods, these were just a few as a reminder.
+
+&nbsp;
+
 ## Additional string methods
 
-We are going to cover 4 new strings method:
+ES6 intoduced 4 new string methods:
 
 - `startsWith()`
 - `endsWith()`
@@ -27,7 +50,6 @@ code.startsWith("ABC");
 ```
 
 We can pass an additional parameter, which is the starting point where the method will begin checking.
-
 
 ``` js
 const code = "ABCDEFGHI"

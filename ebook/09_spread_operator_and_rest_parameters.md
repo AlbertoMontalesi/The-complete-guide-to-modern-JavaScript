@@ -26,7 +26,6 @@ The `...` is the spread syntax, and it allowed us to grab all the individual val
 
 The spread syntax is very helpful if we want to create a copy of an array.
 
-
 ``` js
 const veggie = ["tomato","cucumber","beans"];
 const newVeggie = veggie;
@@ -83,7 +82,6 @@ We can replace the `.apply()` syntax and just use the spread operator.
 
 Let's look at another example:
 
-
 ``` js
 const name = ["Alberto", "Montalesi"];
 
@@ -115,7 +113,7 @@ We provided 3 values inside our array but only have 2 arguments in our function 
 
 ### Spread in Object Literals (ES 2018 / ES9)
 
-This feature is not part of ES6, but as we are already discussing this topic, it is worth mentioning that ES2018 will introduce the Spread operator for Objects.
+This feature is not part of ES6, but as we are already discussing this topic, it is worth mentioning that ES2018 introduced the Spread operator for Objects.
 Let's look at an example:
 
 ``` js

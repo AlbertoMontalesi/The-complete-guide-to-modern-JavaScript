@@ -52,7 +52,7 @@ fs.readdir(source, function (err, files) {
 
 We try to write our code in a way where executions happens visually from top to bottom, causing excessive nesting on functions and result in what you can see above.
 
-To improve your callbacks you can read this [article](http://callbackhell.com/).
+To improve your callbacks you can check out http://callbackhell.com/
 
 Here we will focus on how to write promises.
 
@@ -82,7 +82,7 @@ myPromise.then(
 // The value we get from the promise
 ```
 
-We immediately resolved our promise and see the result in the console.
+We immediately resolved our promise and can see the result in the console.
 
 We can combine a `setTimeout()` to wait a certain amount of time before resolving.
 
@@ -97,7 +97,7 @@ myPromise.then(
   data => {
     console.log(data);
   });
-// after 2 seconds we will get:
+// after 2 seconds ...
 // The value we get from the promise
 ```
 
@@ -261,7 +261,7 @@ const promise2 =  new Promise((resolve,reject) => {
   reject(Error("oooops error"));
 });
 
-// one of the two promise will fail, but .all will return only a rejection.
+// one of the two promise will fail, but `.all` will return only a rejection.
 Promise
   .all([promise1, promise2])
   .then(data => {

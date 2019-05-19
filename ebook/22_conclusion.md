@@ -5,3 +5,5 @@ A sincere thank you to you for making it this far. This is my first book and kno
 I hope that you found it useful and if that is the case I suggest you to follow my new [website](https://www.inspiredwebdev.com/) and my [Medium](https://medium.com/@labby92) where I will write articles about Web Development.
 
 Thank you very much for your time and your support.
+
+A special thanks to all the users on Github that made pull requests and opened issues to help fix mistakes and improve the quality of the book.

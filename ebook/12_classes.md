@@ -16,8 +16,8 @@ Person.prototype.greet = function(){
   console.log("Hello, my name is " + this.name);
 }
 
-const alberto = new Person("Alberto", 25);
-const caroline = new Person("Caroline",25);
+const alberto = new Person("Alberto", 26);
+const caroline = new Person("Caroline",26);
 
 alberto.greet();
 // Hello, my name is Alberto
@@ -69,10 +69,10 @@ class Person {
   }
 }
 
-const alberto = new Person("Alberto",25);
+const alberto = new Person("Alberto",26);
 
 alberto.greet();
-// Hello, my name is Alberto and I am 25 years old
+// Hello, my name is Alberto and I am 26 years old
 alberto.farewell();
 // goodbye friend
 ```
@@ -158,7 +158,7 @@ class Adult extends Person {
   }
 }
 
-const alberto = new Adult("Alberto",25,"teacher");
+const alberto = new Adult("Alberto",26,"software developer");
 ```
 
 We created a new `Class Adult` that inherits from `Person` but if you try to run this code you will get an error:
@@ -186,11 +186,11 @@ If we now run the code again we will get this:
 
 ``` js
 alberto.age
-// 25
+// 26
 alberto.work
-// "teacher"
+// "software developer"
 alberto.greet();
-// Hello, my name is Alberto and I am 25 years old
+// Hello, my name is Alberto and I am 26 years old
 ```
 
 As you can see our `Adult` inherited all the properties and methods from the `Person` class.
@@ -203,11 +203,11 @@ We want to create something like this, something similar to an array where the f
 
 ``` js
 // we create a new Classroom
-const myClass = new Classroom('1A', 
+const myClass = new Classroom('1A',[ 
   {name: "Tim", mark: 6},
   {name: "Tom", mark: 3},
   {name: "Jim", mark: 8},
-  {name: "Jon", mark: 10},
+  {name: "Jon", mark: 10},]
 );
 ```
 
@@ -221,7 +221,8 @@ class Classroom extends Array {
     super(...students);
     this.name = name;
     // we create a new method to add students
-  } add(student){
+  } 
+  add(student){
     this.push(student);
   }
 }

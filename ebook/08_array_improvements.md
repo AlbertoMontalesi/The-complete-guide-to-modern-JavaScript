@@ -6,19 +6,22 @@
 
 It will take something **arrayish**, meaning something that looks like an array but it isn't, and transform it into a real array.
 
-``` js
-// our html
+```html
 <div class="fruits">
   <p> Apple </p>
   <p> Banana </p>
   <p> Orange </p>
 </div>
+```
 
+```js
 const fruits = document.querySelectorAll(".fruits p");
+// fruits is a nodelist (an array-like collection) containng our three p tags
+// now we convert it in an Array
 const fruitArray = Array.from(fruits);
 
-console.log(fruits);
-//it will return us an array containing 3 p tags [p,p,p];
+console.log(fruitArray);
+// [p,p,p]
 
 //since now we are dealing with an array we can use map
 const fruitNames = fruitArray.map( fruit => fruit.textContent);
@@ -55,6 +58,8 @@ console.log(fruitArray);
 // ["Apple", "Banana", "Orange"]
 ```
 
+In the example above we passed a `map` function to the `.from()` method to push into our newly formed array only the `textContent` of the `p` tags and not the whole tag.
+
 &nbsp;
 
 ## `Array.of()`
@@ -75,13 +80,12 @@ console.log(digits);
 
 `Array.find()` returns the value of the first element in the array that satisfies the provided testing function. Otherwise `undefined` is returned.
 
-It can be useful in instances where we have a json file, maybe coming from an API from instagram or something similar and we want to grab a specific post with a specific code that identifies it.
-
 Let's looks at a simple example to see how `Array.find()` works.
 
 ``` js
 const array = [1,2,3,4,5];
 
+// this will return the first element in the array with a value higher than 3
 let found = array.find( e => e > 3 );
 console.log(found);
 // 4
@@ -93,7 +97,7 @@ As we mentioned, it will return the **first element** that matches our condition
 
 ## `Array.findIndex()`
 
-`Array.findIndex()` will return the *index* of the element that matches our condition.
+`Array.findIndex()` will return the *index* of the **first** element that matches our condition.
 
 ``` js
 const greetings = ["hello","hi","byebye","goodbye","hi"];
@@ -109,8 +113,8 @@ Again, only the index of the **first element** that matches our condition is ret
 
 ## `Array.some()` & `Array.every()`
 
-I'm grouping these two together because their use is self-explanatory: `.some()` will search if there are some items matching the condition and
-stop once it finds the first one, `.every()` will check that all items match the given condition.
+I'm grouping these two together because their use is self-explanatory: `.some()` will search if there are *some* items matching the condition and
+stop once it finds the first one, `.every()` will check that *all* items match the given condition.
 
 ```js
 const array = [1,2,3,4,5,6,1,2,3,1];

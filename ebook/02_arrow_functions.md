@@ -39,10 +39,29 @@ const greeting = () => {
 
 ## Implicitly return
 
-With arrow functions we can skip the explicit return and return like this:
+With arrow functions we can skip the explicit `return` and return like this:
 
 ``` javascript
 const greeting = name => `hello ${name}`;
+```
+
+Look at a side by side comparison with an old ES5 Function:
+
+```js
+const oldFunction = function(name){
+  return `hello ${name}`
+}
+
+const arrowFunction = name => `hello ${name}`;
+```
+
+Both functions achieve the same result, but the new syntax allows you to be more concise.
+Beware! Readability is more important than conciceness so you might want to write your funciton like this if you are working in a team and not everybody is totally up-to-date with ES6.
+
+```js
+const arrowFunction = (name) => {
+  return `hello ${name}`;
+}
 ```
 
 Let's say we want to implicitly return an **object literal**, we would do like this:
@@ -51,12 +70,12 @@ Let's say we want to implicitly return an **object literal**, we would do like t
 const race = "100m dash";
 const runners = [ "Usain Bolt", "Justin Gatlin", "Asafa Powell" ];
 
-const winner = runners.map((runner, i) =>  ({ name: runner, race, place: i + 1}));
+const results = runners.map((runner, i) =>  ({ name: runner, race, place: i + 1}));
 
-console.log(winner);
-// {name: "Usain Bolt", race: "100m dash", place: 1}
+console.log(results);
+// [{name: "Usain Bolt", race: "100m dash", place: 1}
 // {name: "Justin Gatlin", race: "100m dash", place: 2}
-// {name: "Asafa Powell", race: "100m dash", place: 3}
+// {name: "Asafa Powell", race: "100m dash", place: 3}]
 ```
 
 To tell JavaScript that what's inside the curly braces is an **object literal** that we want to implicitly return, we need to wrap everything inside parenthesis.
@@ -76,7 +95,6 @@ const greeting = name => `hello ${name}`;
 
 greeting("Tom");
 ```
-
 
 &nbsp;
 
@@ -133,7 +151,7 @@ Here, the second `this` will inherit from its parent, and will be set to the `co
 
 Using what we know about the inheritance of the `this` keyword we can define some instances where you should **not** use arrow functions.
 
-The next 2 examples all show when to be careful using `this` inside of arrows.
+The next 2 examples show when to be careful using `this` inside of arrows.
 
 ``` javascript
 const button = document.querySelector("btn");
@@ -153,15 +171,33 @@ const person = {
 }
 ```
 
-One other difference between Arrow functions and normal functions is access to the `arguments`. 
+Another difference between Arrow functions and normal functions is the access to the `arguments object`.
+The `arguments object` is an array-like object that we can access from inside functions and contains the values of the arguments passed to that function.
+
+A quick example:
+
+```js
+function example(){
+  console.log(arguments[0])
+}
+
+example(1,2,3);
+// 1
+```
+
+As you can see we accessed the first argument using an array notation `arguments[0]`.
+
+Similarly as what we saw with the `this` keyword, Arrow functions inherit the value of the `arguments object` from their parent scope.
+
+Let's have a look at this example with our previous list of runners:
 
 ```javascript
-const orderRunners = () => {
-  const runners = Array.from(arguments);
-  return runners.map((runner, i) => {
-    return `#{runner} was number #{i +1}`;
-   })
+const showWinner = () => {
+  const winner = arguments[0];
+  return `${winner} was the winner`
 }
+
+showWinner( "Usain Bolt", "Justin Gatlin", "Asafa Powell" )
 ```
 
 This code will return:
@@ -170,14 +206,28 @@ This code will return:
 ReferenceError: arguments is not defined
 ```
 
-To access all the arguments of an array, use old function notation, or the splat syntax. The name of the parameter does not matter (here it is called args to reduce confusion with `arguments`). 
+To access all the arguments passed to the function we can either use the old function notation or the spread syntax(which we will discuss more in Chapter 9)
+
+Remember that `arguments` it's just a keyword, it's not a variable name.
+
+Example with **arrow function**:
 
 ```javascript
-const orderRunners = (...args) => {
-  const runners = Array.from(args);
-  console.log(runners);
-  return runners.map((runner, i) => {
-    return `#{runner} was number #{i +1}`;
-  })
+const showWinner = (...args) => {
+  const winner = args[0];
+  return `${winner} was the winner`
 }
+showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell" )
+// "Usain Bolt was the winner"
+```
+
+Example with **function**:
+
+```js
+const showWinner = function() {
+  const winner = arguments[0];
+  return `${winner} was the winner`
+}
+showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell")
+// "Usain Bolt was the winner"
 ```
