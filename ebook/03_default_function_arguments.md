@@ -20,7 +20,7 @@ getLocation('Paris','France')
 // Europe France Paris
 ```
 
-As you can see our function taskes three arguments, a city, a country and a continent. In the function body we are checking if either country or continent are `undefined` and in that case we are giving them a **default value**.
+As you can see our function takes three arguments, a city, a country and a continent. In the function body we are checking if either country or continent are `undefined` and in that case we are giving them a **default value**.
 
 When calling `getLocation('Milan')` the second and third parameter (country and continent) are undefined and get replaced by the default values of our functions.
 
@@ -90,7 +90,7 @@ const bill = calculatePrice({ tip: 0.15, total:150 });
 
 We made the argument of our function an Object and when calling the function we don't even have to worry about the order of the parameters because they will be matched based on their key.
 
-In the example above the default value for *tip* was 0.05 and we overrode it with 0.15 but we didn't give a value to tax which remained the default 0.1.
+In the example above the default value for *tip* was 0.05 and we overwrote it with 0.15 but we didn't give a value to tax which remained the default 0.1.
 
 Notice this detail:
 

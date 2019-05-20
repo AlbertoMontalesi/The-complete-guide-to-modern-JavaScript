@@ -28,7 +28,7 @@ console.log(family);
 
 As you can see, at the end we tried to add "Dad" again,but the `Set` still remained the same because a `Set` can only take **unique values**.
 
-Let's continue using the same `Set` and see what method we can use on it.
+Let's continue using the same `Set` and see what methods we can use on it.
 
 ``` js
 family.size;

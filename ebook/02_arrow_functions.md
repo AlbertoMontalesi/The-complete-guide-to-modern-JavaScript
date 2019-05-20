@@ -56,7 +56,7 @@ const arrowFunction = name => `hello ${name}`;
 ```
 
 Both functions achieve the same result, but the new syntax allows you to be more concise.
-Beware! Readability is more important than conciceness so you might want to write your funciton like this if you are working in a team and not everybody is totally up-to-date with ES6.
+Beware! Readability is more important than conciseness so you might want to write your funciton like this if you are working in a team and not everybody is totally up-to-date with ES6.
 
 ```js
 const arrowFunction = (name) => {
@@ -208,7 +208,7 @@ ReferenceError: arguments is not defined
 
 To access all the arguments passed to the function we can either use the old function notation or the spread syntax(which we will discuss more in Chapter 9)
 
-Remember that `arguments` it's just a keyword, it's not a variable name.
+Remember that `arguments` is just a keyword, it's not a variable name.
 
 Example with **arrow function**:
 

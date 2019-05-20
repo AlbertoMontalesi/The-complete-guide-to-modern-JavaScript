@@ -33,7 +33,7 @@ Ok, now that I refreshed your knowledge of prototypal inheritance, let's have a 
 
 ## Create a `Class`
 
-There are two way of creating a class:
+There are two ways of creating a class:
 
 - class declaration
 - class expression
@@ -101,7 +101,7 @@ Person.info();
 
 ## `set` and `get`
 
-We use setter and getter methods to set and get values inside our `Class`.
+We can use setter and getter methods to set and get values inside our `Class`.
 
 ```js
 class Person {

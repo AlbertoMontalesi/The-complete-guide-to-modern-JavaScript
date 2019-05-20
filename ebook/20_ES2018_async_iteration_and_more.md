@@ -44,7 +44,7 @@ console.log(myObj)
 // {a: 1, b: 3, c: 5, d: 8, e: 15}
 ```
 
-With the spread operator we can easily create a clone of our `Object` so that when we modify the original `Object`, the clone does not get modified, similarly to what we saw when we discusse about arrays.
+With the spread operator we can easily create a clone of our `Object` so that when we modify the original `Object`, the clone does not get modified, similarly to what we saw when we talked about arrays.
 
 &nbsp;
 
