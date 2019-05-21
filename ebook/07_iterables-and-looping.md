@@ -117,7 +117,7 @@ for (const digit of digits) {
 // 1 3 5 7 9
 ```
 
-The last important difference I want to talk is that the `for in` loop will iterate over new properties added to the object.
+The last important difference I want to talk about is that the `for in` loop will iterate over new properties added to the object.
 
 ```js
 const fruit = ["apple","banana", "orange"];

@@ -99,7 +99,7 @@ var name = "myname";
 var person = {}
 // update the object
 person[name] = "Alberto";
-console.log(person.name);
+console.log(person.myname);
 // Alberto
 ```
 
@@ -112,6 +112,6 @@ const name = "myname";
 const person = {
   [name]:"Alberto",
 };
-console.log(person.name);
+console.log(person.myname);
 // Alberto
 ```

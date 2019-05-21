@@ -247,7 +247,7 @@ Promise
 // first value second value
 ```
 
-Our values returned together, after 1000ms (the timeout of the *second* promise) meaning that the first one had to wait the completion of the second one.
+Our values returned together, after 1000ms (the timeout of the *second* promise) meaning that the first one had to wait for the completion of the second one.
 
 If we were to pass an empty iterable then it will return an already resolved promise.
 
@@ -274,7 +274,7 @@ Promise
   // Error: oooops error
 ```
 
-`Promise.race()` on the other hand returns a promises that resolves or rejects as soon as one of the promises in the iterable resolves or reject, with the value from that promise.
+`Promise.race()` on the other hand returns a promise that resolves or rejects as soon as one of the promises in the iterable resolves or reject, with the value from that promise.
 
 ``` js
 const promise1 =  new Promise((resolve,reject) => {

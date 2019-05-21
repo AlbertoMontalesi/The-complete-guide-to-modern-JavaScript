@@ -128,7 +128,7 @@ Object.getOwnPropertyDescriptors(myObj);
 
 ## Trailing commas in function parameter lists and calls
 
-This is just a minor change to a syntax. Now, when writing objects we can to leave a trailing comma after each parameter, whether or not it is the last one.
+This is just a minor change to a syntax. Now, when writing objects we can leave a trailing comma after each parameter, whether or not it is the last one.
 
 ``` js
 // from this

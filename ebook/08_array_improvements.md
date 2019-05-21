@@ -4,7 +4,7 @@
 
 `Array.from()` is the first of the many new array methods that ES6 introduced.
 
-It will take something **arrayish**, meaning something that looks like an array but it isn't, and transform it into a real array.
+It will take something **arrayish**, meaning something that looks like an array but isn't, and transform it into a real array.
 
 ```html
 <div class="fruits">

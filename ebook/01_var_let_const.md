@@ -125,7 +125,7 @@ let j = "I am a let";
 `var` can be accessed **before** they are defined, but we can't access their **value**.
 `let` and `const` can't be accessed **before we define them**.
 
-Despite what you may read on other sources, both `var` and `let`(and `const`) are subject to **hoisting** which measn thath they are processe before any code is executed and lifted up to the top of their scope (whether it's global or block).
+Despite what you may read on other sources, both `var` and `let`(and `const`) are subject to **hoisting** which means that they are processed before any code is executed and lifted up to the top of their scope (whether it's global or block).
 
 The main differences lays in the fact that `var` can still be accessed before they are defined, causing the value to be `undefined` while on the other hand, `let` variables sit in a **temporal dead zone** until they are declared, causing an error when accessed before initialization which makes it easier to debug code rather than having an `undefined` as the result.
 
