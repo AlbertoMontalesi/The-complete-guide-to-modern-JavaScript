@@ -4,11 +4,9 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook.svg)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook.svg)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/network)
-[![GitHub issues](https://img.shields.io/github/issues/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook.svg)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/issues)
 [![Github All Releases](https://img.shields.io/github/downloads/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/total.svg)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook)
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/pulls)
-[![HitCount](http://hits.dwyl.io/albertomontalesi/JavaScript-es6-and-beyond-ebook.svg)](http://hits.dwyl.io/albertomontalesi/JavaScript-es6-and-beyond-ebook)
 
 
 # [The Complete Guide to Modern JavaScript ](https://www.amazon.com/dp/B07S2M3FVV)
