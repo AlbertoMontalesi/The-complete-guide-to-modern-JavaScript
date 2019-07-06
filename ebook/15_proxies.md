@@ -17,7 +17,7 @@ var x = new Proxy(target,handler)
 ```
 
 - our `target` can be anything, from an object, to a function, to another `Proxy`
-- a `handler` is an object which will define the behavior of our `Proxy` when an operation is performed on it.
+- a `handler` is an object which will define the behavior of our `Proxy` when an operation is performed on it
 
 ``` js
 // our object

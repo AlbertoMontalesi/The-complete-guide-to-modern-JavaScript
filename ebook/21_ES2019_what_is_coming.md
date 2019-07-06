@@ -6,7 +6,7 @@ In this chapter we will look at what is coming with the latest version of EcmaSc
 
 ## Array.prototype.flat() / Array.prototype.flatMap()
 
-`Array.prototype.flat()` will flatten the array recursively up to the depth that we specify. If no dept argument is specified, 1 is the default value. We can use `Infinity` to flatten all nested arrays.
+`Array.prototype.flat()` will flatten the array recursively up to the depth that we specify. If no depth argument is specified, 1 is the default value. We can use `Infinity` to flatten all nested arrays.
 
 ```js
 const letters = ['a', 'b', ['c', 'd', ['e', 'f']]];
@@ -63,7 +63,7 @@ const obj = Object.fromEntries(keyValueArray)
 
 We can pass any iterable as argument of `Object.fromEntries()`, whether it's an `Array`, a `Map` or other objects implementing the iterable protocol.
 
-You can read more about the iterable protocol here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol;
+You can read more about the iterable protocol here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol
 
 &nbsp;
 
@@ -112,7 +112,7 @@ try {
 }
 ```
 
-This is useful when you want to ignore the error. For a more detailed list of use cases for this I highly recommend this article: [http://2ality.com/2017/08/optional-catch-binding.html](http://2ality.com/2017/08/optional-catch-binding.html)
+This is useful when you want to ignore the error. For a more detailed list of use cases for this I highly recommend this article: http://2ality.com/2017/08/optional-catch-binding.html
 
 &nbsp;
 

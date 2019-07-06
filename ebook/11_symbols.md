@@ -82,7 +82,7 @@ console.log(symbols);
 ​// length: 3
 ```
 
-We retrieved the array but to be able to access the properties we havee to use `map`.
+We retrieved the array but to be able to access the properties we have to use `map`.
 
 ```js
 const symbols = Object.getOwnPropertySymbols(office);

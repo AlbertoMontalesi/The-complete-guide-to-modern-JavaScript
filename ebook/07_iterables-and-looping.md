@@ -59,7 +59,7 @@ for (const prop of Object.keys(car)){
 
 ## The `for in` loop
 
-Even though it is not a new ES6 loop, let's look at the `for in` loop to understand what differentiate it compared to the `for of`.
+Even though it is not a new ES6 loop, let's look at the `for in` loop to understand what differentiates it to the `for of` loop.
 
 The `for in` loop is a bit different because it will iterate over all the [enumerable properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object in no particular order.
 
@@ -103,7 +103,7 @@ for (let i of list) {
 `for in` will return a list of keys whereas the `for of` will return a list of values of the numeric properties of the object being iterated.
 
 
-Another differences is that we **can** stop a `for of` loop but we can't do the same with a `for in` loop.
+Another difference is that we **can** stop a `for of` loop but we can't do the same with a `for in` loop.
 
 ```js
 const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];

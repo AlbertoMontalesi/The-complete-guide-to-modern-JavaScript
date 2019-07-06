@@ -1,6 +1,6 @@
 # Chapter 5: Additional string methods
 
-There are many methods that we can use againt strings. Here's a list of a few of them:
+There are many methods that we can use against strings. Here's a list of a few of them:
 
 ```js
 // .length()
