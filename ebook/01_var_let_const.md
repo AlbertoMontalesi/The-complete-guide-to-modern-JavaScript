@@ -104,11 +104,9 @@ In this case we are not reassigning the whole variable but just one of its prope
 
 ## The temporal dead zone
 
-Now we will have a look at a very important concept which may sound complicate from its name, but i reassure you it is not.
+Now we will have a look at a very important concept which may sound complicated from its name, but I assure you it is not.
 
 First let's have a look at a simple example:
-
-Let's look at an example:
 
 ```javascript
 console.log(i);
@@ -143,7 +141,7 @@ The first opinion comes from [Mathias Bynes:](https://mathiasbynens.be/notes/es6
 - `var` should never be used in ES6.
 
 
-The second opinion comes from [Kyle Simpson:]( blog.getify.com/constantly-confusing-const/)
+The second opinion comes from [Kyle Simpson:](https://me.getify.com/)
 
 - Use `var` for top-level variables that are shared across many (especially larger) scopes.
 - Use `let` for localized variables in smaller scopes.
