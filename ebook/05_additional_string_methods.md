@@ -2,24 +2,40 @@
 
 There are many methods that we can use against strings. Here's a list of a few of them:
 
-```js
-// .length()
-const str = 'hello'
-str.length() // 5
-// .indexOf()
-const str2 = 'this is a short sentence'
-str2.indexOf('short'); // 10
-// slice()
-const str3 = 'pizza, orange, cereals'
-str3.slice(0,5) // 'pizza'
-// toUppercase() / toLowerCase()
-const str4 = 'lowercase'
-str4.toUpperCase(); // 'LOWERCASE'
-const str5 = 'UPPERCASE'
-str5.toLowerCase() // 'uppercase'
-```
+  1. **indexOf()**
+  
+  Gets the position of the first occurence of the specified value in a string.
+  ```js
+  const str = "this is a short sentence";
+  str.indexOf("short");
+  // Output: 10
+  ```
+  2. **slice()**
+  
+  Pulls a specified part of a string as a new string.
+  ```js
+  const str = "pizza, orange, cereals"
+  str.slice(0, 5);
+  // Output: "pizza"
+  ```
+  3. **toUpperCase()**
+  
+  Turns all characters of a string to uppercase.
+  ```js
+  const str = "i ate an apple"
+  str.toUpperCase()
+  // Output: "I ATE AN APPLE"
+  ```
+  4. **toLowerCase()**
+  
+  Turns all characters of a string to lowercase.
+  ```
+  const str = "I ATE AN APPLE"
+  str.toLowerCase()
+  // Output: "i ate an apple"
+  ```
 
-There are many more methods, these were just a few as a reminder.
+There are many more methods, these were just a few as a reminder. Check the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#) for a more in-depth description on the above methods.
 
 &nbsp;
 
