@@ -2,7 +2,7 @@
 
 ## `Array.from()`
 
-`Array.from()` is the first of the many new array methods that ES6 introduced.
+`Array.from()` is the first of many new array methods that ES6 introduced.
 
 It will take something **arrayish**, meaning something that looks like an array but isn't, and transform it into a real array.
 

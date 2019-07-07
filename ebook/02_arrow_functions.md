@@ -78,7 +78,7 @@ console.log(results);
 // {name: "Asafa Powell", race: "100m dash", place: 3}]
 ```
 
-To tell JavaScript that what's inside the curly braces is an **object literal** that we want to implicitly return, we need to wrap everything inside parenthesis.
+To tell JavaScript what's inside the curly braces is an **object literal** we want to implicitly return, we need to wrap everything inside parenthesis.
 
 Writing `race` or `race: race` is the same.
 
@@ -121,7 +121,7 @@ box.addEventListener("click", function() {
 ```
 
 
-The problem in this case is that the first `this` is bound to the `const` box but the second one, inside the `setTimeout`, will be set to the `Window` object, trowing this error:
+The problem in this case is that the first `this` is bound to the `const` box but the second one, inside the `setTimeout`, will be set to the `Window` object, throwing this error:
 
 ``` javascript
 Uncaught TypeError: cannot read property "toggle" of undefined 
@@ -187,7 +187,7 @@ example(1,2,3);
 
 As you can see we accessed the first argument using an array notation `arguments[0]`.
 
-Similarly as what we saw with the `this` keyword, Arrow functions inherit the value of the `arguments object` from their parent scope.
+Similarly to what we saw with the `this` keyword, Arrow functions inherit the value of the `arguments object` from their parent scope.
 
 Let's have a look at this example with our previous list of runners:
 

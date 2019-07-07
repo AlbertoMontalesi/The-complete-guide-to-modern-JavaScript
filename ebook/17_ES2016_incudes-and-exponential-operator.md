@@ -1,6 +1,6 @@
 # Chapter 17: Everything new in ES2016
 
-ES2016 introduced only two new features :
+ES2016 introduced only two new features:
 
 - `Array.prototype.includes()`
 - The exponential operator
@@ -24,7 +24,7 @@ array.includes(3);
 
 ### Combine `includes()` with `fromIndex`
 
-We can provide `.includes()` with an index where to begin searching for an element. Default is 0, but we can also pass a negative value.
+We can provide `.includes()` with an index to begin searching for an element. Default is 0, but we can also pass a negative value.
 
 The first value we pass in is the element to search and the second one is the index:
 
@@ -43,7 +43,7 @@ array.includes(11,-3);
 // true
 ```
 
-`array.includes(5,4);` returned `false` because, despite the array actually contains the number 5, it is found at the index 2 but we started looking at position 4. That's why we couldn't find it and it returned `false`.
+`array.includes(5,4);` returned `false` because, despite the array actually containing the number 5, it is found at the index 2 but we started looking at position 4. That's why we couldn't find it and it returned `false`.
 
 `array.includes(1,-1);` returned `false` because we started looking at the index -1 (which is the last element of the array) and then continued from that point onward.
 

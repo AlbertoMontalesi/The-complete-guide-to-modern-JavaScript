@@ -109,7 +109,7 @@ Let's break down what we just did:
 - to create an `async` function we need to put the `async` keyword in front of it
 - the keyword will tell JavaScript to always return a promise
 - if we specify to `return <non-promise>` it will return a value wrapped inside a promise
-- the `await` keyword **only** works inside an `async` function.
+- the `await` keyword **only** works inside an `async` function
 - as the name implies, `await` will tell JavaScript to wait until the promise returns its result
 
 Let's see what happens if we try to use `await` outside an `async` function
@@ -153,7 +153,7 @@ asyncFunc();
 // TypeError: failed to fetch
 ```
 
-We use `try...catch` to grab the error, but in a case where  we do not have them we can still catch the error like this:
+We use `try...catch` to grab the error, but in a case where we do not have them we can still catch the error like this:
 
 ``` js
 async function asyncFunc(){

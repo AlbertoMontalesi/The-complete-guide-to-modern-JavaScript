@@ -101,7 +101,7 @@ Notice this detail:
   tip = 0.05} = {}
 ```
 
-If we don't default our argument Object to an empty Object, if we were to try and run `calculatePrice()` we would get:
+If we don't default our argument Object to an empty Object, and we were to try and run `calculatePrice()` we would get:
 
 ```js
 Cannot destructure property `total` of 'undefined' or 'null'.

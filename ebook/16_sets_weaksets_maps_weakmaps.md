@@ -26,7 +26,7 @@ console.log(family);
 // Set [ "Dad", "Mom", "Son" ]
 ```
 
-As you can see, at the end we tried to add "Dad" again,but the `Set` still remained the same because a `Set` can only take **unique values**.
+As you can see, at the end we tried to add "Dad" again, but the `Set` still remained the same because a `Set` can only take **unique values**.
 
 Let's continue using the same `Set` and see what methods we can use on it.
 
@@ -49,7 +49,7 @@ family;
 
 As you can see a `Set` has a `size` property and we can `delete` an item from it or use `clear` to delete all the items from it.
 
-We can also notice that a `Set` does not have keys so when we call `.keys()` we get the same as calling `.values()` or `.entries()`.
+We can also notice that a `Set` does not have keys, so when we call `.keys()` we get the same result as calling `.values()` or `.entries()`.
 
 &nbsp;
 
@@ -137,7 +137,7 @@ As you can see after a few seconds **dad** was removed and *garbage collected*. 
 
 ## What is a `Map`?
 
-A `Map` is similar to a `Set`, but they have key and value pairs.
+A `Map` is similar to a `Set`, but they have key/value pairs.
 
 ```js
 const family = new Map();

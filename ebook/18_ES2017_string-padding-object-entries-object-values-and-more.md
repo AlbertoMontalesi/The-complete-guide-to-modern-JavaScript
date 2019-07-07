@@ -1,6 +1,6 @@
 # Chapter 18: ES2017 string padding, `Object.entries()`, `Object.values()` and more
 
-ES2017 introduced many new cool features, which we are going to see here.
+ES2017 introduced many cool new features, which we are going to see here.
 
 ## String padding (`.padStart()` and `.padEnd()`)
 
@@ -13,8 +13,8 @@ We can now add some padding to our strings, either at the end (`.padEnd()`) or a
 // "hello "
 ```
 
-We specified that we want 6 as our padding, but why in both cases we got only 1 space?
-It happens because `padStart` and `padEnd` will go and fill the **empty spaces**. In our example "hello" is 5 letters, and our padding is 6, which leaves only 1 empty space.
+We specified that we want 6 as our padding, so then why in both cases did we only get 1 space?
+It happened because `padStart` and `padEnd` will go and fill the **empty spaces**. In our example "hello" is 5 letters, and our padding is 6, which leaves only 1 empty space.
 
 Look at this example:
 
@@ -85,7 +85,7 @@ family.father;
 "Jonathan Kent"
 ```
 
-`Object.keys()` returned us only the keys of the object that we then had to use to access the values.
+`Object.keys()` returned only the keys of the object that we then had to use to access the values.
 
 We now have two more ways of accessing our objects:
 
@@ -145,7 +145,7 @@ const object = {
 ```
 
 Notice how I wrote a comma at the end of the second property.
-It will not throw any error if you don't put it, but it's a better practice to follow as it will make the life easier to your colleague or team members.
+It will not throw any error if you don't put it, but it's a better practice to follow as it will make your colleague or team members life easier.
 
 ```js
 // I write

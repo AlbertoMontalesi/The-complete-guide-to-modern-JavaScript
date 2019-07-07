@@ -16,7 +16,7 @@ console.log(greeting);
 // Hello my name is Alberto
 ```
 
-In ES6 we can use backticks to make our life easier.
+In ES6 we can use backticks to make our lives easier.
 
 ``` javascript
 let name  = "Alberto";
@@ -99,7 +99,7 @@ return isFridgeEmpty ? "$10" : "20"
 // $20
 ```
 
-If the condition before the `?` can be converted to `true` then the first value is returned, else it's the value after the `:` that get returned.
+If the condition before the `?` can be converted to `true` then the first value is returned, else it's the value after the `:` that gets returned.
 
 
 ``` js

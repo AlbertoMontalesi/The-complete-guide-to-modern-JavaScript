@@ -21,7 +21,7 @@ Whether you are a complete beginner or you have some knowledge in JavaScript, th
 
 After reading this book, Let Const, generators, promises and async won't be a problem anymore.
 
-If you want to experience something new, this book also includes an introduction to the basics of TypeScript, a must-know for any JavaScript develop in 2019.
+If you want to experience something new, this book also includes an introduction to the basics of TypeScript, a must-know for any JavaScript developer in 2019.
 
 ## Where to buy it
 
@@ -29,7 +29,7 @@ You can purchase this ebook on amazon.com at this [link](https://www.amazon.com/
 
 You can also read my articles on my blog [here](https://www.inspiredwebdev.com/).
 
-The ebook includes two sections dedicated to the basics of JavaScript and TypeScript and also contains 50+ extra quizzes for your to practice and test your knowledge after reading each chapter.
+The ebook includes two sections dedicated to the basics of JavaScript and TypeScript and also contains 50+ extra quizzes for you to practice and test your knowledge after reading each chapter.
 You can have a look at the quizzes from the first two chapters in the `quizzes` folder.
 
 ## About me

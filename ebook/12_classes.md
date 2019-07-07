@@ -53,7 +53,7 @@ const person = class Person {
 
 Let's start creating our first `Class`.
 
-We only need a method called `constructor` (remember to add only one constructor, a `SyntaxError` will be thrown if the class contains more than one constructor methods).
+We only need a method called `constructor` (remember to add only one constructor, a `SyntaxError` will be thrown if the class contains more than one constructor method).
 
 ``` js
 class Person {

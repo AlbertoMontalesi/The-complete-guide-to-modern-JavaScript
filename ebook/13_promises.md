@@ -126,13 +126,13 @@ myPromise
 
 We use `.then()` to grab the value when the promise resolves and `.catch()` when the promise rejects.
 
-If you see our error log you can see that it tells us where the error occured, that is because we wrote `reject(Error("this is our error"));` and not simply `reject("this is our error");`.
+Looking at our error log you can see that it tells us where the error occured, that is because we wrote `reject(Error("this is our error"));` and not simply `reject("this is our error");`.
 
 &nbsp;
 
 ### Chaining promises
 
-We can chain promises one after the other, using what was returned from the previous one as the base for the subsequent one, whether the promise resolved or got rejected.
+We can chain promises one after the other, using what was returned from the previous one as the base for the subsequent one, whether the promise was resolved or rejected.
 
 ``` js
 const myPromise = new Promise((resolve, reject) => {
@@ -251,7 +251,7 @@ Our values returned together, after 1000ms (the timeout of the *second* promise)
 
 If we were to pass an empty iterable then it will return an already resolved promise.
 
-If one of the promise was rejected, all of them would asynchronously reject with the value of that rejection, no matter if they resolved.
+If one of the promises was rejected, all of them would asynchronously reject with the value of that rejection, even if they resolved.
 
 ```js
 const promise1 =  new Promise((resolve,reject) => {
@@ -261,7 +261,7 @@ const promise2 =  new Promise((resolve,reject) => {
   reject(Error("oooops error"));
 });
 
-// one of the two promise will fail, but `.all` will return only a rejection.
+// one of the two promises will fail, but `.all` will return only a rejection.
 Promise
   .all([promise1, promise2])
   .then(data => {
@@ -274,7 +274,7 @@ Promise
   // Error: oooops error
 ```
 
-`Promise.race()` on the other hand returns a promise that resolves or rejects as soon as one of the promises in the iterable resolves or reject, with the value from that promise.
+`Promise.race()` on the other hand returns a promise that resolves or rejects as soon as one of the promises in the iterable resolves or rejects, with the value from that promise.
 
 ``` js
 const promise1 =  new Promise((resolve,reject) => {
@@ -291,4 +291,4 @@ Promise.race([promise1, promise2]).then(function(value) {
 // expected output: "second value"
 ```
 
-If we passed an empty iterable, the race would be pending forever!.
+If we passed an empty iterable, the race would be pending forever!

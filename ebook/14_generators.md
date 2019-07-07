@@ -49,22 +49,22 @@ const fruitList = ['Banana','Apple','Orange','Melon','Cherry','Mango'];
 // create our looping generator
 function* loop(arr) {
   for (const item of arr) {
-    yield `I like to eat ${item}`;
+    yield `I like to eat ${item}s`;
   }
 }
 
 
 const fruitGenerator = loop(fruitList);
 fruitGenerator.next();
-// Object { value: "I like to eat Banana", done: false }
+// Object { value: "I like to eat Bananas", done: false }
 fruitGenerator.next();
-// Object { value: "I like to eat Apple", done: false }
+// Object { value: "I like to eat Apples", done: false }
 fruitGenerator.next().value;
-// "I like to eat Orange"
+// "I like to eat Oranges"
 ```
 
-- Our new generator will loop over the array and print one value at a time every time we call `.next()`.
-- if you are only concerned about getting the value, then use `.next().value` and it will not print the status of the generator
+- Our new generator will loop over the array and print one value at a time every time we call `.next()`
+- If you are only concerned about getting the value, then use `.next().value` and it will not print the status of the generator
 
 &nbsp;
 
@@ -113,21 +113,21 @@ myGenerator.throw("ooops");
 // Object { value: undefined, done: true }
 ```
 
-As you can see when we called `.throw()` the `generator` returned us the error and  finished even though we still had one more `yield` to execute.
+As you can see when we called `.throw()` the `generator` returned us the error and finished even though we still had one more `yield` to execute.
 
 &nbsp;
 
 ## Combining Generators with Promises
 
-As we have previously seen, Promises are very useful for asynchronous programming, and by combining them with generators we can have a very powerful tool at our disposal to avoid problems like the *callback hell*.
+As we have previously seen, Promises are very useful for asynchronous programming, and by combining them with generators we have a very powerful tool at our disposal to avoid problems like the *callback hell*.
 
-As we are solely discussing ES6, I won't be talking about async functions as they were introduce in ES2017 but know that the way they work is based on what you will see now.
+As we are solely discussing ES6, I won't be talking about async functions as they were introduced in ES2017, but know that the way they work is based on what you will see now.
 
 You can read more about async functions in Chapter 19.
 
-Using a Generator in combination with a `Promise` will allow us to write asynchronous code that feels like synchronous.
+Using a Generator in combination with a `Promise` will allow us to write asynchronous code that feels like synchronous code.
 
-What we want to do is to wait for a promise to resolve and then pass the resolved value back into our generator in the `.next()` call.
+What we want to do is wait for a promise to resolve and then pass the resolved value back into our generator in the `.next()` call.
 
 ``` js
 const myPromise = () => new Promise((resolve) => {
@@ -142,7 +142,7 @@ function* gen() {
   yield result + ' 2';
 };
 
-// Call the async function and pass params.
+// Call the async function and pass params
 const asyncFunc = gen();
 asyncFunc.next();
 // call the promise and wait for it to resolve
