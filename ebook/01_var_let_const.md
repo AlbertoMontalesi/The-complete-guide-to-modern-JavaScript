@@ -100,6 +100,26 @@ In this case we are not reassigning the whole variable but just one of its prope
 
 ---
 
+Note: We can still freeze the const object, which will not change the contents of the object (but trying to change the values of object Javascript will not throw any error)
+
+``` javascript
+const person = {
+  name: 'Alberto',
+  age: 25,
+}
+
+person.age = 26;
+console.log(person.age);
+// 26
+
+Object.freeze(person)
+
+person.age = 30;
+
+console.log(person.age);
+// 26
+```
+
 &nbsp;
 
 ## The temporal dead zone
