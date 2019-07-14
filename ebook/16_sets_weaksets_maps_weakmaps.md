@@ -151,7 +151,7 @@ family;
 family.size;
 // 3
 
-family.forEach((key,val) => console.log(val,key));
+family.forEach((val,key) => console.log(key,val));
 // Dad 40
 // Mom 50
 // Son 20
