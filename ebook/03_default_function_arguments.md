@@ -88,10 +88,6 @@ const bill = calculatePrice({ tip: 0.15, total:150 });
 // 187.5
 ```
 
-const bill = calculatePrice({ tip: 0.15, total:150 });
-// 187.5
-```
-
 We made the argument of our function an Object and when calling the function we don't even have to worry about the order of the parameters because they will be matched based on their key.
 
 In the example above the default value for *tip* was 0.05 and we overwrote it with 0.15 but we didn't give a value to tax which remained the default 0.1.
