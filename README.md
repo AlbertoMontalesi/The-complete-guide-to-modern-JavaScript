@@ -12,7 +12,7 @@
 
 ## Discover all the new features introduced to JavaScript from 2015 to 2019
 
-[![book-cover](/assets/banner.png)](http://bit.ly/2VV2LbX)
+[![book-cover](/assets/banner.jpg)](http://bit.ly/2VV2LbX)
 
 ## Who is this book for ?
 
