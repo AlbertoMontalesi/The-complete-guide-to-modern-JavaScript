@@ -8,7 +8,7 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/pulls)
 
-# [The Complete Guide to Modern JavaScript ](http://bit.ly/2VV2LbX)
+# [The Complete Guide to Modern JavaScript ](https://amzn.to/2H76VUz)
 
 ## Discover all the new features introduced to JavaScript from 2015 to 2019
 
@@ -42,7 +42,7 @@ The Paid version gives you access to:
 You get the ebook on Amazon and Leanpub, check the following link to find your local amazon store:
 
 - Leanpub: [Ebook](https://leanpub.com/thecompleteguidetomodernjavascript2019)
-- Amazon USA: [Ebook](https://www.amazon.com/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.com/dp/1080031294) | [Paperback full color](https://www.amazon.com/dp/1099295688)
+- Amazon USA: [Ebook](https://amzn.to/2H76VUz) | [Paperback Black and White](https://https://amzn.to/2z7BfKo) | [Paperback full color](https://www.amazon.com/dp/1099295688)
 - Amazon UK: [Ebook](https://www.amazon.co.uk/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.co.uk/dp/1080031294) | [Paperback full color](https://www.amazon.co.uk/dp/1099295688)
 - Amazon GERMANY: [Ebook](https://www.amazon.de/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.de/dp/1080031294) | [Paperback full color](https://www.amazon.de/dp/1099295688)
 - Amazon FRANCE: [Ebook](https://www.amazon.fr/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.fr/dp/1080031294) | [Paperback full color](https://www.amazon.fr/dp/1099295688)
