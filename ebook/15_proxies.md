@@ -37,7 +37,7 @@ const dogProxy = new Proxy(dog, {
 dogProxy.breed;
 // "GERMAN SHEPHARD"
 dogProxy.breed = "Labrador";
-// changing breed to... 
+// changing breed to...
 // "Labrador"
 dogProxy.breed;
 // "LABRADOR"

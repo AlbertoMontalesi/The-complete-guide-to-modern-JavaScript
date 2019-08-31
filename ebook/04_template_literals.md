@@ -64,7 +64,7 @@ how are you?\ "
 
 In ES6 we simply have to wrap everything inside backticks, no more backslashes on each line.
 
-``` javascript 
+``` javascript
 const content = `hello,
 my name is Alberto
 how are you?`;
@@ -100,7 +100,6 @@ return isFridgeEmpty ? "$10" : "$20"
 ```
 
 If the condition before the `?` can be converted to `true` then the first value is returned, else it's the value after the `:` that gets returned.
-
 
 ``` js
 // create an artist with name and age
@@ -148,7 +147,7 @@ const groceries = {
 // this function will map each individual value of our groceries
 function groceryList(others) {
   return `
-    <p> 
+    <p>
       ${others.map( other => ` <span> ${other}</span>`).join(' ')}
     </p>
   `;

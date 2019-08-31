@@ -52,7 +52,7 @@ fs.readdir(source, function (err, files) {
 
 We try to write our code in a way where executions happens visually from top to bottom, causing excessive nesting on functions and result in what you can see above.
 
-To improve your callbacks you can check out http://callbackhell.com/
+To improve your callbacks you can check out [http://callbackhell.com/](http://callbackhell.com/)
 
 Here we will focus on how to write promises.
 
@@ -191,7 +191,7 @@ We did not get "first value" because we threw an error therefore we only got the
 ```js
 //Promise.resolve()
 Promise.resolve('Success').then(function(value) {
-  console.log(value); 
+  console.log(value);
   // "Success"
 }, function(value) {
   // not called

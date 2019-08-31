@@ -33,7 +33,7 @@ They both have the same value, but we will never have naming collisions with Sym
 
 As we mentioned earlier we can use them to create identifiers for object properties, so let's see an example:
 
-``` js 
+``` js
 const office = {
   "Tom" : "CEO",
   "Mark": "CTO",

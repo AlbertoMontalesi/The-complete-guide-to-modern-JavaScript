@@ -63,13 +63,13 @@ const obj = Object.fromEntries(keyValueArray)
 
 We can pass any iterable as argument of `Object.fromEntries()`, whether it's an `Array`, a `Map` or other objects implementing the iterable protocol.
 
-You can read more about the iterable protocol here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol
+You can read more about the iterable protocol here: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol)
 
 &nbsp;
 
 ## String.prototype.trimStart() / .trimEnd()
 
-`String.prototype.trimStart()` removes whitespace from the beginning of a string while `String.prototype.trimEnd()` removes them from the end.
+`String.prototype.trimStart()` removes white space from the beginning of a string while `String.prototype.trimEnd()` removes them from the end.
 
 ```js
 let str = "    this string has a lot of whitespace   ";
@@ -112,7 +112,7 @@ try {
 }
 ```
 
-This is useful when you want to ignore the error. For a more detailed list of use cases for this I highly recommend this article: http://2ality.com/2017/08/optional-catch-binding.html
+This is useful when you want to ignore the error. For a more detailed list of use cases for this I highly recommend this article: [http://2ality.com/2017/08/optional-catch-binding.html](http://2ality.com/2017/08/optional-catch-binding.html)
 
 &nbsp;
 

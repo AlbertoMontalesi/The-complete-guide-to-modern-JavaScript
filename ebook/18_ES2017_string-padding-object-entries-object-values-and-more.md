@@ -163,7 +163,6 @@ const object = {
 // suddenly, he gets an error because he did not notice that I forgot to leave a comma at the end of the last parameter.
 ```
 
-
 &nbsp;
 
 ## Shared memory and `Atomics`

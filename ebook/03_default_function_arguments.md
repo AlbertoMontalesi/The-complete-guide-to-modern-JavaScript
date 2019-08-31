@@ -108,9 +108,9 @@ If we don't default our argument Object to an empty Object, and we were to try a
 Cannot destructure property `total` of 'undefined' or 'null'.
 ```
 
-By writing ` = {}` we default our argument to an `Object` and no matter what argument we pass in the function, it will be an `Object`:
+By writing `= {}` we default our argument to an `Object` and no matter what argument we pass in the function, it will be an `Object`:
 
-``` js
+```js
 calculatePrice({});
 // 0
 calculatePrice();

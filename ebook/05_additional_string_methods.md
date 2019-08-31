@@ -2,38 +2,45 @@
 
 There are many methods that we can use against strings. Here's a list of a few of them:
 
-  1. **indexOf()**
-  
-  Gets the position of the first occurence of the specified value in a string.
-  ```js
-  const str = "this is a short sentence";
-  str.indexOf("short");
-  // Output: 10
-  ```
-  2. **slice()**
-  
-  Pulls a specified part of a string as a new string.
-  ```js
-  const str = "pizza, orange, cereals"
-  str.slice(0, 5);
-  // Output: "pizza"
-  ```
-  3. **toUpperCase()**
-  
-  Turns all characters of a string to uppercase.
-  ```js
-  const str = "i ate an apple"
-  str.toUpperCase()
-  // Output: "I ATE AN APPLE"
-  ```
-  4. **toLowerCase()**
-  
-  Turns all characters of a string to lowercase.
-  ```
-  const str = "I ATE AN APPLE"
-  str.toLowerCase()
-  // Output: "i ate an apple"
-  ```
+1. **indexOf()**
+
+Gets the position of the first occurrence of the specified value in a string.
+
+```js
+const str = "this is a short sentence";
+str.indexOf("short");
+// Output: 10
+```
+
+2. **slice()**
+
+Pulls a specified part of a string as a new string.
+
+```js
+const str = "pizza, orange, cereals"
+str.slice(0, 5);
+// Output: "pizza"
+```
+
+1. **toUpperCase()**
+
+Turns all characters of a string to uppercase.
+
+```js
+const str = "i ate an apple"
+str.toUpperCase()
+// Output: "I ATE AN APPLE"
+```
+
+4. **toLowerCase()**
+
+Turns all characters of a string to lowercase.
+
+```JS
+const str = "I ATE AN APPLE"
+str.toLowerCase()
+// Output: "i ate an apple"
+```
 
 There are many more methods, these were just a few as a reminder. Check the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#) for a more in-depth description on the above methods.
 
@@ -41,7 +48,7 @@ There are many more methods, these were just a few as a reminder. Check the [MDN
 
 ## Additional string methods
 
-ES6 intoduced 4 new string methods:
+ES6 introduced 4 new string methods:
 
 - `startsWith()`
 - `endsWith()`

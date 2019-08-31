@@ -3,7 +3,6 @@
 Quoting MDN:
 > classes are primarily syntactical sugar over js's existing prototype-based inheritance. The class syntax **does not** introduce a new object-oriented inheritance model to JavaScript.
 
-
 That being said, let's review prototypal inheritance before we jump into classes.
 
 ``` js
@@ -83,7 +82,7 @@ As you can see everything works just like before. As we mentioned at the beginni
 
 ## Static methods
 
-Right now the two new methods that we created, `greet()` and `farewell()` can be accessed by every new instance of `Person`, but what if we want a method that can only be accessed by the class itself, similarily to `Array.of()` for arrays?
+Right now the two new methods that we created, `greet()` and `farewell()` can be accessed by every new instance of `Person`, but what if we want a method that can only be accessed by the class itself, similarly to `Array.of()` for arrays?
 
 ```js
 static info(){
@@ -135,7 +134,6 @@ alberto.nicknames;
 
 What if we want to have a new `Class` that inherits from our previous one? We use `extends`:
 
-
 ``` js
 // our initial class
 class Person {
@@ -179,7 +177,7 @@ class Adult extends Person {
 }
 ```
 
-Why did we set `super(name,age)` ? Because our `Adult` class inherits name and age from the `Person` therefore we don't need to redeclare them. 
+Why did we set `super(name,age)` ? Because our `Adult` class inherits name and age from the `Person` therefore we don't need to redeclare them.
 Super will simply create a new Person for us.
 
 If we now run the code again we will get this:
@@ -203,7 +201,7 @@ We want to create something like this, something similar to an array where the f
 
 ``` js
 // we create a new Classroom
-const myClass = new Classroom('1A',[ 
+const myClass = new Classroom('1A',[
   {name: "Tim", mark: 6},
   {name: "Tom", mark: 3},
   {name: "Jim", mark: 8},
@@ -221,12 +219,12 @@ class Classroom extends Array {
     super(...students);
     this.name = name;
     // we create a new method to add students
-  } 
+  }
   add(student){
     this.push(student);
   }
 }
-const myClass = new Classroom('1A', 
+const myClass = new Classroom('1A',
   {name: "Tim", mark: 6},
   {name: "Tom", mark: 3},
   {name: "Jim", mark: 8},

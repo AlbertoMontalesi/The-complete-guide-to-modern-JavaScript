@@ -6,4 +6,4 @@ I hope that you found it useful and if that is the case I suggest you to follow 
 
 Thank you very much for your time and your support.
 
-A special thanks to all the users on Github that made pull requests and opened issues to help fix mistakes and improve the quality of the book.
+A special thanks to all the users on GitHub that made pull requests and opened issues to help fix mistakes and improve the quality of the book.

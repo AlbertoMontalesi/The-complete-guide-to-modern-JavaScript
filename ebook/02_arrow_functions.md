@@ -56,7 +56,7 @@ const arrowFunction = name => `hello ${name}`;
 ```
 
 Both functions achieve the same result, but the new syntax allows you to be more concise.
-Beware! Readability is more important than conciseness so you might want to write your funciton like this if you are working in a team and not everybody is totally up-to-date with ES6.
+Beware! Readability is more important than conciseness so you might want to write your function like this if you are working in a team and not everybody is totally up-to-date with ES6.
 
 ```js
 const arrowFunction = (name) => {
@@ -106,10 +106,10 @@ When you use an arrow function, the `this` keyword is inherited from the parent 
 
 This can be useful in cases like this one:
 
-``` javascript 
+``` javascript
 // grab our div with class box
 const box = document.querySelector(".box");
-// listen for a click event 
+// listen for a click event
 box.addEventListener("click", function() {
   // toggle the class opening on the div
   this.classList.toggle("opening");
@@ -120,11 +120,10 @@ box.addEventListener("click", function() {
 });
 ```
 
-
 The problem in this case is that the first `this` is bound to the `const` box but the second one, inside the `setTimeout`, will be set to the `Window` object, throwing this error:
 
 ``` javascript
-Uncaught TypeError: cannot read property "toggle" of undefined 
+Uncaught TypeError: cannot read property "toggle" of undefined
 ```
 
 Since we know that **arrow functions** inherit the value of `this` from the parent scope, we can re-write our function like this:

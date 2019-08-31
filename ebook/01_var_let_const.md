@@ -70,7 +70,6 @@ As you can see, when we assigned a new value to our `let` inside our block-scope
 
 Similarly to `let`, `const` are **block-scoped**, but they differ in the fact that their value **can't change through re-assignment or can't be re-declared**.
 
-
 ``` javascript
 const constant = 'I am a constant';
 constant = " I can't be reassigned";
@@ -100,7 +99,7 @@ In this case we are not reassigning the whole variable but just one of its prope
 
 ---
 
-Note: We can still freeze the const object, which will not change the contents of the object (but trying to change the values of object Javascript will not throw any error)
+Note: We can still freeze the const object, which will not change the contents of the object (but trying to change the values of object JavaScript will not throw any error)
 
 ``` javascript
 const person = {
@@ -159,7 +158,6 @@ The first opinion comes from [Mathias Bynes:](https://mathiasbynens.be/notes/es6
 - use `const` by default
 - use `let` only if rebinding is needed.
 - `var` should never be used in ES6.
-
 
 The second opinion comes from [Kyle Simpson:](https://me.getify.com/)
 

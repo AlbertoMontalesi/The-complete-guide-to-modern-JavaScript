@@ -54,7 +54,6 @@ const { facebook } = person.links.social;
 
 We are not limited to name our variable the same as the property of the object, we can also rename it like this:
 
-
 ```js
 const { facebook:fb } = person.links.social;
 // it will look for the property person.links.social.facebook and name the variable fb

@@ -66,7 +66,6 @@ In the example above we passed a `map` function to the `.from()` method to push 
 
 `Array.of()` will create an array with all the arguments we pass into it.
 
-
 ```js
 const digits = Array.of(1,2,3,4,5);
 console.log(digits);
