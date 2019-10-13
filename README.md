@@ -41,6 +41,8 @@ The Paid version gives you access to:
 
 You get the ebook on Amazon and Leanpub, check the following link to find your local amazon store:
 
+- Kobo [Ebook](https://www.kobo.com/ww/en/ebook/complete-guide-to-modern-javascript)
+- Gumroad [Ebook](https://gum.co/completeguidetomodernjavascript)
 - Leanpub: [Ebook](https://leanpub.com/thecompleteguidetomodernjavascript2019)
 - Amazon USA: [Ebook](https://amzn.to/2H76VUz) | [Paperback Black and White](https://https://amzn.to/2z7BfKo) | [Paperback full color](https://www.amazon.com/dp/1099295688)
 - Amazon UK: [Ebook](https://www.amazon.co.uk/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.co.uk/dp/1080031294) | [Paperback full color](https://www.amazon.co.uk/dp/1099295688)
