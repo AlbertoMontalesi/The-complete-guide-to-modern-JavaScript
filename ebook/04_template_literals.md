@@ -95,7 +95,7 @@ The syntax for a ternary operator looks like this:
 ```js
 const isDiscounted = false
 
-return isFridgeEmpty ? "$10" : "$20"
+return isDiscounted ? "$10" : "$20"
 // $20
 ```
 
