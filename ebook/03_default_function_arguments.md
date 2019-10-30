@@ -2,7 +2,7 @@
 
 Prior to ES6, setting default values to function arguments was not so easy. Let's look at an example:
 
-``` js
+```javascript
 function getLocation(city,country,continent){
   if(typeof country === 'undefined'){
     country = 'Italy'
@@ -26,7 +26,7 @@ When calling `getLocation('Milan')` the second and third parameter (country and 
 
 But what if we want our default value to be at the beginning and not at the end of our list of arguments?
 
-``` js
+```javascript
 function getLocation(continent,country,city){
   if(typeof country === 'undefined'){
     country = 'Italy'
@@ -52,7 +52,7 @@ If we want to replace any of the first arguments with our default we need to pas
 
 ES6 makes it very easy to set default function arguments. Let's look at an example:
 
-``` js
+```javascript
 function calculatePrice(total, tax = 0.1, tip = 0.05){
 // When no value is given for tax or tip, the default 0.1 and 0.05 will be used
 return total + (total * tax) + (total * tip);
@@ -61,14 +61,14 @@ return total + (total * tax) + (total * tip);
 
 What if we don't want to pass the parameter at all, like this:
 
-``` js
+```javascript
 // The 0.15 will be bound to the second argument, tax even if in our intention it was to set 0.15 as the tip
 calculatePrice(100, 0.15)
 ```
 
 We can solve by doing this:
 
-``` js
+```javascript
 // In this case 0.15 will be bound to the tip
 calculatePrice(100, undefined, 0.15)
 ```
@@ -77,7 +77,7 @@ It works, but it's not very nice, how to improve it?
 
 With **destructuring** we can write this:
 
-``` js
+```javascript
 function calculatePrice({
   total = 0,
   tax = 0.1,
@@ -94,7 +94,7 @@ In the example above the default value for *tip* was 0.05 and we overwrote it wi
 
 Notice this detail:
 
-``` js
+```javascript
 {
   total = 0,
   tax = 0.1,
@@ -110,7 +110,7 @@ Cannot destructure property `total` of 'undefined' or 'null'.
 
 By writing `= {}` we default our argument to an `Object` and no matter what argument we pass in the function, it will be an `Object`:
 
-```js
+```javascript
 calculatePrice({});
 // 0
 calculatePrice();
@@ -122,25 +122,3 @@ calculatePrice(undefined)
 No matter what we passed, the argument was defaulted to an `Object` which had three default properties of total, tax and tip.
 
 Don't worry about destructuring, we will talk about it in Chapter 10.
-
-Note: We now don't need to construct object and equate to an empty object. Alternative to above we can construct a function as below
-
-``` js
-function calculatePrice({
-  total = 0,
-  tax = 0.1,
-  tip = 0.05}){
-  return total + (total * tax) + (total * tip);
-}
-```
-
-and the below code would work normal
-
-``` js
-calculatePrice({});
-// 0
-calculatePrice();
-// 0
-calculatePrice(undefined)
-// 0
-```

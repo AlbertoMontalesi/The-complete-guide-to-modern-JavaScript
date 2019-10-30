@@ -11,7 +11,7 @@ ES2016 introduced only two new features:
 
 The `includes()` method will return `true` if our array includes a certain element, or `false` if it doesn't.
 
-```js
+```javascript
 let array = [1,2,4,5];
 
 array.includes(2);
@@ -28,7 +28,7 @@ We can provide `.includes()` with an index to begin searching for an element. De
 
 The first value we pass in is the element to search and the second one is the index:
 
-``` js
+```javascript
 let array = [1,3,5,7,9,11];
 
 array.includes(3,1);
@@ -55,7 +55,7 @@ array.includes(11,-3);
 
 Prior to ES2016 we would have done this:
 
-``` js
+```javascript
 Math.pow(2,2);
 // 4
 Math.pow(2,3);
@@ -64,7 +64,7 @@ Math.pow(2,3);
 
 Now with the new exponential operator we can do this:
 
-```js
+```javascript
 2**2;
 // 4
 2**3;
@@ -73,7 +73,7 @@ Now with the new exponential operator we can do this:
 
 It will get pretty useful when combining multiple operations like in this example:
 
-``` js
+```javascript
 2**2**2;
 // 16
 Math.pow(Math.pow(2,2),2);

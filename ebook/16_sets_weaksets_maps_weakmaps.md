@@ -4,7 +4,7 @@
 
 A `Set` is an `Object` where we can store **unique values** of any type.
 
-```js
+```javascript
 // create our set
 const family = new Set();
 
@@ -30,7 +30,7 @@ As you can see, at the end we tried to add "Dad" again, but the `Set` still rema
 
 Let's continue using the same `Set` and see what methods we can use on it.
 
-``` js
+```javascript
 family.size;
 // 3
 family.keys();
@@ -57,7 +57,7 @@ We can also notice that a `Set` does not have keys, so when we call `.keys()` we
 
 We have two ways of iterating over a `Set`: using `.next()` or using a `for of` loop.
 
-``` js
+```javascript
 // using `.next()`
 const iterator = family.values();
 iterator.next();
@@ -81,7 +81,7 @@ for(const person of family) {
 
 We can use a `Set` to remove duplicates from an Array since we know it can only hold unique values.
 
-```js
+```javascript
 const myArray = ["dad", "mom", "son", "dad", "mom", "daughter"];
 
 const set = new Set(myArray);
@@ -105,7 +105,7 @@ As you can see the new array only contains the unique values from the original a
 
 A `WeakSet` is similar to a `Set` but it can **only** contain Objects.
 
-``` js
+```javascript
 let dad = {name: "Daddy", age: 50};
 let mom = {name: "Mummy", age: 45};
 
@@ -121,7 +121,7 @@ We created our new `WeakSet` but when we tried to use a `for of` loop it did not
 
 A `WeakSet` cleans itself up after we delete an element from it.
 
-```js
+```javascript
 dad = null;
 family;
 // WeakSet [ {…}, {…} ]
@@ -139,7 +139,7 @@ As you can see after a few seconds **dad** was removed and *garbage collected*. 
 
 A `Map` is similar to a `Set`, but they have key/value pairs.
 
-```js
+```javascript
 const family = new Map();
 
 family.set("Dad", 40);
@@ -174,7 +174,7 @@ A `WeakMap` is a collection of key/value pairs and similarly to a `WeakSet`, eve
 
 A `WeakMap` is **not** enumerable therefore we cannot loop over it.
 
-```js
+```javascript
 let dad = { name: "Daddy" };
 let mom = { name: "Mommy" };
 

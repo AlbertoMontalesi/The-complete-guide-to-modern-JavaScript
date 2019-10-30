@@ -6,7 +6,7 @@ There are many methods that we can use against strings. Here's a list of a few o
 
 Gets the position of the first occurrence of the specified value in a string.
 
-```js
+```javascript
 const str = "this is a short sentence";
 str.indexOf("short");
 // Output: 10
@@ -16,7 +16,7 @@ str.indexOf("short");
 
 Pulls a specified part of a string as a new string.
 
-```js
+```javascript
 const str = "pizza, orange, cereals"
 str.slice(0, 5);
 // Output: "pizza"
@@ -26,7 +26,7 @@ str.slice(0, 5);
 
 Turns all characters of a string to uppercase.
 
-```js
+```javascript
 const str = "i ate an apple"
 str.toUpperCase()
 // Output: "I ATE AN APPLE"
@@ -36,7 +36,7 @@ str.toUpperCase()
 
 Turns all characters of a string to lowercase.
 
-```JS
+```javascript
 const str = "I ATE AN APPLE"
 str.toLowerCase()
 // Output: "i ate an apple"
@@ -61,7 +61,7 @@ ES6 introduced 4 new string methods:
 
 This new method will check if the string starts with the value we pass in:
 
-```js
+```javascript
 const code = "ABCDEFG";
 
 code.startsWith("ABB");
@@ -74,7 +74,7 @@ code.startsWith("ABC");
 
 We can pass an additional parameter, which is the starting point where the method will begin checking.
 
-``` js
+```javascript
 const code = "ABCDEFGHI"
 
 code.startsWith("DEF",3);
@@ -87,7 +87,7 @@ code.startsWith("DEF",3);
 
 Similarly to `startsWith()` this new method will check if the string ends with the value we pass in:
 
-```js
+```javascript
 const code = "ABCDEF";
 
 code.endsWith("DDD");
@@ -101,7 +101,7 @@ code.endsWith("DEF");
 
 We can pass an additional parameter, which is the number of digits we want to consider when checking the ending.
 
-``` js
+```javascript
 const code = "ABCDEFGHI"
 
 code.endsWith("EF", 6);
@@ -114,7 +114,7 @@ code.endsWith("EF", 6);
 
 This method will check if our string includes the value we pass in.
 
-```js
+```javascript
 const code = "ABCDEF"
 
 code.includes("ABB");
@@ -131,7 +131,7 @@ code.includes("CDE");
 
 As the name suggests, this new method will repeat what we pass in.
 
-``` js
+```javascript
 let hello = "Hi";
 console.log(hello.repeat(10));
 // "HiHiHiHiHiHiHiHiHiHi"

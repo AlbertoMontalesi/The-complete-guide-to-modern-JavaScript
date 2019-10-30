@@ -9,7 +9,7 @@ According to MDN:
 
 ### Combine arrays
 
-``` js
+```javascript
 const veggie = ["tomato","cucumber","beans"];
 const meat = ["pork","beef","chicken"];
 
@@ -26,7 +26,7 @@ The `...` is the spread syntax, and it allowed us to grab all the individual val
 
 The spread syntax is very helpful if we want to create a copy of an array.
 
-``` js
+```javascript
 const veggie = ["tomato","cucumber","beans"];
 const newVeggie = veggie;
 
@@ -43,7 +43,7 @@ console.log(newVeggie);
 Our new array also changed, but why? Because we did not actually create a copy but we just referenced our old array in the new one.
 This is how we would usually make a copy of an array in ES5 and earlier.
 
-``` js
+```javascript
 const veggie = ["tomato","cucumber","beans"];
 const newVeggie = [].concat(veggie);
 // we created an empty array and put the values of the old array inside of it
@@ -51,7 +51,7 @@ const newVeggie = [].concat(veggie);
 
 And this is how we would do the same using the spread syntax:
 
-``` js
+```javascript
 const veggie = ["tomato","cucumber","beans"];
 const newVeggie = [...veggie];
 ```
@@ -60,7 +60,7 @@ const newVeggie = [...veggie];
 
 ### Spread into a function
 
-``` js
+```javascript
 // OLD WAY
 function doStuff (x, y, z) {
   console.log(x + y + z);
@@ -82,7 +82,7 @@ We can replace the `.apply()` syntax and just use the spread operator.
 
 Let's look at another example:
 
-``` js
+```javascript
 const name = ["Alberto", "Montalesi"];
 
 function greet(first, last) {
@@ -97,7 +97,7 @@ The two values of the array are automatically assigned to the two arguments of o
 
 What if we provide more values than arguments?
 
-``` js
+```javascript
 const name = ["Jon", "Paul", "Jones"];
 
 function greet(first, last) {
@@ -116,7 +116,7 @@ We provided 3 values inside our array but only have 2 arguments in our function 
 This feature is not part of ES6, but as we are already discussing this topic, it is worth mentioning that ES2018 introduced the Spread operator for Objects.
 Let's look at an example:
 
-``` js
+```javascript
 let person = {
   name : "Alberto",
   surname: "Montalesi",
@@ -137,7 +137,7 @@ You can read more about ES2018 in Chapter 20.
 
 The rest syntax looks exactly the same as the spread, 3 dots `...` but it is quite the opposite of it. Spread expands an array, while rest condenses multiple elements into a single one.
 
-```js
+```javascript
 
 const runners = ["Tom", "Paul", "Mark", "Luke"];
 const [first,second,...losers] = runners;

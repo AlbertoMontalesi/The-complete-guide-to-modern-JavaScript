@@ -7,7 +7,7 @@ From MDN:
 
 JavaScript works almost entirely asynchronously which means that when we are retrieving something from an API, for example, our code won't stop executing. Look at this example to understand what is going to happen:
 
-```js
+```javascript
 const data = fetch('your-api-url-goes-here');
 console.log('Finished');
 console.log(data);
@@ -23,7 +23,7 @@ To avoid this we would use **callbacks** or **promises**.
 
 You may have heard of something called **callback hell** which looks roughly like this:
 
-``` js
+```javascript
 fs.readdir(source, function (err, files) {
   if (err) {
     console.log('Error finding files: ' + err)
@@ -60,7 +60,7 @@ Here we will focus on how to write promises.
 
 ## Create your own promise
 
-```js
+```javascript
 const myPromise = new Promise((resolve, reject) => {
   // your code goes here
 });
@@ -70,7 +70,7 @@ This is how you create your own promise, `resolve` and `reject` will be called o
 
 We can immediately return it to see what we would get:
 
-```js
+```javascript
 const myPromise = new Promise((resolve, reject) => {
   resolve("The value we get from the promise");
 });
@@ -86,7 +86,7 @@ We immediately resolved our promise and can see the result in the console.
 
 We can combine a `setTimeout()` to wait a certain amount of time before resolving.
 
-```js
+```javascript
 const myPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
       resolve("The value we get from the promise");
@@ -105,7 +105,7 @@ These two examples are very simple but **promises** are very useful when dealing
 
 In the example above we kept it simple and only resolved our promise but in reality you will also encounter errors so let's see how to deal with them:
 
-``` js
+```javascript
 const myPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
       reject(Error("this is our error"));
@@ -134,7 +134,7 @@ Looking at our error log you can see that it tells us where the error occured, t
 
 We can chain promises one after the other, using what was returned from the previous one as the base for the subsequent one, whether the promise was resolved or rejected.
 
-``` js
+```javascript
 const myPromise = new Promise((resolve, reject) => {
   resolve();
 });
@@ -159,7 +159,7 @@ You can chain as many promises as you want and the code will still be more reada
 
 We are not limited to chaining in case of success, we can also chain when we get a `reject`.
 
-```js
+```javascript
 const myPromise = new Promise((resolve, reject) => {
   resolve();
 });
@@ -188,7 +188,7 @@ We did not get "first value" because we threw an error therefore we only got the
 
 `Promise.resolve(`) and `Promise.reject()` will create promises that automatically resolve or reject.
 
-```js
+```javascript
 //Promise.resolve()
 Promise.resolve('Success').then(function(value) {
   console.log(value);
@@ -214,7 +214,7 @@ Promise.reject(new Error('fail')).then(function() {
 
 Let's look at this example where we have two promises.
 
-```js
+```javascript
 const promise1 =  new Promise((resolve,reject) => {
   setTimeout(resolve, 500, 'first value');
 });
@@ -236,7 +236,7 @@ promise2.then(data => {
 
 They will resolve independently from one another but look at what happens when we use `Promise.all().`
 
-```js
+```javascript
 Promise
   .all([promise1, promise2])
   .then(data => {
@@ -253,7 +253,7 @@ If we were to pass an empty iterable then it will return an already resolved pro
 
 If one of the promises was rejected, all of them would asynchronously reject with the value of that rejection, even if they resolved.
 
-```js
+```javascript
 const promise1 =  new Promise((resolve,reject) => {
   resolve("my first value");
 });
@@ -276,7 +276,7 @@ Promise
 
 `Promise.race()` on the other hand returns a promise that resolves or rejects as soon as one of the promises in the iterable resolves or rejects, with the value from that promise.
 
-``` js
+```javascript
 const promise1 =  new Promise((resolve,reject) => {
   setTimeout(resolve, 500, 'first value');
 });

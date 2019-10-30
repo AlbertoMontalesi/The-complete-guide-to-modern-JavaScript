@@ -76,7 +76,7 @@ how are you?`;
 
 It's very easy to nest a template inside another one, like this:
 
-``` js
+```javascript
 const markup = `
 <ul>
   ${people.map(person => `<li>  ${person.name}</li>`)}
@@ -92,7 +92,7 @@ We can easily add some logic inside our template string by using a ternary opera
 
 The syntax for a ternary operator looks like this:
 
-```js
+```javascript
 const isDiscounted = false
 
 return isDiscounted ? "$10" : "$20"
@@ -101,7 +101,7 @@ return isDiscounted ? "$10" : "$20"
 
 If the condition before the `?` can be converted to `true` then the first value is returned, else it's the value after the `:` that gets returned.
 
-``` js
+```javascript
 // create an artist with name and age
 const artist = {
   name: "Bon Jovi",
@@ -136,7 +136,7 @@ const artist = {
 
 Similarly to the example above, if we want to, we can pass a function inside a template literal.
 
-``` js
+```javascript
 const groceries = {
   meat: "pork chop",
   veggie: "salad",
@@ -184,7 +184,7 @@ By tagging a function to a template literal we can run the template literal thro
 
 The way it works is very simple: you just take the name of your function and put it in front of the template that you want to run it against.
 
-```js
+```javascript
 let person = "Alberto";
 let age = 25;
 
@@ -208,7 +208,7 @@ We captured the value of the variable age and used a ternary operator to decide 
 In our example our string is divided in 3 pieces: `${person}`, `is a` and `${age}`.
 We use array notation to access the string in the middle like this:
 
-```js
+```javascript
 let str = strings[1];
 ```
 

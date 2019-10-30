@@ -6,7 +6,7 @@ ES2017 introduced many cool new features, which we are going to see here.
 
 We can now add some padding to our strings, either at the end (`.padEnd()`) or at the beginning (`.padStart()`) of them.
 
-```js
+```javascript
 "hello".padStart(6);
 // " hello"
 "hello".padEnd(6);
@@ -18,7 +18,7 @@ It happened because `padStart` and `padEnd` will go and fill the **empty spaces*
 
 Look at this example:
 
-```js
+```javascript
 "hi".padStart(10);
 // 10 - 2 = 8 empty spaces
 // "        hi"
@@ -33,7 +33,7 @@ Look at this example:
 
 We can use `padStart` if we want to right align something.
 
-```js
+```javascript
 const strings = ["short", "medium length", "very long string"];
 
 const longestString = strings.sort(str => str.length).map(str => str.length)[0];
@@ -53,7 +53,7 @@ First we grabbed the longest of our strings and measured its length. We then app
 
 We are not bound to just add a white space as a padding, we can pass both strings and numbers.
 
-```js
+```javascript
 "hello".padEnd(13," Alberto");
 // "hello Alberto"
 "1".padStart(3,0);
@@ -68,7 +68,7 @@ We are not bound to just add a white space as a padding, we can pass both string
 
 Let's first create an Object.
 
-```js
+```javascript
 const family = {
   father: "Jonathan Kent",
   mother: "Martha Kent",
@@ -78,7 +78,7 @@ const family = {
 
 In previous versions of JavaScript we would have accessed the values inside the object like this:
 
-```js
+```javascript
 Object.keys(family);
 // ["father", "mother", "son"]
 family.father;
@@ -89,7 +89,7 @@ family.father;
 
 We now have two more ways of accessing our objects:
 
-```js
+```javascript
 Object.values(family);
 // ["Jonathan Kent", "Martha Kent", "Clark Kent"]
 
@@ -108,7 +108,7 @@ Object.entries(family);
 This method will return all the own property descriptors of an object.
 The attributes it can return are `value`, `writable`, `get`, `set`, `configurable` and `enumerable`.
 
-``` js
+```javascript
 const myObj = {
   name: "Alberto",
   age: 25,
@@ -130,7 +130,7 @@ Object.getOwnPropertyDescriptors(myObj);
 
 This is just a minor change to a syntax. Now, when writing objects we can leave a trailing comma after each parameter, whether or not it is the last one.
 
-``` js
+```javascript
 // from this
 const object = {
   prop1: "prop",
@@ -147,7 +147,7 @@ const object = {
 Notice how I wrote a comma at the end of the second property.
 It will not throw any error if you don't put it, but it's a better practice to follow as it will make your colleague or team members life easier.
 
-```js
+```javascript
 // I write
 const object = {
   prop1: "prop",

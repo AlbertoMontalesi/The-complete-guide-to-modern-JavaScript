@@ -12,7 +12,7 @@ Let's start with **destructuring objects** first.
 
 To create variables from an object we used to do this:
 
-```js
+```javascript
 var person  = {
   first: "Alberto",
   last: "Montalesi"
@@ -24,7 +24,7 @@ var last = person.last;
 
 In ES6 we can now write this:
 
-```js
+```javascript
 const person = {
   first: "Alberto",
   last: "Montalesi"
@@ -37,7 +37,7 @@ Since our `const` have the same name as the properties we want to grab, we don't
 
 The same applies even when we have nested data, such as what we could get from an API.
 
-```js
+```javascript
 const person = {
   name: "Alberto",
   last: "Montalesi",
@@ -54,14 +54,14 @@ const { facebook } = person.links.social;
 
 We are not limited to name our variable the same as the property of the object, we can also rename it like this:
 
-```js
+```javascript
 const { facebook:fb } = person.links.social;
 // it will look for the property person.links.social.facebook and name the variable fb
 ```
 
 We can also pass in **default values** like this:
 
-```js
+```javascript
 const { facebook:fb = "https://www.facebook.com"} = person.links.social;
 // we renamed the variable to *fb* and we also set a default value to it
 ```
@@ -72,14 +72,14 @@ const { facebook:fb = "https://www.facebook.com"} = person.links.social;
 
 The first difference we notice when **destructuring arrays** is that we are going to use `[]` and not `{}`.
 
-```js
+```javascript
 const person = ["Alberto","Montalesi",25];
 const [name,surname,age] = person;
 ```
 
 What if the number of variables that we create is less than the elements in the array?
 
-```js
+```javascript
 const person = ["Alberto","Montalesi",25];
 // we leave out age, we don't want it
 const [name,surname] = person;
@@ -90,7 +90,7 @@ console.log(name,surname);
 
 Let's say we want to grab all the other values remaining, we can use the **rest operator**:
 
-```js
+```javascript
 const person = ["Alberto", "Montalesi", "pizza", "ice cream", "cheese cake"];
 // we use the **rest operator** to grab all the remaining values
 const [name,surname,...food] = person ;
@@ -108,7 +108,7 @@ The `...` is the syntax for the `rest operator`
 
 The destructuring assignment makes it **extremely easy** to swap variables, just look at this example:
 
-```js
+```javascript
 let hungry = "yes";
 let full = "no";
 // after we eat we don't feel hungry anymore, we feel full, let's swap the values
@@ -124,7 +124,7 @@ It can't get easier than this to swap values.
 
 ## Destructuring functions
 
-```js
+```javascript
 function totalBill({ total, tax = 0.1 }) {
   return total + (total * tax);
 }

@@ -8,7 +8,7 @@ In this chapter we will look at what was introduced with ES2018.
 
 Remember how ES6 (ES2015) allowed us to do this?
 
-```js
+```javascript
 const veggie = ["tomato","cucumber","beans"];
 const meat = ["pork","beef","chicken"];
 
@@ -19,7 +19,7 @@ console.log(menu);
 
 Now we can use the rest/spread syntax for objects too, let's look at how:
 
-```js
+```javascript
 let myObj = {
   a:1,
   b:3,
@@ -57,7 +57,7 @@ With Asynchronous Iteration we can iterate asynchronously over our data.
 
 To do so, we will use a `for-await-of` loop.
 
-``` js
+```javascript
 for await (const line of readLines(filePath)) {
   console.log(line);
 }
@@ -72,7 +72,7 @@ Each time we access the next value in the sequence, we implicitly await the prom
 
 After our promise has finished we can invoke a callback.
 
-``` js
+```javascript
 fetch("your-url")
   .then(result => {
     // do something with the result
@@ -102,7 +102,7 @@ fetch("your-url")
 
 This introduces a new `s` flag for ECMAScript regular expressions that makes `.` match any character, including line terminators.
 
-``` js
+```javascript
 /foo.bar/s.test('foo\nbar');
 // → true
 ```
@@ -115,7 +115,7 @@ This introduces a new `s` flag for ECMAScript regular expressions that makes `.`
 
 >Numbered capture groups allow one to refer to certain portions of a string that a regular expression matches. Each capture group is assigned a unique number and can be referenced using that number, but this can make a regular expression hard to grasp and refactor.</br> </br> For example, given` /(\d{4})-(\d{2})-(\d{2})/` that matches a date, one cannot be sure which group corresponds to the month and which one is the day without examining the surrounding code. Also, if one wants to swap the order of the month and the day, the group references should also be updated.</br> </br> A capture group can be given a name using the `(?<name>...)` syntax, for any identifier `name`. The regular expression for a date then can be written as `/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u`. Each name should be unique and follow the grammar for ECMAScript IdentifierName.</br> </br> Named groups can be accessed from properties of a `groups` property of the regular expression result. Numbered references to the groups are also created, just as for non-named groups. For example:
 
-``` js
+```javascript
 let re = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u;
 let result = re.exec('2015-01-02');
 // result.groups.year === '2015';
@@ -146,7 +146,7 @@ console.log(`one: ${one}, two: ${two}`);  // prints one: foo, two: bar
 
 This brings the addition of Unicode property escapes of the form `\p{…}` and` \P{…}`. Unicode property escapes are a new type of escape sequence available in regular expressions that have the `u` flag set. With this feature, we could write:
 
-``` js
+```javascript
 const regexGreekSymbol = /\p{Script=Greek}/u;
 regexGreekSymbol.test('π');
 // → true

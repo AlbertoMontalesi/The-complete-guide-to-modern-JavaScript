@@ -2,7 +2,7 @@
 
 ### 2.1 What is the correct syntax for an arrow function?
 
-```js
+```javascript
 let arr = [1,2,3];
 
 //a)
@@ -23,7 +23,7 @@ let func = arr.map(n ~> n+1);
 
 ### 2.2 What is the correct output of the following code?
 
-``` js
+```javascript
 const person = {
   age: 10,
   grow: () => {
@@ -43,7 +43,7 @@ console.log(person.age);
 
 ### 2.3 Refactor the following code to use the arrow function syntax:
 
-```js
+```javascript
 function(arg) {
   console.log(arg);
 }

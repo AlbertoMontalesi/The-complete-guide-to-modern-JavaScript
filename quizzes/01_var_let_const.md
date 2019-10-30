@@ -2,7 +2,7 @@
 
 ### 1.1 What is the correct output of the following code?
 
-```js
+```javascript
 var greeting = "Hello";
 
 greeting = "Farewell";
@@ -22,7 +22,7 @@ console.log(greeting);
 
 ### 1.2 What is the correct output of the following code?
 
-```js
+```javascript
 let value = 1;
 
 if(true) {
@@ -41,7 +41,7 @@ value = 3;
 
 ### 1.3 What is the correct output of the following code?
 
-```js
+```javascript
 let x = 100;
 
 if (x > 50) {
@@ -59,7 +59,7 @@ console.log(x);
 
 ### 1.4 What is the correct output of the following code?
 
-```js
+```javascript
 console.log(constant);
 
 const constant = 1;

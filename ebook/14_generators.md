@@ -6,7 +6,7 @@ A generator function is a function that we can start and stop, for an indefinite
 
 To create a generator function we write like this:
 
-``` js
+```javascript
 function* fruitList(){
   yield 'Banana';
   yield 'Apple';
@@ -42,7 +42,7 @@ Our function is paused between each `.next()` call.
 
 We can use the `for of` loop to iterate over our generator and `yield` the content at each loop.
 
-``` js
+```javascript
 // create an array of fruits
 const fruitList = ['Banana','Apple','Orange','Melon','Cherry','Mango'];
 
@@ -72,7 +72,7 @@ fruitGenerator.next().value;
 
 Using `.return()` we can return a given value and finish the generator.
 
-``` js
+```javascript
 function* fruitList(){
   yield 'Banana';
   yield 'Apple';
@@ -91,7 +91,7 @@ In this case we got `value: undefined` because we did not pass anything in the `
 
 ## Catching errors with `.throw()`
 
-``` js
+```javascript
 function* gen(){
   try {
     yield "Trying...";
@@ -129,7 +129,7 @@ Using a Generator in combination with a `Promise` will allow us to write asynchr
 
 What we want to do is wait for a promise to resolve and then pass the resolved value back into our generator in the `.next()` call.
 
-``` js
+```javascript
 const myPromise = () => new Promise((resolve) => {
   resolve("our value is...");
 });

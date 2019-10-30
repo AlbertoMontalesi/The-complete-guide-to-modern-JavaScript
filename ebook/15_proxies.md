@@ -12,14 +12,14 @@ From MDN:
 
 This is how we create a Proxy:
 
-``` js
+```javascript
 var x = new Proxy(target,handler)
 ```
 
 - our `target` can be anything, from an object, to a function, to another `Proxy`
 - a `handler` is an object which will define the behavior of our `Proxy` when an operation is performed on it
 
-``` js
+```javascript
 // our object
 const dog = { breed: "German Shephard", age: 5}
 
@@ -49,7 +49,7 @@ When setting a new value we step in again and log a short message before setting
 
 Proxies can be very useful for example to validate data. Look at this example.
 
-```js
+```javascript
 const validateAge = {
   set: function(object,property,value){
     if(property === 'age'){

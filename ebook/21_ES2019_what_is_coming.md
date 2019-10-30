@@ -8,7 +8,7 @@ In this chapter we will look at what is coming with the latest version of EcmaSc
 
 `Array.prototype.flat()` will flatten the array recursively up to the depth that we specify. If no depth argument is specified, 1 is the default value. We can use `Infinity` to flatten all nested arrays.
 
-```js
+```javascript
 const letters = ['a', 'b', ['c', 'd', ['e', 'f']]];
 // default depth of 1
 letters.flat();
@@ -29,7 +29,7 @@ letters.flat(Infinity)
 
 `Array.prototype.flatMap()` is identical to the previous one with regards to the way it handles the 'depth' argument but instead of simply flattening an array, with `flatMap()` we can also map over it and return the result in the new array.
 
-```js
+```javascript
 let greeting = ["Greetings from", " ", "Vietnam"];
 
 // let's first try using a normal `map()` function
@@ -51,7 +51,7 @@ As you can see, if we use `.map()` we will get a multi level array, a problem th
 
 `Object.fromEntries()` transforms a list of key-value pairs into an object.
 
-```js
+```javascript
 const keyValueArray = [
   ['key1', 'value1'],
   ['key2', 'value2']
@@ -71,7 +71,7 @@ You can read more about the iterable protocol here: [https://developer.mozilla.o
 
 `String.prototype.trimStart()` removes white space from the beginning of a string while `String.prototype.trimEnd()` removes them from the end.
 
-```js
+```javascript
 let str = "    this string has a lot of whitespace   ";
 
 str.length;
@@ -96,7 +96,7 @@ We can also use `.trimLeft()` as an alias of `.trimStart()` and `.trimRight()` a
 
 Prior to ES2019 you had to always include an exception variable in your `catch` clause. E2019 allows you to omit it.
 
-```js
+```javascript
 // Before
 try {
    ...
@@ -120,7 +120,7 @@ This is useful when you want to ignore the error. For a more detailed list of us
 
 The `.toString()` method returns a string representing the source code of the function.
 
-```js
+```javascript
 function sum(a, b) {
   return a + b;
 }
@@ -133,7 +133,7 @@ console.log(sum.toString());
 
 It also includes comments.
 
-```js
+```javascript
 function sum(a, b) {
   // perform a sum
   return a + b;
@@ -152,7 +152,7 @@ console.log(sum.toString());
 
 `.description` returns the optional description of a `Symbol` Object.
 
-```js
+```javascript
 const me = Symbol("Alberto");
 me.description;
 // "Alberto"

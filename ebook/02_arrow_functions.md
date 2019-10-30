@@ -47,7 +47,7 @@ const greeting = name => `hello ${name}`;
 
 Look at a side by side comparison with an old ES5 Function:
 
-```js
+```javascript
 const oldFunction = function(name){
   return `hello ${name}`
 }
@@ -58,7 +58,7 @@ const arrowFunction = name => `hello ${name}`;
 Both functions achieve the same result, but the new syntax allows you to be more concise.
 Beware! Readability is more important than conciseness so you might want to write your function like this if you are working in a team and not everybody is totally up-to-date with ES6.
 
-```js
+```javascript
 const arrowFunction = (name) => {
   return `hello ${name}`;
 }
@@ -175,7 +175,7 @@ The `arguments object` is an array-like object that we can access from inside fu
 
 A quick example:
 
-```js
+```javascript
 function example(){
   console.log(arguments[0])
 }
@@ -222,7 +222,7 @@ showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell" )
 
 Example with **function**:
 
-```js
+```javascript
 const showWinner = function() {
   const winner = arguments[0];
   return `${winner} was the winner`

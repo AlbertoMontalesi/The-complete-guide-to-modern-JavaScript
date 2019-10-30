@@ -14,7 +14,7 @@ It will take something **arrayish**, meaning something that looks like an array 
 </div>
 ```
 
-```js
+```javascript
 const fruits = document.querySelectorAll(".fruits p");
 // fruits is a nodelist (an array-like collection) containng our three p tags
 // now we convert it in an Array
@@ -32,7 +32,7 @@ console.log(fruitNames);
 
 We can also simplify like this:
 
-```js
+```javascript
 const fruits = Array.from(document.querySelectorAll(".fruits p"));
 const fruitNames = fruits.map(fruit => fruit.textContent);
 
@@ -44,7 +44,7 @@ Now we transformed **fruits** into a real array, meaning that we can use any sor
 
 `Array.from()` also takes a second argument, a `map` function so we can write:
 
-``` js
+```javascript
 const fruits = document.querySelectorAll(".fruits p");
 const fruitArray = Array.from(fruits, fruit => {
   console.log(fruit);
@@ -66,7 +66,7 @@ In the example above we passed a `map` function to the `.from()` method to push 
 
 `Array.of()` will create an array with all the arguments we pass into it.
 
-```js
+```javascript
 const digits = Array.of(1,2,3,4,5);
 console.log(digits);
 
@@ -81,7 +81,7 @@ console.log(digits);
 
 Let's looks at a simple example to see how `Array.find()` works.
 
-``` js
+```javascript
 const array = [1,2,3,4,5];
 
 // this will return the first element in the array with a value higher than 3
@@ -98,7 +98,7 @@ As we mentioned, it will return the **first element** that matches our condition
 
 `Array.findIndex()` will return the *index* of the **first** element that matches our condition.
 
-``` js
+```javascript
 const greetings = ["hello","hi","byebye","goodbye","hi"];
 
 let foundIndex = greetings.findIndex(e => e === "hi");
@@ -115,7 +115,7 @@ Again, only the index of the **first element** that matches our condition is ret
 I'm grouping these two together because their use is self-explanatory: `.some()` will search if there are *some* items matching the condition and
 stop once it finds the first one, `.every()` will check that *all* items match the given condition.
 
-```js
+```javascript
 const array = [1,2,3,4,5,6,1,2,3,1];
 
 let arraySome = array.some( e => e > 2);

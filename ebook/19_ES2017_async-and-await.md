@@ -8,7 +8,7 @@ ES2017 introduced a new way of working with promises, called "async/await".
 
 Before we dive in this new syntax let's quickly review how we would usually write a promise:
 
-```js
+```javascript
 // fetch a user from github
 fetch('api.github.com/user/AlbertoMontalesi').then( res => {
   // return the data in json format
@@ -26,7 +26,7 @@ This is a very simple promise to fetch a user from GitHub and print it to the co
 
 Let's see a different example:
 
-```js
+```javascript
 function walk(amount) {
   return new Promise((resolve,reject) => {
     if (amount < 500) {
@@ -69,7 +69,7 @@ Let's see how we can rewrite this `Promise` with the new async/await syntax.
 
 ## Async and Await
 
-``` js
+```javascript
 function walk(amount) {
   return new Promise((resolve,reject) => {
     if (amount < 500) {
@@ -114,7 +114,7 @@ Let's break down what we just did:
 
 Let's see what happens if we try to use `await` outside an `async` function
 
-```js
+```javascript
 // use await inside a normal function
 function func() {
   let promise = Promise.resolve(1);
@@ -139,7 +139,7 @@ let result = await response;
 In a normal promise we would use `.catch()` to catch eventual errors returned by the promise.
 Here, it is not much different:
 
-```js
+```javascript
 async function asyncFunc() {
 
   try {
@@ -155,7 +155,7 @@ asyncFunc();
 
 We use `try...catch` to grab the error, but in a case where we do not have them we can still catch the error like this:
 
-``` js
+```javascript
 async function asyncFunc(){
   let response = await fetch('http:your-url');
 }

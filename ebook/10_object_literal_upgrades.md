@@ -8,7 +8,7 @@ In this article we will look at the many upgrades brought by ES6 to the Object l
 
 This is our initial situation:
 
-``` js
+```javascript
 const name = "Alberto";
 const surname = "Montalesi";
 const age = 25;
@@ -17,7 +17,7 @@ const nationality = "Italian";
 
 Now if we wanted to create an object literal this is what we would usually do:
 
-```js
+```javascript
 const person = {
   name: name,
   surname: surname,
@@ -28,7 +28,7 @@ const person = {
 
 In ES6 we can simplify like this:
 
-```js
+```javascript
 const person = {
   name,
   surname,
@@ -47,7 +47,7 @@ As our `const` are named the same way as the properties we are using, we can red
 
 Let's looks at an example from ES5:
 
-``` js
+```javascript
 const person = {
   name: "Alberto",
   greet: function(){
@@ -58,7 +58,7 @@ const person = {
 
 If we wanted to add a function to our Object we had to use the the `function` keyword. In ES6 it got easier, look here:
 
-``` js
+```javascript
 const person = {
   name: "Alberto",
   greet(){
@@ -74,7 +74,7 @@ No more `function`, it's shorter and it does the same.
 
 **Remember** that **arrow functions** are anonymous, look at this example:
 
-``` js
+```javascript
 // this won't work, you need a key to access the function
 const person1 = {
   () => console.log("Hello"),
@@ -93,7 +93,7 @@ person2.greet()
 
 This is how we would dynamically define properties of an Object in ES5:
 
-``` js
+```javascript
 var name = "myname";
 // create empty object
 var person = {}
@@ -107,7 +107,7 @@ First we created the Object and then we modified it.
 
 In ES6 we can do both things at the same time, look here:
 
-``` js
+```javascript
 const name = "myname";
 const person = {
   [name]:"Alberto",
