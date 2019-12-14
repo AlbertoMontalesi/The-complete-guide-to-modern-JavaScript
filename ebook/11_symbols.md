@@ -2,6 +2,10 @@
 
 ES6 added a new type of primitive called **Symbols**. What are they? And what do they do?
 
+&nbsp;
+
+## The unique property of Symbols
+
 Symbols are **always unique** and we can use them as identifiers for object properties.
 
 Let's create a `Symbol` together:
@@ -30,6 +34,10 @@ console.log(me === clone);
 ```
 
 They both have the same value, but we will never have naming collisions with Symbols as they are always unique.
+
+&nbsp;
+
+## Identifiers for object properties
 
 As we mentioned earlier we can use them to create identifiers for object properties, so let's see an example:
 
@@ -63,7 +71,7 @@ for(person in office) {
 // undefined
 ```
 
-We got undefined when we tried to loop over the symbols because they are **not enumerable** so we can't loop over them with a `for in`.
+We got `undefined` when we tried to loop over the symbols because they are **not enumerable**, so we can’t loop over them with a `for in`.
 
 If we want to retrieve their object properties we can use `Object.getOwnPropertySymbols()`.
 

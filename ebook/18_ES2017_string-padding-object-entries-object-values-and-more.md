@@ -76,7 +76,7 @@ const family = {
 }
 ```
 
-In previous versions of JavaScript we would have accessed the values inside the object like this:
+In previous versions of `JavaScript` we would have accessed the values inside the object like this:
 
 ```javascript
 Object.keys(family);
@@ -145,7 +145,7 @@ const object = {
 ```
 
 Notice how I wrote a comma at the end of the second property.
-It will not throw any error if you don't put it, but it's a better practice to follow as it will make your colleague or team members life easier.
+It will not throw any error if you don't put it, but it's a better practice to follow as it make your colleague’s or team member’s life easier.
 
 ```javascript
 // I write
@@ -169,7 +169,7 @@ const object = {
 
 From [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Atomics):
 
-> When memory is shared, multiple threads can read and write the same data in memory. Atomic operations make sure that predictable values are written and read, that operations are finished before the next operation starts and that operations are not interrupted.
+> When memory is shared, multiple threads can read and write the same data in memory. **Atomic** operations make sure that predictable values are written and read, that operations are finished before the next operation starts and that operations are not interrupted.
 
 `Atomics` is not a constructor, all of its properties and methods are static (just like `Math`) therefore we cannot use it with a new operator or invoke the `Atomics` object as a function.
 
@@ -178,3 +178,67 @@ Examples of its methods are:
 - add / sub
 - and / or / xor
 - load / store
+
+Atomics are used with `SharedArrayBuffer` (generic fixed-length binary data buffer) objects which represent generic, fixed-length raw binary data buffer.
+
+Let's have a look at some examples of `Atomics` methods:
+
+### `Atomics.add()`, `Atomics.sub()`,   `Atomics.load()` and `Atomics.store()`
+
+`Atomics.add()` will take three arguments, an array, an index and a value and will return the previous value at that index before performing an addition.
+
+```js
+// create a `SharedArrayBuffer`
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+
+// add a value at the first position
+uint8[0] = 10;
+
+console.log(Atomics.add(uint8, 0, 5));
+// 10
+
+// 10 + 5 = 15
+console.log(uint8[0])
+// 15
+console.log(Atomics.load(uint8,0));
+// 15
+```
+
+As you can see, calling `Atomics.add()` will return the previous value at the array position we are targeting. when we call again `uint8[0]` we see that the addition was performed and we got 15.
+
+To retrieve a specific value from our array we can use `Atomics.load` and pass two argument, an array and an index.
+
+`Atomics.sub()` works the same way as `Atomics.add()` but it will subtract a value.
+
+```javascript
+// create a `SharedArrayBuffer`
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+
+// add a value at the first position
+uint8[0] = 10;
+
+console.log(Atomics.sub(uint8, 0, 5));
+// 10
+
+// 10 - 5 = 5
+console.log(uint8[0])
+// 5
+console.log(Atomics.store(uint8,0,3));
+// 3
+console.log(Atomics.load(uint8,0));
+// 3
+```
+
+Here we are using `Atomics.sub()` to substract 5 from the value at position `uint8[0]` which is equivalent to 10 - 5.
+Same as with `Atomics.add()`, the method will return the previous value at that index, in this case 10.
+
+We are then using `Atomics.store()` to store a specific value, in this case 3, at a specific index of the array, in this case 0, the first position.
+`Atomics.store()` will return the value that we just passed, in this case 3. You can see that when we call `Atomics.load()` on that specific index we get 3 and not 5 anymore.
+
+&nbsp;
+
+### `Atomics.and()`, `Atomics.or()` and `Atomics.xor()`
+
+These three methods all perform bitwise AND, OR and XOR operations at a given position of the array. You can read more about bitwise operations on [Wikipedia](https://en.wikipedia.org/wiki/Bitwise_operation) at this link https://en.wikipedia.org/wiki/Bitwise_operation

@@ -1,6 +1,6 @@
 # Chapter 10: Object literal upgrades
 
-In this article we will look at the many upgrades brought by ES6 to the Object literal notation.
+In this article we will look at the many upgrades brought by ES6 to the **Object literal** notation.
 
 &nbsp;
 
@@ -24,6 +24,12 @@ const person = {
   age: age,
   nationality: nationality,
 }
+
+console.log(person);
+// { name: 'Alberto',
+// surname: 'Montalesi',
+// age: 25,
+// nationality: 'Italian' }
 ```
 
 In ES6 we can simplify like this:
@@ -54,6 +60,9 @@ const person = {
     console.log("Hello");
   },
 }
+
+person.greet();
+// Hello
 ```
 
 If we wanted to add a function to our Object we had to use the the `function` keyword. In ES6 it got easier, look here:
@@ -70,7 +79,7 @@ person.greet();
 // Hello;
 ```
 
-No more `function`, it's shorter and it does the same.
+No more `function`, it’s shorter and it behaves the same way.
 
 **Remember** that **arrow functions** are anonymous, look at this example:
 
@@ -103,9 +112,7 @@ console.log(person.myname);
 // Alberto
 ```
 
-First we created the Object and then we modified it.
-
-In ES6 we can do both things at the same time, look here:
+In the example given above, first we created the Object and then we modified it. However, in ES6 we can do both things at the same time. Take a look at the following example:
 
 ```javascript
 const name = "myname";

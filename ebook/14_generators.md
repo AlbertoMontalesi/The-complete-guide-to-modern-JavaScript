@@ -2,7 +2,7 @@
 
 ## What is a Generator?
 
-A generator function is a function that we can start and stop, for an indefinite amount of time, and restart with the possibility of passing additional data at a later point in time.
+A generator function is a function that we can start and stop, for an indefinite amount of time. And, restart with the possibility of passing additional data at a later point in time.
 
 To create a generator function we write like this:
 
@@ -143,11 +143,14 @@ function* gen() {
 };
 
 // Call the async function and pass params
-const asyncFunc = gen();
-asyncFunc.next();
+const asyncFunc = gen(); 
+const val1 = asyncFunc.next();
+console.log(val1);
 // call the promise and wait for it to resolve
 // {value: Promise, done: false}
-asyncFunc.next();
+val1.value.then(() => {
+  console.log(asyncFunc.next());
+})
 // Object { value: "our value is... 2", done: false }
 ```
 

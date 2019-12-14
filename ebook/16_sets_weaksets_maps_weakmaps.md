@@ -42,7 +42,7 @@ family.values();
 family.delete("Dad");
 family;
 // Set [ "Mom", "Son" ]
-family.clear;
+family.clear();
 family;
 // Set []
 ```
@@ -74,6 +74,8 @@ for(const person of family) {
 // Mom
 // Son
 ```
+
+The method `values()` will return an `Iterator` object on which we can call `next()` similarly to how we did when we discussed about `generator` functions.
 
 &nbsp;
 
@@ -122,16 +124,21 @@ We created our new `WeakSet` but when we tried to use a `for of` loop it did not
 A `WeakSet` cleans itself up after we delete an element from it.
 
 ```javascript
+let dad = {name: "Daddy", age: 50};
+let mom = {name: "Mummy", age: 45};
+
+const family = new WeakSet([dad,mom]);
+
 dad = null;
-family;
+console.log(family);
 // WeakSet [ {…}, {…} ]
 
 // wait a few seconds
-family;
+console.log(family);
 // WeakSet [ {…} ]
 ```
 
-As you can see after a few seconds **dad** was removed and *garbage collected*. That happened because the reference to it was lost when we set the value to `null`.
+You can try running the example above in the Dev Tools of your browser, as you can see after a few seconds **dad** was removed and *garbage collected*. That happened because the reference to it was lost when we set the value to `null`.
 
 &nbsp;
 
@@ -187,9 +194,9 @@ myWeakMap.set(mom);
 dad = null;
 mom = null;
 
-myMap;
+console.log(myMap);
 // Map(1) {{…}}
-myWeakMap;
+console.log(myWeakMap);
 // WeakMap {}
 ```
 

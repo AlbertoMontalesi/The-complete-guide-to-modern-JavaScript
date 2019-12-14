@@ -53,7 +53,7 @@ array.includes(11,-3);
 
 ## The exponential operator
 
-Prior to ES2016 we would have done this:
+Prior to ES2016 we would have done the following:
 
 ```javascript
 Math.pow(2,2);
@@ -62,7 +62,7 @@ Math.pow(2,3);
 // 8
 ```
 
-Now with the new exponential operator we can do this:
+Now with the new exponential operator, we can do the following:
 
 ```javascript
 2**2;

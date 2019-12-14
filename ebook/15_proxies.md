@@ -4,7 +4,7 @@
 
 From MDN:
 
-> the Proxy object is used to define custom behavior for fundamental operations (e.g. property lookup, assignment, enumeration, function invocation, etc).
+> The **Proxy** object is used to define custom behavior for fundamental operations (e.g. property lookup, assignment, enumeration, function invocation, etc).
 
 &nbsp;
 
@@ -34,12 +34,12 @@ const dogProxy = new Proxy(dog, {
   }
 });
 
-dogProxy.breed;
+console.log(dogProxy.breed);
 // "GERMAN SHEPHARD"
-dogProxy.breed = "Labrador";
+console.log(dogProxy.breed = "Labrador")
 // changing breed to...
 // "Labrador"
-dogProxy.breed;
+console.log(dogProxy.breed);
 // "LABRADOR"
 ```
 
@@ -47,22 +47,22 @@ When we call the `get` method we step inside the normal flow and change the valu
 
 When setting a new value we step in again and log a short message before setting the value.
 
-Proxies can be very useful for example to validate data. Look at this example.
+Proxies can be very useful. For example, we can use them to validate data.
 
 ```javascript
 const validateAge = {
   set: function(object,property,value){
     if(property === 'age'){
       if(value < 18){
-        throw new Error('you are too young!')
+        throw new Error('you are too young!');
+      } else {
+        // default behaviour
+        object[property] = value;
+        return true
       }
-    } else {
-      // default behaviour
-      object.property = value;
-      return true
     }
   }
-};
+}
 
 const user =  new Proxy({},validateAge)
 
@@ -74,3 +74,100 @@ user.age = 21
 ```
 
 When we set the `age` property of the `user Object` we pass it through our `validateAge` function which checks if it is more or less than 18 and throws an error if it's less than 18.
+
+Proxies can be very useful if we have many properties that would require a **getter** and **setter** each. By using a `Proxy` we need to define only one **getter** and one **setter**.  Let's look at this example:
+
+```javascript
+const dog  = {
+  _name: 'pup',
+  _age: 7,
+
+  get name() {
+    console.log(this._name)
+  },
+  get age(){
+    console.log(this._age)
+  },
+
+  set name(newName){
+    this._name = newName;
+    console.log(this._name)
+  },
+  set age(newAge){
+    this._age = newAge;
+    console.log(this._age)
+  }
+}
+
+dog.name;
+// pup
+dog.age;
+// 7
+dog.breed;
+// undefined
+dog.name = 'Max';
+// Max
+dog.age = 8;
+// 8
+```
+
+Notice that i'm writing `_name` instead of `name` etc.., the `_` symbol is used in `JavaScript` convention to define **Private** properties, meaning properties that are should not be accessed by instances of the same class.
+That is not something that `JavaScript` enforces, it's just for developers to quickly identify **Private** properties. The reason why i'm using it here is because if i was to call:
+
+```javascript
+set name(newName){
+  this.name = newName;
+}
+```
+
+This would cause an infinite loop as `this.name = ` would call the setter again and again. By putting the underscore in front of it it, I achieve the same result that I would get by renaming the setter to something else, such as:
+
+```javascript
+set rename(newName){
+  this.name = newName;
+}
+```
+
+As you can see we had two properties: `name` and `age`and for each of them we had to create a **getter** and a **setter**.
+When we try to access a property that does not exist on the Object, such as `breed` we get `undefined`.
+
+With a `Proxy` we can simplify the code by writing the following:
+
+```javascript
+const dog  = {
+  name: 'pup',
+  age: 7
+}
+const handler = {
+  get: (target, property) => {
+    property in target ? console.log(target[property]) : console.log('property not found');
+  },
+  set: (target, property, value) => {
+    target[property] = value;
+    console.log(target[property])
+  }
+}
+
+const dogProxy = new Proxy(dog, handler);
+
+dogProxy.name;
+// pup
+dogProxy.age;
+// 7
+dogProxy.name = 'Max';
+// Max
+dogProxy.age = 8;
+// 8
+dogProxy.breed;
+// property not found
+```
+
+First, we created our `dog` Object but this time we did not set any **getter** and **setter** inside of it.
+We created our `handler` that will handle each possible property with only one **getter** and **setter**.
+In the **getter** what we are doing is check if the `property` is available on the `target` Object. If it is, we log it, otherwise we log a custom message.
+The setter takes three argument, the `target` object, the `property` name and the `value`, nothing special happens here, we set the property to the new value and we log it.
+
+As you can see, by using a `Proxy` we achieved two things:
+
+- shorter, cleaner code
+- we are logging a custom message if we try to access a property that is not available.

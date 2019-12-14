@@ -55,12 +55,20 @@ With Asynchronous Iteration we can iterate asynchronously over our data.
 [From the documentation:](https://github.com/tc39/proposal-async-iteration)
 > An async iterator is much like an iterator, except that its `next()` method returns a promise for a `{ value, done }` pair.
 
-To do so, we will use a `for-await-of` loop.
+To do so, we will use a `for-await-of` loop which works by converting our iterables to a Promise, unless they already are one.
 
 ```javascript
-for await (const line of readLines(filePath)) {
-  console.log(line);
+const iterables = [1,2,3];
+
+async function test() {
+    for await (const value of iterables) {
+        console.log(value);
+    }
 }
+test();
+// 1
+// 2
+// 3
 ```
 
 > During execution, an async iterator is created from the data source using the `[Symbol.asyncIterator]()` method.
@@ -73,25 +81,53 @@ Each time we access the next value in the sequence, we implicitly await the prom
 After our promise has finished we can invoke a callback.
 
 ```javascript
-fetch("your-url")
-  .then(result => {
-    // do something with the result
+const myPromise = new Promise((resolve,reject) => {
+  resolve();
+})
+myPromise
+  .then( () => {
+    console.log('still working');
   })
-  .catch(error => {
-    // do something with the error
+  .catch( () => {
+    console.log('there was an error');
   })
   .finally(()=> {
-    // do something once the promise is finished
+    console.log('Done!');
   })
 ```
+
+`.finally()` will also return a `Promise` so we can chain more `then` and `catch` after it but those Promises will fulfill based on the `Promise` they were chained onto.
+
+```javascript
+const myPromise = new Promise((resolve,reject) => {
+  resolve();
+})
+myPromise
+.then( () => {
+    console.log('still working');
+    return 'still working';
+  })
+  .finally(()=> {
+    console.log('Done!');
+    return 'Done!';
+  })
+  .then( res => {
+    console.log(res);
+  })
+// still working
+// Done!
+// still working
+```
+
+As you can see the `then` chained after `finally` returned the value that was returned by the `Promise` created not by `finally` but by the first `then`.
 
 &nbsp;
 
 ## RegExp features
 
-4 new RegExp related features made it to the new version of ECMAScript. They are:
+Four new RegExp related features made it to the new version of `ECMAScript`. They are:
 
-- [`s (dotAll)` flag for regular expressions](https://github.com/tc39/proposal-regexp-dotall-flag)
+- [`s(dotAll)` flag for regular expressions](https://github.com/tc39/proposal-regexp-dotall-flag)
 - [RegExp named capture groups](https://github.com/tc39/proposal-regexp-named-groups)
 - [RegExp Lookbehind Assertions](https://github.com/tc39/proposal-regexp-lookbehind)
 - [RegExp Unicode Property Escapes](https://github.com/tc39/proposal-regexp-lookbehind)
@@ -100,11 +136,11 @@ fetch("your-url")
 
 ### `s (dotAll)` flag for regular expression
 
-This introduces a new `s` flag for ECMAScript regular expressions that makes `.` match any character, including line terminators.
+This introduces a new `s` flag for `ECMAScript` regular expressions that makes `.` match any character, including line terminators.
 
 ```javascript
 /foo.bar/s.test('foo\nbar');
-// → true
+// true
 ```
 
 &nbsp;
@@ -113,7 +149,7 @@ This introduces a new `s` flag for ECMAScript regular expressions that makes `.`
 
 [From the documentation:](https://github.com/tc39/proposal-regexp-named-groups)
 
->Numbered capture groups allow one to refer to certain portions of a string that a regular expression matches. Each capture group is assigned a unique number and can be referenced using that number, but this can make a regular expression hard to grasp and refactor.</br> </br> For example, given` /(\d{4})-(\d{2})-(\d{2})/` that matches a date, one cannot be sure which group corresponds to the month and which one is the day without examining the surrounding code. Also, if one wants to swap the order of the month and the day, the group references should also be updated.</br> </br> A capture group can be given a name using the `(?<name>...)` syntax, for any identifier `name`. The regular expression for a date then can be written as `/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u`. Each name should be unique and follow the grammar for ECMAScript IdentifierName.</br> </br> Named groups can be accessed from properties of a `groups` property of the regular expression result. Numbered references to the groups are also created, just as for non-named groups. For example:
+>Numbered capture groups allow one to refer to certain portions of a string that a regular expression matches. Each capture group is assigned a unique number and can be referenced using that number, but this can make a regular expression hard to grasp and refactor.</br> </br> For example, given` /(\d{4})-(\d{2})-(\d{2})/` that matches a date, one cannot be sure which group corresponds to the month and which one is the day without examining the surrounding code. Also, if one wants to swap the order of the month and the day, the group references should also be updated.</br> </br> A capture group can be given a name using the `(?<name>...)` syntax, for any identifier `name`. The regular expression for a date then can be written as `/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u`. Each name should be unique and follow the grammar for `ECMAScript` IdentifierName.</br> </br> Named groups can be accessed from properties of a `groups` property of the regular expression result. Numbered references to the groups are also created, just as for non-named groups. For example:
 
 ```javascript
 let re = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u;
@@ -128,9 +164,11 @@ let result = re.exec('2015-01-02');
 // result[3] === '02';
 
 let {groups: {one, two}} = /^(?<one>.*):(?<two>.*)$/u.exec('foo:bar');
-console.log(`one: ${one}, two: ${two}`);  // prints one: foo, two: bar
+console.log(`one: ${one}, two: ${two}`); 
+// one: foo, two: bar
 ```
-&nbsp; 
+
+&nbsp;
 
 ### RegExp Lookbehind Assertions
 
@@ -144,12 +182,12 @@ console.log(`one: ${one}, two: ${two}`);  // prints one: foo, two: bar
 
 [From the documentation:](https://github.com/tc39/proposal-regexp-unicode-property-escapes)
 
-This brings the addition of Unicode property escapes of the form `\p{…}` and` \P{…}`. Unicode property escapes are a new type of escape sequence available in regular expressions that have the `u` flag set. With this feature, we could write:
+> This brings the addition of Unicode property escapes of the form `\p{…}` and` \P{…}`. Unicode property escapes are a new type of escape sequence available in regular expressions that have the `u` flag set. With this feature, we could write:
 
 ```javascript
 const regexGreekSymbol = /\p{Script=Greek}/u;
 regexGreekSymbol.test('π');
-// → true
+// true
 ```
 
 &nbsp;

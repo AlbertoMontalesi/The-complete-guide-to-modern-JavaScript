@@ -1,7 +1,7 @@
-# Chapter 12: Classes
+# Chapter 12: `class`es
 
 Quoting MDN:
-> classes are primarily syntactical sugar over js's existing prototype-based inheritance. The class syntax **does not** introduce a new object-oriented inheritance model to JavaScript.
+> classes are primarily syntactical sugar over `JavaScript`'s existing prototype-based inheritance. The class syntax **does not** introduce a new object-oriented inheritance model to `JavaScript`.
 
 That being said, let's review prototypal inheritance before we jump into classes.
 
@@ -24,18 +24,18 @@ caroline.greet();
 // Hello, my name is Caroline
 ```
 
-We added a new method to the prototype in order to make it accessible to all the new instances of Person that we created.
+We added a new method to the prototype in order to make it accessible to all the new instances of `Person` that we created.
 
 Ok, now that I refreshed your knowledge of prototypal inheritance, let's have a look at classes.
 
 &nbsp;
 
-## Create a `Class`
+## Create a `class`
 
 There are two ways of creating a class:
 
-- class declaration
-- class expression
+- `class` declaration
+- `class` expression
 
 ```javascript
 // class declaration
@@ -48,9 +48,9 @@ const person = class Person {
 }
 ```
 
->Remember: class declaration (and expression) are **not hoisted** which means that unless you want to get a **ReferenceError** you need to declare your class before you access it.
+>**Remember**: `class` declaration (and expression) are **not hoisted** which means that unless you want to get a **ReferenceError** you need to declare your class before you access it.
 
-Let's start creating our first `Class`.
+Let's start creating our first `class`.
 
 We only need a method called `constructor` (remember to add only one constructor, a `SyntaxError` will be thrown if the class contains more than one constructor method).
 
@@ -76,7 +76,7 @@ alberto.farewell();
 // goodbye friend
 ```
 
-As you can see everything works just like before. As we mentioned at the beginning, Classes are just a syntactical sugar, a nicer way of doing inheritance.
+As you can see everything works just like before. As we mentioned at the beginning, `class`es are just a syntactical sugar, a nicer way of doing inheritance.
 
 &nbsp;
 
@@ -85,9 +85,16 @@ As you can see everything works just like before. As we mentioned at the beginni
 Right now the two new methods that we created, `greet()` and `farewell()` can be accessed by every new instance of `Person`, but what if we want a method that can only be accessed by the class itself, similarly to `Array.of()` for arrays?
 
 ```javascript
-static info(){
-  console.log("I am a Person class, nice to meet you");
+class Person {
+  constructor(name,age){
+    this.name = name;
+    this.age = age;
+  }
+  static info(){
+    console.log("I am a Person class, nice to meet you");
+  }
 }
+const alberto = new Person("Alberto",26);
 
 alberto.info();
 // TypeError: alberto.info is not a function
@@ -100,7 +107,7 @@ Person.info();
 
 ## `set` and `get`
 
-We can use setter and getter methods to set and get values inside our `Class`.
+We can use setter and getter methods to set and get values inside our ``class``.
 
 ```javascript
 class Person {
@@ -111,9 +118,10 @@ class Person {
   }
   set nicknames(value){
     this.nickname = value;
+    console.log(this.nickname);
   }
   get nicknames(){
-    return `Your nickname is ${this.nickname}`;
+     console.log(`Your nickname is ${this.nickname}`);
   }
 }
 
@@ -130,9 +138,9 @@ alberto.nicknames;
 
 &nbsp;
 
-## Extending our `Class`
+## Extending our ``class``
 
-What if we want to have a new `Class` that inherits from our previous one? We use `extends`:
+What if we want to have a new ``class`` that inherits from our previous one? We use `extends` keyword for this purpose. Take a look at the following example:
 
 ```javascript
 // our initial class
@@ -159,13 +167,13 @@ class Adult extends Person {
 const alberto = new Adult("Alberto",26,"software developer");
 ```
 
-We created a new `Class Adult` that inherits from `Person` but if you try to run this code you will get an error:
+We created a new ``class` Adult` that inherits from `Person` but if you try to run this code you will get an error:
 
 ```javascript
 ReferenceError: must call super constructor before using |this| in Adult class constructor
 ```
 
-The error message tells us to call `super()` before using `this` in our new `Class`.
+The error message tells us to call `super()` before using `this` in our new ``class``.
 What it means is that we basically have to create a new Person before we create a new Adult and the `super()` constructor will do exactly that.
 
 ```javascript
@@ -183,9 +191,31 @@ Super will simply create a new Person for us.
 If we now run the code again we will get this:
 
 ```javascript
-alberto.age
+// our initial class
+class Person {
+  constructor(name,age){
+    this.name = name;
+    this.age = age;
+  }
+  greet(){
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old` );
+  }
+}
+
+
+// our new class
+class Adult extends Person {
+  constructor(name,age,work){
+    super(name,age);
+    this.work = work;
+  }
+}
+
+const alberto = new Adult("Alberto",26,"software developer");
+
+console.log(alberto.age);
 // 26
-alberto.work
+console.log(alberto.work);
 // "software developer"
 alberto.greet();
 // Hello, my name is Alberto and I am 26 years old
@@ -197,11 +227,11 @@ As you can see our `Adult` inherited all the properties and methods from the `Pe
 
 ## Extending Arrays
 
-We want to create something like this, something similar to an array where the first value is a property to define our Classroom and the rest are our students and their marks.
+We want to create something like this, something similar to an array where the first value is a property to define our `class`room and the rest are our students and their marks.
 
 ```javascript
-// we create a new Classroom
-const myClass = new Classroom('1A',[
+// we create a new `class`room
+const my`class` = new `class`room('1A',[
   {name: "Tim", mark: 6},
   {name: "Tom", mark: 3},
   {name: "Jim", mark: 8},
@@ -209,10 +239,10 @@ const myClass = new Classroom('1A',[
 );
 ```
 
-What we can do is create a new `Class` that extends the array.
+What we can do is create a new ``class`` that extends the array.
 
 ```javascript
-class Classroom extends Array {
+class `class`room extends Array {
   // we use rest operator to grab all the students
   constructor(name, ...students){
     // we use spread to place all the students in the array individually otherwise we would push an array into an array
@@ -224,7 +254,7 @@ class Classroom extends Array {
     this.push(student);
   }
 }
-const myClass = new Classroom('1A',
+const my`class` = new `class`room('1A',
   {name: "Tim", mark: 6},
   {name: "Tom", mark: 3},
   {name: "Jim", mark: 8},
@@ -232,12 +262,12 @@ const myClass = new Classroom('1A',
 );
 
 // now we can call
-myClass.add({name: "Timmy", mark:7});
-myClass[4];
+my`class`.add({name: "Timmy", mark:7});
+my`class`[4];
 // Object { name: "Timmy", mark: 7 }
 
 // we can also loop over with for of
-for(const student of myClass) {
+for(const student of my`class`) {
   console.log(student);
   }
 // Object { name: "Tim", grade: 6 }

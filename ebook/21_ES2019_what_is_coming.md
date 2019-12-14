@@ -1,10 +1,10 @@
-# Chapter 21: ES2019 what is coming?
+# Chapter 21: What's new in ES2019?
 
-In this chapter we will look at what is coming with the latest version of EcmaScript: ES2019.
+In this chapter we will look at what is included in the latest version of `ECMAScript`: ES2019.
 
 &nbsp; 
 
-## Array.prototype.flat() / Array.prototype.flatMap()
+## `Array.prototype.flat()` / `Array.prototype.flatMap()`
 
 `Array.prototype.flat()` will flatten the array recursively up to the depth that we specify. If no depth argument is specified, 1 is the default value. We can use `Infinity` to flatten all nested arrays.
 
@@ -47,7 +47,7 @@ As you can see, if we use `.map()` we will get a multi level array, a problem th
 
 &nbsp;
 
-## Object.fromEntries()
+## `Object.fromEntries()`
 
 `Object.fromEntries()` transforms a list of key-value pairs into an object.
 
@@ -67,7 +67,7 @@ You can read more about the iterable protocol here: [https://developer.mozilla.o
 
 &nbsp;
 
-## String.prototype.trimStart() / .trimEnd()
+## `String.prototype.trimStart()` / `.trimEnd()`
 
 `String.prototype.trimStart()` removes white space from the beginning of a string while `String.prototype.trimEnd()` removes them from the end.
 
@@ -116,7 +116,7 @@ This is useful when you want to ignore the error. For a more detailed list of us
 
 &nbsp;
 
-## Function​.prototype​.toString()
+## `Function​.prototype​.toString()`
 
 The `.toString()` method returns a string representing the source code of the function.
 
@@ -148,7 +148,7 @@ console.log(sum.toString());
 
 &nbsp;
 
-## Symbol.prototype.description
+## `Symbol.prototype.description`
 
 `.description` returns the optional description of a `Symbol` Object.
 

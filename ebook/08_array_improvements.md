@@ -112,8 +112,7 @@ Again, only the index of the **first element** that matches our condition is ret
 
 ## `Array.some()` & `Array.every()`
 
-I'm grouping these two together because their use is self-explanatory: `.some()` will search if there are *some* items matching the condition and
-stop once it finds the first one, `.every()` will check that *all* items match the given condition.
+I'm grouping these two together because their use is self-explanatory: `.some()` will search if there are *some* items matching the condition and stop once it finds the first one. Whereas, .every() will check if all items match the given condition or not.
 
 ```javascript
 const array = [1,2,3,4,5,6,1,2,3,1];

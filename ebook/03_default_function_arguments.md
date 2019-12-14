@@ -81,14 +81,15 @@ With **destructuring** we can write this:
 function calculatePrice({
   total = 0,
   tax = 0.1,
-  tip = 0.05} = {} ){
+  tip = 0.05} = {}){
   return total + (total * tax) + (total * tip);
 }
 
 const bill = calculatePrice({ tip: 0.15, total:150 });
 // 187.5
+```
 
-We made the argument of our function an Object and when calling the function we don't even have to worry about the order of the parameters because they will be matched based on their key.
+We made the argument of our function an Object. When calling the function, we don’t even have to worry about the order of the parameters because they are matched based on their key.
 
 In the example above the default value for *tip* was 0.05 and we overwrote it with 0.15 but we didn't give a value to tax which remained the default 0.1.
 
@@ -104,7 +105,7 @@ Notice this detail:
 
 If we don't default our argument Object to an empty Object, and we were to try and run `calculatePrice()` we would get:
 
-``` javascript
+```JavaScript
 Cannot destructure property `total` of 'undefined' or 'null'.
 ```
 
@@ -120,5 +121,20 @@ calculatePrice(undefined)
 ```
 
 No matter what we passed, the argument was defaulted to an `Object` which had three default properties of total, tax and tip.
+
+```javascript
+function calculatePrice({
+  total = 0,
+  tax = 0.1,
+  tip = 0.05}){
+  return total + (total * tax) + (total * tip);
+}
+calculatePrice({});
+// cannot read property `total` of 'undefined' or 'null'.
+calculatePrice();
+// cannot read property `total` of 'undefined' or 'null'.
+calculatePrice(undefined)
+// cannot read property `total` of 'undefined' or 'null'.
+```
 
 Don't worry about destructuring, we will talk about it in Chapter 10.

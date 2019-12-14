@@ -8,7 +8,7 @@ Prior to ES6 they were called *template strings*, now we call them  *template li
 
 In ES5 we used to write this, in order to interpolate strings:
 
-``` javascript
+```JavaScript
 var name = "Alberto";
 var greeting = 'Hello my name is ' + name;
 
@@ -18,7 +18,7 @@ console.log(greeting);
 
 In ES6 we can use backticks to make our lives easier.
 
-``` javascript
+```JavaScript
 let name  = "Alberto";
 const greeting = `Hello my name is ${name}`;
 
@@ -32,7 +32,7 @@ console.log(greeting);
 
 In ES5 we used to write this:
 
-``` javascript
+```JavaScript
 var a = 1;
 var b = 10;
 console.log('1 * 10 is ' + ( a * b));
@@ -42,7 +42,7 @@ console.log('1 * 10 is ' + ( a * b));
 
 In ES6 we can use backticks to reduce our typing:
 
-``` javascript
+```JavaScript
 var a = 1;
 var b = 10;
 console.log(`1 * 10 is ${a * b}`);
@@ -55,7 +55,7 @@ console.log(`1 * 10 is ${a * b}`);
 
 In ES5 we used to do this to write multi-line strings:
 
-``` javascript
+```JavaScript
 // We have to include a backslash on each line
 var text = "hello, \
 my name is Alberto \
@@ -64,7 +64,7 @@ how are you?\ "
 
 In ES6 we simply have to wrap everything inside backticks, no more backslashes on each line.
 
-``` javascript
+```JavaScript
 const content = `hello,
 my name is Alberto
 how are you?`;
@@ -77,12 +77,30 @@ how are you?`;
 It's very easy to nest a template inside another one, like this:
 
 ```javascript
+const people = [{
+	name: 'Alberto',
+	age: 27
+},{
+	name: 'Caroline',
+	age: 27
+},{
+	name: 'Josh',
+	age: 31
+}];
+
 const markup = `
 <ul>
   ${people.map(person => `<li>  ${person.name}</li>`)}
 </ul>
 `;
+console.log(markup);
+
+// <ul>
+//   <li>  Alberto</li>,<li>  Caroline</li>,<li>  Josh</li>
+// </ul>
 ```
+
+Here we are using the `map` function to loop over each of our `people` and display a `li` tag containing the `name` of the person.
 
 &nbsp;
 
@@ -95,7 +113,10 @@ The syntax for a ternary operator looks like this:
 ```javascript
 const isDiscounted = false
 
-return isDiscounted ? "$10" : "$20"
+function getPrice(){
+	console.log(isDiscounted ? "$10" : "$20");
+}
+getPrice();
 // $20
 ```
 
@@ -134,7 +155,7 @@ const artist = {
 
 ## Pass a function inside a template literal
 
-Similarly to the example above, if we want to, we can pass a function inside a template literal.
+Similarly to the example above (line 10 of the code), if we want to, we can pass a function inside a template literal.
 
 ```javascript
 const groceries = {
@@ -148,7 +169,7 @@ const groceries = {
 function groceryList(others) {
   return `
     <p>
-      ${others.map( other => ` <span> ${other}</span>`).join(' ')}
+      ${others.map( other => ` <span>${other}</span>`).join('\n')}
     </p>
   `;
 }
@@ -168,13 +189,16 @@ const markup = `
 //     <p>apple</p>
 //     <p>
 //     <p>
-//        <span> mushrooms</span>
-//         <span> instant noodles</span>
-//         <span> instant soup</span>
+//        <span>mushrooms</span>
+//        <span>instant noodles</span>
+//        <span>instant soup</span>
 //     </p>
 //   </p>
 //   <div>
 ```
+
+Inside of the last `p` tag we are calling our function `groceryList` passing it all the `others` groceries as an argument.
+Inside of the function we are returning a `p` tag and we are using `map` to loop over each of our items in the grocery list returning an Array of `span` tags containing each grocery. We are then using `.join('\n')` to add a new line after each of those span. 
 
 &nbsp;
 

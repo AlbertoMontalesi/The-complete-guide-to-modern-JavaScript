@@ -1,19 +1,13 @@
 # Chapter 13: Promises
 
-## What is a Promise?
+`JavaScript` work **synchronously** which means that each block of code will be executed after the previous one.
+In the example above we are using `fetch` to retrieve data from an url (in this example we are only pretending to be doing so).
 
-From MDN:
-> A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+In case of synchronous code we would expect the line subsequent line to be called only after the `fetch` has been complete but in reality what is going to happen is that `fetch` will be called and straight away the subsequent two `console.log` will also be called, resulting in the last one `console.log(data)` to return `undefined`.
 
-JavaScript works almost entirely asynchronously which means that when we are retrieving something from an API, for example, our code won't stop executing. Look at this example to understand what is going to happen:
+This happens because `fetch` performs **asynchronously**, which means that the code **won't stop** running once it hits that line but, instead, will continue executing.
 
-```javascript
-const data = fetch('your-api-url-goes-here');
-console.log('Finished');
-console.log(data);
-```
-
-The code won't stop once it hits the fetch, therefore our next `console.log` will be executed before we actually get some value in return, meaning that the `console.log(data)` will be empty.
+What we need, is a way of waiting until `fetch` returns us something before we continue executing our code.
 
 To avoid this we would use **callbacks** or **promises**.
 
@@ -21,40 +15,44 @@ To avoid this we would use **callbacks** or **promises**.
 
 ### Callback hell
 
-You may have heard of something called **callback hell** which looks roughly like this:
+You may have heard of something called **callback hell**, which is something that happens when we try to write **asynchronous** code as if it was **synchronous**, meaning that we try to chain each block of code after the other.
+
+In simple words it would something like:
+
+**do A, If A do B, if B do C** and so on and so forth.
+
+The following is an example just to showcase the meaning of the **callback hell**. Imagine each step is **asynchronous** meaning that we need to send a request to our server for each step of preparing the pizza and we need to wait for the server to respond.
 
 ```javascript
-fs.readdir(source, function (err, files) {
-  if (err) {
-    console.log('Error finding files: ' + err)
-  } else {
-    files.forEach(function (filename, fileIndex) {
-      console.log(filename)
-      gm(source + filename).size(function (err, values) {
-        if (err) {
-          console.log('Error identifying file size: ' + err)
-        } else {
-          console.log(filename + ' : ' + values)
-          aspect = (values.width / values.height)
-          widths.forEach(function (width, widthIndex) {
-            height = Math.round(width / aspect)
-            console.log('resizing ' + filename + 'to ' + height + 'x' + height)
-            this.resize(width, height).write(dest + 'w' + width + '_' + filename, function(err) {
-              if (err) console.log('Error writing file: ' + err)
-            })
-          }.bind(this))
-        }
-      })
-    })
-  }
-})
+const makePizza = (ingredients, callback) => {
+    mixIngredients(ingredients, function(mixedIngredients)){
+      bakePizza(mixedIngredients, function(bakedPizza)){
+        console.log('finished!')
+      }
+    }
+}
 ```
 
 We try to write our code in a way where executions happens visually from top to bottom, causing excessive nesting on functions and result in what you can see above.
 
 To improve your callbacks you can check out [http://callbackhell.com/](http://callbackhell.com/)
 
-Here we will focus on how to write promises.
+Promises will help us escape this "hell" and improve our code.
+
+&nbsp;
+
+## What is a Promise?
+
+From MDN:
+> A **Promise** is an object representing the eventual completion or failure of an asynchronous operation.
+
+Have a quick look at the following example:
+
+```javascript
+const data = fetch('your-api-url-goes-here');
+console.log('Finished');
+console.log(data);
+```
 
 &nbsp;
 
@@ -126,13 +124,15 @@ myPromise
 
 We use `.then()` to grab the value when the promise resolves and `.catch()` when the promise rejects.
 
-Looking at our error log you can see that it tells us where the error occured, that is because we wrote `reject(Error("this is our error"));` and not simply `reject("this is our error");`.
+Looking at our error log you can see that it tells us where the error occurred, that is because we wrote `reject(Error("this is our error"));` and not simply `reject("this is our error");`.
 
 &nbsp;
 
 ### Chaining promises
 
 We can chain promises one after the other, using what was returned from the previous one as the base for the subsequent one, whether the promise was resolved or rejected.
+
+You can chain as many promises as you want and the code will still be more readable and shorter than what we have seen above in the **callback hell**.
 
 ```javascript
 const myPromise = new Promise((resolve, reject) => {
@@ -141,21 +141,22 @@ const myPromise = new Promise((resolve, reject) => {
 
 myPromise
   .then(data => {
-    // take the data returned and call a function on it
-    return doSomething(data);
+    // return something new 
+    return 'working...'
   })
   .then(data => {
     // log the data that we got from the previous promise
     console.log(data);
+    throw 'failed!';
   })
   .catch(err => {
+    // grab the error from the previous promise and log it
     console.error(err);
+    // failed!
   })
 ```
 
-We called a function (it can do whatever you want, in this case it does nothing) and we passed the value down to the next step where we logged it.
-
-You can chain as many promises as you want and the code will still be more readable and shorter than what we have seen above in the **callback hell**.
+As you can see, the first `then` passed a value down to the second one where we logged it and we also threw an error that was caught in the `catch` clause.
 
 We are not limited to chaining in case of success, we can also chain when we get a `reject`.
 
@@ -167,7 +168,6 @@ const myPromise = new Promise((resolve, reject) => {
 myPromise
   .then(data => {
     throw new Error("ooops");
-
     console.log("first value");
   })
   .catch(() => {
@@ -186,15 +186,15 @@ We did not get "first value" because we threw an error therefore we only got the
 
 ### `Promise.resolve()` & `Promise.reject()`
 
-`Promise.resolve(`) and `Promise.reject()` will create promises that automatically resolve or reject.
+`Promise.resolve()` and `Promise.reject()` will create promises that automatically resolve or reject.
 
 ```javascript
 //Promise.resolve()
 Promise.resolve('Success').then(function(value) {
-  console.log(value);
+  console.log();
   // "Success"
 }, function(value) {
-  // not called
+  cnsole.log('fail')
 });
 
 // Promise.reject()
@@ -205,6 +205,10 @@ Promise.reject(new Error('fail')).then(function() {
   // Error: fail
 });
 ```
+
+As you can see in the first example, the Promise created in the `then` clause has two arguments, one function that get's called when the Promise resolves, and one that gets called when the Promise rejects. Since `Promise.resolve()` immediately resolves the promise, the first functions is being called.
+
+The opposite happens in the second example, where we use `Promise.reject()` to immediately reject the Promise, therefore the second argument of the `then` clause gets called.
 
 &nbsp;
 
@@ -237,6 +241,13 @@ promise2.then(data => {
 They will resolve independently from one another but look at what happens when we use `Promise.all().`
 
 ```javascript
+const promise1 =  new Promise((resolve,reject) => {
+  setTimeout(resolve, 500, 'first value');
+});
+const promise2 =  new Promise((resolve,reject) => {
+  setTimeout(resolve, 1000, 'second value');
+});
+
 Promise
   .all([promise1, promise2])
   .then(data => {

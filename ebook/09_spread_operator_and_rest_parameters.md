@@ -3,7 +3,7 @@
 ## The Spread operator
 
 According to MDN:
-> Spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
+> **Spread** syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
 
 &nbsp;
 
@@ -41,12 +41,17 @@ console.log(newVeggie);
 ```
 
 Our new array also changed, but why? Because we did not actually create a copy but we just referenced our old array in the new one.
-This is how we would usually make a copy of an array in ES5 and earlier.
+The following is how we would usually make a **copy** of an array in ES5 and earlier
 
 ```javascript
 const veggie = ["tomato","cucumber","beans"];
-const newVeggie = [].concat(veggie);
 // we created an empty array and put the values of the old array inside of it
+const newVeggie = [].concat(veggie);
+veggie.push("peas");
+console.log(veggie);
+// Array [ "tomato", "cucumber", "beans", "peas" ]
+console.log(newVeggie);
+// Array [ "tomato", "cucumber", "beans" ]
 ```
 
 And this is how we would do the same using the spread syntax:
@@ -54,11 +59,21 @@ And this is how we would do the same using the spread syntax:
 ```javascript
 const veggie = ["tomato","cucumber","beans"];
 const newVeggie = [...veggie];
+veggie.push("peas");
+console.log(veggie);
+// Array [ "tomato", "cucumber", "beans", "peas" ]
+console.log(newVeggie);
+// Array [ "tomato", "cucumber", "beans" ]
 ```
+
+The syntax for the **Spread** operator is the following `...YourArray`. Since we wanted the variable `newVeggie` to be a copy of the array `veggie` we assigned it to an Array and inside of it we spread all the values from the variable `veggie` like so:
+`[...veggie]`.
 
 &nbsp;
 
 ### Spread into a function
+
+Thanks to the **Spread** operator we have an easier way of calling a function with an Array of arguments.
 
 ```javascript
 // OLD WAY
@@ -78,7 +93,7 @@ console.log(args);
 // Array [ 0, 1, 2 ]
 ```
 
-We can replace the `.apply()` syntax and just use the spread operator.
+As you can see, in the example, our `doStuff` function accepts 3 parameters and we are passing them by spreading the array `args` into the function like so: `...args` replacing the need of resorting to use `.apply()`.
 
 Let's look at another example:
 
@@ -107,7 +122,7 @@ greet(...name);
 // Hello Jon Paul
 ```
 
-We provided 3 values inside our array but only have 2 arguments in our function therefore the last one is left out.
+In the example given above, we provided three values inside the array but we only have two arguments in our function therefore the last one is left out.
 
 &nbsp;
 
@@ -135,7 +150,7 @@ You can read more about ES2018 in Chapter 20.
 
 ## The Rest parameter
 
-The rest syntax looks exactly the same as the spread, 3 dots `...` but it is quite the opposite of it. Spread expands an array, while rest condenses multiple elements into a single one.
+The **rest** syntax looks exactly the same as the **spread**, 3 dots `...` but it is quite the opposite of it. **Spread** expands an array, while **rest** condenses multiple elements into a single one.
 
 ```javascript
 

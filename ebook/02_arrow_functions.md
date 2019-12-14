@@ -5,32 +5,32 @@
 ES6 introduced fat arrows (`=>`) as a way to declare functions.
 This is how we would normally declare a function in ES5:
 
-``` javascript
-var greeting = function(name) {
+```JavaScript
+const greeting = function(name) {
   return "hello " + name;
 }
 ```
 
 The new syntax with a fat arrow looks like this:
 
-``` javascript
-const greeting = (name) => {
+```JavaScript
+var greeting = (name) => {
   return `hello ${name}`;
 }
 ```
 
 We can go further, if we only have one parameter we can drop the parenthesis and write:
 
-``` javascript
-const greeting = name => {
+```JavaScript
+var greeting = name => {
   return `hello ${name}`;
 }
 ```
 
 If we have no parameter at all we need to write empty parenthesis like this:
 
-``` javascript
-const greeting = () => {
+```JavaScript
+var greeting = () => {
   return "hello";
 }
 ```
@@ -41,7 +41,7 @@ const greeting = () => {
 
 With arrow functions we can skip the explicit `return` and return like this:
 
-``` javascript
+```JavaScript
 const greeting = name => `hello ${name}`;
 ```
 
@@ -64,9 +64,9 @@ const arrowFunction = (name) => {
 }
 ```
 
-Let's say we want to implicitly return an **object literal**, we would do like this:
+Let's say we want to implicitly return an **object literal**, we would do it like this:
 
-``` javascript
+```JavaScript
 const race = "100m dash";
 const runners = [ "Usain Bolt", "Justin Gatlin", "Asafa Powell" ];
 
@@ -78,7 +78,9 @@ console.log(results);
 // {name: "Asafa Powell", race: "100m dash", place: 3}]
 ```
 
-To tell JavaScript what's inside the curly braces is an **object literal** we want to implicitly return, we need to wrap everything inside parenthesis.
+In this example, we are using the `map` function to iterate over the array `runners`. The first argument is the current item in the array and the `i` is the index of it. For each item in the array we are then adding into `results` an Object containing the properties `name`, `race`, and `place`.
+
+To tell `JavaScript` what's inside the curly braces is an **object literal** we want to implicitly return, we need to wrap everything inside parenthesis.
 
 Writing `race` or `race: race` is the same.
 
@@ -90,7 +92,7 @@ As you can see from the previous examples, arrow functions are **anonymous**.
 
 If we want to have a name to reference them we can bind them to a variable:
 
-``` javascript
+```JavaScript
 const greeting = name => `hello ${name}`;
 
 greeting("Tom");
@@ -106,7 +108,19 @@ When you use an arrow function, the `this` keyword is inherited from the parent 
 
 This can be useful in cases like this one:
 
-``` javascript
+```html
+<div class="box open">
+	This is a box
+</div>
+```
+
+```css
+.opening {
+	background-color:red;
+}
+```
+
+```JavaScript
 // grab our div with class box
 const box = document.querySelector(".box");
 // listen for a click event
@@ -115,34 +129,35 @@ box.addEventListener("click", function() {
   this.classList.toggle("opening");
   setTimeout(function(){
     // try to toggle again the class
-    this.classList.toggle("open");
-    });
+    this.classList.toggle("opening");
+    },500);
 });
 ```
 
 The problem in this case is that the first `this` is bound to the `const` box but the second one, inside the `setTimeout`, will be set to the `Window` object, throwing this error:
 
-``` javascript
+```JavaScript
 Uncaught TypeError: cannot read property "toggle" of undefined
 ```
 
 Since we know that **arrow functions** inherit the value of `this` from the parent scope, we can re-write our function like this:
 
-``` javascript
-// grab our div with class box
+```JavaScript
 const box = document.querySelector(".box");
 // listen for a click event
-box.addEventListener("click", function () {
+box.addEventListener("click", function() {
   // toggle the class opening on the div
   this.classList.toggle("opening");
-  setTimeout(() => {
+  setTimeout(()=>{
     // try to toggle again the class
-    this.classList.toggle("open");
-   });
+    this.classList.toggle("opening");
+    },500);
 });
 ```
 
 Here, the second `this` will inherit from its parent, and will be set to the `const` box.
+
+Running the example code you should see our `div` turning red for just half a second.
 
 &nbsp;
 
@@ -150,9 +165,11 @@ Here, the second `this` will inherit from its parent, and will be set to the `co
 
 Using what we know about the inheritance of the `this` keyword we can define some instances where you should **not** use arrow functions.
 
-The next 2 examples show when to be careful using `this` inside of arrows.
+The next two examples show when to be careful using `this` inside of arrows.
 
-``` javascript
+#### Example 1
+
+```JavaScript
 const button = document.querySelector("btn");
 button.addEventListener("click", () => {
   // error: *this* refers to the `Window` Object
@@ -160,14 +177,32 @@ button.addEventListener("click", () => {
 })
 ```
 
-``` javascript
-const person = {
+&nbsp;
+
+#### Example 2
+
+```JavaScript
+const person1 = {
+  age: 10,
+  grow: function() {
+    this.age++;
+    console.log(this.age);
+  }
+}
+
+person1.grow();
+// 11
+
+const person2 = {
   age: 10,
   grow: () => {
     // error: *this* refers to the `Window` Object
     this.age++;
+    console.log(this.age);
   }
 }
+
+person2.grow();
 ```
 
 Another difference between Arrow functions and normal functions is the access to the `arguments object`.
@@ -193,7 +228,7 @@ Let's have a look at this example with our previous list of runners:
 ```javascript
 const showWinner = () => {
   const winner = arguments[0];
-  return `${winner} was the winner`
+  console.log(`${winner} was the winner`)
 }
 
 showWinner( "Usain Bolt", "Justin Gatlin", "Asafa Powell" )
@@ -201,7 +236,7 @@ showWinner( "Usain Bolt", "Justin Gatlin", "Asafa Powell" )
 
 This code will return:
 
-``` javascript
+```JavaScript
 ReferenceError: arguments is not defined
 ```
 
@@ -214,7 +249,7 @@ Example with **arrow function**:
 ```javascript
 const showWinner = (...args) => {
   const winner = args[0];
-  return `${winner} was the winner`
+  console.log(`${winner} was the winner`)
 }
 showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell" )
 // "Usain Bolt was the winner"
@@ -225,7 +260,7 @@ Example with **function**:
 ```javascript
 const showWinner = function() {
   const winner = arguments[0];
-  return `${winner} was the winner`
+  console.log(`${winner} was the winner`)
 }
 showWinner("Usain Bolt", "Justin Gatlin", "Asafa Powell")
 // "Usain Bolt was the winner"

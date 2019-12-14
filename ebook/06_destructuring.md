@@ -2,7 +2,7 @@
 
 MDN defines **destructuring** like this:
 
-> The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+> The **destructuring** assignment syntax is a `JavaScript` expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
 
 Let's start with **destructuring objects** first.
 
@@ -10,7 +10,7 @@ Let's start with **destructuring objects** first.
 
 ## Destructuring Objects
 
-To create variables from an object we used to do this:
+To create variables from an object, we used to do the following:
 
 ```javascript
 var person  = {
@@ -22,7 +22,7 @@ var first = person.first;
 var last = person.last;
 ```
 
-In ES6 we can now write this:
+In ES6 we can instead do it as following:
 
 ```javascript
 const person = {
@@ -33,7 +33,7 @@ const person = {
 const { first, last } = person;
 ```
 
-Since our `const` have the same name as the properties we want to grab, we don't have to specify `person.first` and `person.last` anymore.
+Since our `const` variable, `person`, have the same name as the properties we want to grab, we don't have to specify `person.first` and `person.last` anymore.
 
 The same applies even when we have nested data, such as what we could get from an API.
 
@@ -52,12 +52,17 @@ const person = {
 const { facebook } = person.links.social;
 ```
 
-We are not limited to name our variable the same as the property of the object, we can also rename it like this:
+We are not limited to name our variable the same as the property of the object. We can also rename as the following:
 
 ```javascript
 const { facebook:fb } = person.links.social;
 // it will look for the property person.links.social.facebook and name the variable fb
+console.log(fb); // https://www.facebook.com/alberto.montalesi
+console.log(facebook); //ReferenceError: facebook is not defined
 ```
+
+We are using the syntax `const { facebook:fb }` to specify that we want to target the property `facebook` of the Object `person.links.social` and we want the `const` variable to be called `fb`.
+That is why when we try to log `facebook` we get an error.
 
 We can also pass in **default values** like this:
 
@@ -98,9 +103,9 @@ console.log(food);
 // Array [ "pizza", "ice cream", "cheese cake" ]
 ```
 
-In the example above the first two values of the array were bound to `name` and `surname` while the rest (that's why it's called the `rest operator`) get assigned to `food`
+In the example above the first two values of the array were bound to `name` and `surname` while the rest (that's why it's called the **rest operator**) get assigned to `food`
 
-The `...` is the syntax for the `rest operator`
+The `...` is the syntax for the **rest operator**.
 
 &nbsp;
 
@@ -121,15 +126,3 @@ console.log(hungry,full);
 It can't get easier than this to swap values.
 
 &nbsp;
-
-## Destructuring functions
-
-```javascript
-function totalBill({ total, tax = 0.1 }) {
-  return total + (total * tax);
-}
-
-// as you see since we are using the same names, we don't have to pass the arguments in the same order as when we declared the function
-// we are also overriding the default value we set for the tax
-const bill = totalBill({ tax: 0.15, total: 150});
-```
