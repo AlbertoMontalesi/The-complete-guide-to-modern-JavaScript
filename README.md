@@ -14,13 +14,11 @@
 
 [![book-cover](/assets/banner.jpg)](http://bit.ly/2VV2LbX)
 
-## Who is this book for ?
+## Who is this book for?
 
-Whether you are a complete beginner or you have some knowledge in JavaScript, this book will guide you from the basics of the language to all the new features introduced until 2019. At the end of each chapter test your knowledge with quizzes.
+This book is aimed to developer of every level, from beginner to advanced, who want to improve their `JavaScript` skills and get up to date with all the upgraded done to the language specification since 2015.
 
-After reading this book, Let Const, generators, promises and async won't be a problem anymore.
-
-If you want to experience something new, this book also includes an introduction to the basics of TypeScript, a must-know for any JavaScript developer in 2019.
+This book is **not** for total beginners, it does **cover** the basics of programming in general and albeit providing an introduction to `JavaScript` I would recommend that you take it only if you have at least a basic understanding of the language.
 
 &nbsp;
 
@@ -39,7 +37,11 @@ The Paid version gives you access to:
 
 ## Where to buy it
 
-You get the ebook on Amazon and Leanpub, check the following link to find your local amazon store:
+You can get the course based on this book on:
+
+- [Leanpub](https://leanpub.com/c/completeguidetomodernjavascript)
+
+You get the ebook on Amazon, Leanpub and other stores, check the following link to find your local amazon store:
 
 - Kobo [Ebook](https://www.kobo.com/ww/en/ebook/complete-guide-to-modern-javascript)
 - Gumroad [Ebook](https://gum.co/completeguidetomodernjavascript)
@@ -93,7 +95,7 @@ If you want to get in touch for any type of collaboration or discussion you can 
 
 ## Contributions & Donations
 
-Any contributions you make are of course greatly appreciated.
+Any contributions you make are of book greatly appreciated.
 
 If you enjoy my content and you want to donate a cup of coffee to me, you can do so at [https://www.paypal.me/albertomontalesi](https://www.paypal.me/albertomontalesi).
 
