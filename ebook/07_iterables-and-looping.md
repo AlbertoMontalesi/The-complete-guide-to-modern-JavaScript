@@ -110,7 +110,7 @@ The last important difference I want to talk about is that the `for in` loop wil
 ```javascript
 const fruits = ["apple","banana", "orange"];
 
-fruit.eat = "gnam gnam";
+fruits.eat = "gnam gnam";
 
 for (const fruit of fruits){
   console.log(fruit);
