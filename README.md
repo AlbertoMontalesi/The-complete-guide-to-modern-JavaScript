@@ -43,6 +43,7 @@ You can get the course based on this book on:
 
 You get the ebook on Amazon, Leanpub and other stores, check the following link to find your local amazon store:
 
+- Play Store [Ebook](https://play.google.com/store/books/details/Alberto_Montalesi_The_Complete_Guide_to_Modern_Jav?id=avqrDwAAQBAJ)
 - Kobo [Ebook](https://www.kobo.com/ww/en/ebook/complete-guide-to-modern-javascript)
 - Gumroad [Ebook](https://gum.co/completeguidetomodernjavascript)
 - Leanpub: [Ebook](https://leanpub.com/thecompleteguidetomodernjavascript2019)
