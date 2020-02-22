@@ -48,14 +48,14 @@ With the spread operator we can easily create a clone of our `Object` so that wh
 
 &nbsp;
 
-## Asynchronous Iteration
+## Asynchronous iteration
 
-With Asynchronous Iteration we can iterate asynchronously over our data.
+With asynchronous iteration we can iterate asynchronously over our data.
 
 [From the documentation:](https://github.com/tc39/proposal-async-iteration)
 > An async iterator is much like an iterator, except that its `next()` method returns a promise for a `{ value, done }` pair.
 
-To do so, we will use a `for-await-of` loop which works by converting our iterables to a Promise, unless they already are one.
+To do so, we will use a `for-await-of` loop which works by converting our iterables to a promise, unless they already are one.
 
 ```javascript
 const iterables = [1,2,3];
@@ -96,7 +96,7 @@ myPromise
   })
 ```
 
-`.finally()` will also return a `Promise` so we can chain more `then` and `catch` after it but those Promises will fulfill based on the `Promise` they were chained onto.
+`.finally()` will also return a `Promise` so we can chain more `then` and `catch` after it, but those promises will fulfill based on the `Promise` they were chained onto.
 
 ```javascript
 const myPromise = new Promise((resolve,reject) => {
@@ -129,8 +129,8 @@ Four new RegExp related features made it to the new version of `ECMAScript`. The
 
 - [`s(dotAll)` flag for regular expressions](https://github.com/tc39/proposal-regexp-dotall-flag)
 - [RegExp named capture groups](https://github.com/tc39/proposal-regexp-named-groups)
-- [RegExp Lookbehind Assertions](https://github.com/tc39/proposal-regexp-lookbehind)
-- [RegExp Unicode Property Escapes](https://github.com/tc39/proposal-regexp-lookbehind)
+- [RegExp lookbehind assertions](https://github.com/tc39/proposal-regexp-lookbehind)
+- [RegExp unicode property escapes](https://github.com/tc39/proposal-regexp-lookbehind)
 
 &nbsp;
 
@@ -149,7 +149,7 @@ This introduces a new `s` flag for `ECMAScript` regular expressions that makes `
 
 [From the documentation:](https://github.com/tc39/proposal-regexp-named-groups)
 
->Numbered capture groups allow one to refer to certain portions of a string that a regular expression matches. Each capture group is assigned a unique number and can be referenced using that number, but this can make a regular expression hard to grasp and refactor.</br> </br> For example, given` /(\d{4})-(\d{2})-(\d{2})/` that matches a date, one cannot be sure which group corresponds to the month and which one is the day without examining the surrounding code. Also, if one wants to swap the order of the month and the day, the group references should also be updated.</br> </br> A capture group can be given a name using the `(?<name>...)` syntax, for any identifier `name`. The regular expression for a date then can be written as `/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u`. Each name should be unique and follow the grammar for `ECMAScript` IdentifierName.</br> </br> Named groups can be accessed from properties of a `groups` property of the regular expression result. Numbered references to the groups are also created, just as for non-named groups. For example:
+>Numbered capture groups allow one to refer to certain portions of a string that a regular expression matches. Each capture group is assigned a unique number and can be referenced using that number, but this can make a regular expression hard to grasp and refactor.</br> </br> For example, given` /(\d{4})-(\d{2})-(\d{2})/` that matches a date, one can't be sure which group corresponds to the month and which one is the day without examining the surrounding code. Also, if one wants to swap the order of the month and the day, the group references should also be updated.</br> </br> A capture group can be given a name using the `(?<name>...)` syntax, for any identifier `name`. The regular expression for a date then can be written as `/(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u`. Each name should be unique and follow the grammar for `ECMAScript` IdentifierName.</br> </br> Named groups can be accessed from properties of a `groups` property of the regular expression result. Numbered references to the groups are also created, just as for non-named groups. For example:
 
 ```javascript
 let re = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u;
@@ -194,6 +194,6 @@ regexGreekSymbol.test('π');
 
 ## Lifting template literals restriction
 
-When using *tagged* template literals the restriction on escape sequences are removed.
+When using *tagged* template literals, the restriction on escape sequences are removed.
 
 You can read more [here.](https://tc39.github.io/proposal-template-literal-revision/#sec-template-literals)

@@ -42,7 +42,7 @@ str.toLowerCase()
 // Output: "i ate an apple"
 ```
 
-There are many more methods; these were just a few as a reminder. Check the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#) for a more in-depth description on the above methods.
+There are many more methods- these were just a few as a reminder. Check the [MDN documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#) for a more in-depth description of the above methods.
 
 &nbsp;
 
@@ -85,7 +85,7 @@ code.startsWith("DEF",3);
 
 ### `endsWith()`
 
-Similarly to `startsWith()` this new method will check if the string ends with the value we pass in:
+Similarly to `startsWith()`, this new method will check if the string ends with the value we pass in:
 
 ```javascript
 const code = "ABCDEF";

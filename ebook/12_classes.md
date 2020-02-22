@@ -1,7 +1,7 @@
-# Chapter 12: `class`es
+# Chapter 12: Classes
 
 Quoting MDN:
-> classes are primarily syntactical sugar over `JavaScript`'s existing prototype-based inheritance. The class syntax **does not** introduce a new object-oriented inheritance model to `JavaScript`.
+> "Classes are primarily syntactic sugar over `JavaScript`'s existing prototype-based inheritance. The class syntax **does not** introduce a new object-oriented inheritance model to `JavaScript`."
 
 That being said, let's review prototypal inheritance before we jump into classes.
 
@@ -48,7 +48,7 @@ const person = class Person {
 }
 ```
 
->**Remember**: `class` declaration (and expression) are **not hoisted** which means that unless you want to get a **ReferenceError** you need to declare your class before you access it.
+>**Remember**: `class` declaration (and expression) are **not hoisted**, which means that unless you want to get a **ReferenceError** you need to declare your class before you access it.
 
 Let's start creating our first `class`.
 
@@ -76,13 +76,13 @@ alberto.farewell();
 // goodbye friend
 ```
 
-As you can see everything works just like before. As we mentioned at the beginning, `class`es are just a syntactical sugar, a nicer way of doing inheritance.
+As you can see everything works just like before. As we mentioned at the beginning, `class`es are just a syntactic sugar, a nicer way of doing inheritance.
 
 &nbsp;
 
 ## Static methods
 
-Right now the two new methods that we created, `greet()` and `farewell()` can be accessed by every new instance of `Person`, but what if we want a method that can only be accessed by the class itself, similarly to `Array.of()` for arrays?
+Right now the two new methods that we created- `greet()` and `farewell()`- can be accessed by every new instance of `Person`, but what if we want a method that can only be accessed by the `class` itself, similarly to `Array.of()` for arrays?
 
 ```javascript
 class Person {
@@ -167,7 +167,7 @@ class Adult extends Person {
 const alberto = new Adult("Alberto",26,"software developer");
 ```
 
-We created a new ``class` Adult` that inherits from `Person` but if you try to run this code you will get an error:
+We created a new ``class` Adult` that inherits from `Person`, but if you try to run this code, you’ll get an error:
 
 ```javascript
 ReferenceError: must call super constructor before using |this| in Adult class constructor
@@ -185,7 +185,7 @@ class Adult extends Person {
 }
 ```
 
-Why did we set `super(name,age)` ? Because our `Adult` class inherits name and age from the `Person` therefore we don't need to redeclare them.
+Why did we set `super(name,age)` ? Because our `Adult` class inherits name and age from the `Person`, therefore we don't need to redeclare them.
 Super will simply create a new Person for us.
 
 If we now run the code again we will get this:
@@ -221,13 +221,13 @@ alberto.greet();
 // Hello, my name is Alberto and I am 26 years old
 ```
 
-As you can see our `Adult` inherited all the properties and methods from the `Person` class.
+As you can see, our `Adult` inherited all the properties and methods from the `Person` class.
 
 &nbsp;
 
 ## Extending Arrays
 
-We want to create something like this, something similar to an array where the first value is a property to define our `class`room and the rest are our students and their marks.
+We want to create something like this- something similar to an array where the first value is a property to define our classroom and the rest are our students and their marks.
 
 ```javascript
 // we create a new `class`room

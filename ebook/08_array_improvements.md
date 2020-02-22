@@ -4,7 +4,7 @@
 
 `Array.from()` is the first of many new array methods that ES6 introduced.
 
-It will take something **arrayish**, meaning something that looks like an array but isn't, and transform it into a real array.
+It will take something arrayish- meaning something that looks like an array but isn’t- and transform it into a real array.
 
 ```html
 <div class="fruits">
@@ -58,7 +58,7 @@ console.log(fruitArray);
 // ["Apple", "Banana", "Orange"]
 ```
 
-In the example above we passed a `map` function to the `.from()` method to push into our newly formed array only the `textContent` of the `p` tags and not the whole tag.
+In the example above we passed a `map` function to the `.from()` method to push into our newly formed array. This includes only the `textContent` of the `p` tags and not the whole tag.
 
 &nbsp;
 
@@ -79,7 +79,7 @@ console.log(digits);
 
 `Array.find()` returns the value of the first element in the array that satisfies the provided testing function. Otherwise `undefined` is returned.
 
-Let's looks at a simple example to see how `Array.find()` works.
+Let's look at a simple example to see how `Array.find()` works.
 
 ```javascript
 const array = [1,2,3,4,5];
@@ -90,7 +90,7 @@ console.log(found);
 // 4
 ```
 
-As we mentioned, it will return the **first element** that matches our condition, that's why we only got **4** and not **5**.
+As we mentioned, it will return the **first element** that matches our condition, that's why we only have **4** and not **5**.
 
 &nbsp;
 

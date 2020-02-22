@@ -3,7 +3,7 @@
 ## The `for of` loop
 
 ES6 introduced a new type of loop, the `for of` loop.
-Let’s take a look at how it is used
+Let’s take a look at how it's used
 
 &nbsp;
 
@@ -21,7 +21,7 @@ for (var i = 0; i < fruits.length; i++){
 // orange
 ```
 
-This is a normal loop where at each iteration we increase the value of `i` by 1 as long as it is less than `fruits.length`. At that point the loop will stop.
+This is a normal loop where at each iteration we increase the value of `i` by 1 as long as it's less than `fruits.length`. At that point the loop will stop.
 
 Look at how we can achieve the same with a `for of` loop:
 
@@ -39,7 +39,7 @@ for(const fruit of fruits){
 
 ### Iterating over an object
 
-Objects are **non iterable** so how do we iterate over them?
+Objects are **non iterable**, so how do we iterate over them?
 We have to first grab all the values of the object using something like `Object.keys()` or the new ES6 function: `Object.entries()`.
 
 ```javascript
@@ -62,11 +62,11 @@ for (const prop of Object.keys(car)){
 
 ## The `for in` loop
 
-Even though it is not a new ES6 loop, let's look at the `for in` loop to understand what differentiates it to the `for of` loop.
+Even though it's not a new ES6 loop, let's look at the `for in` loop to understand what differentiates it to the `for of` loop.
 
 The `for in` loop is a bit different because it will iterate over all the [enumerable properties](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) of an object in no particular order.
 
-It is therefore suggested not to add, modify or delete properties of the object during the iteration. As there is no guarantee that they will be visited, or if they will be visited before or after being modified.
+It's therefore suggested not to add, modify or delete properties of the object during the iteration. There’s no guarantee that they will be visited, or if they will be visited before or after being modified.
 
 ```javascript
 const car = {
@@ -105,12 +105,12 @@ for (let i of list) {
 
 `for in` will return a list of keys whereas the `for of` will return a list of values of the numeric properties of the object being iterated.
 
-The last important difference I want to talk about is that the `for in` loop will iterate over new properties added to the object.
+The last important difference to cover is the `for in` loop will iterate over new properties added to the object.
 
 ```javascript
 const fruits = ["apple","banana", "orange"];
 
-fruits.eat = "gnam gnam";
+fruit.eat = "gnam gnam";
 
 for (const fruit of fruits){
   console.log(fruit);
@@ -129,7 +129,7 @@ for (const index in fruits){
 // gnam gnam
 ```
 
-Since `for in` will return the value and not the value itself we nee to access with the syntax `fruits[index]`.
+Since `for in` will return the value and not the value itself, we need to access with the syntax `fruits[index]`.
 
 As you can see, the `for in` loop returned the value of the property `eat` which we've added after initialization of the variable `fruits`.
-On the other hand, the `for of` loop only returned the values that were in the Array when we initialized it.
+On the other hand, the `for of` loop only returned the values that were in the array when we initialized it.

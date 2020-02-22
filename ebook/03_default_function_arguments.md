@@ -20,7 +20,7 @@ getLocation('Paris','France')
 // Europe France Paris
 ```
 
-As you can see our function takes three arguments, a city, a country and a continent. In the function body we are checking if either country or continent are `undefined` and in that case we are giving them a **default value**.
+As you can see, our function takes three arguments: a city, a country and a continent. In the function body we are checking if either country or continent are `undefined` and in that case, we are giving them a **default value**.
 
 When calling `getLocation('Milan')` the second and third parameter (country and continent) are undefined and get replaced by the default values of our functions.
 
@@ -44,7 +44,7 @@ getLocation(undefined,'Paris','France')
 // Europe Paris France
 ```
 
-If we want to replace any of the first arguments with our default we need to pass them as `undefined`, not really a nice looking solution. Luckily ES6 came to the rescue with default function arguments.
+If we want to replace any of the first arguments with our default we need to pass them as `undefined`, which is not the nicest looking solution. Luckily, ES6 came to the rescue with default function arguments.
 
 &nbsp;
 
@@ -91,7 +91,7 @@ const bill = calculatePrice({ tip: 0.15, total:150 });
 
 We made the argument of our function an Object. When calling the function, we don’t even have to worry about the order of the parameters because they are matched based on their key.
 
-In the example above the default value for *tip* was 0.05 and we overwrote it with 0.15 but we didn't give a value to tax which remained the default 0.1.
+In the example above, the default value for *tip* was 0.05, and we overwrote it with 0.15. But we didn’t give a value to tax which remained the default 0.1.
 
 Notice this detail:
 
@@ -103,7 +103,7 @@ Notice this detail:
 } = {}
 ```
 
-If we don't default our argument Object to an empty Object, and we were to try and run `calculatePrice()` we would get:
+If we don't default our argument Object to an empty Object, and we were to try and run `calculatePrice()`, we would get:
 
 ```JavaScript
 Cannot destructure property `total` of 'undefined' or 'null'.

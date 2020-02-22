@@ -39,7 +39,7 @@ They both have the same value, but we will never have naming collisions with Sym
 
 ## Identifiers for object properties
 
-As we mentioned earlier we can use them to create identifiers for object properties, so let's see an example:
+As we mentioned earlier, we can use them to create identifiers for object properties, so let's see an example:
 
 ```javascript
 const office = {
@@ -55,7 +55,7 @@ for (person in office){
 // Mark
 ```
 
-Here we have our office object with 3 people, two of which share the same name.
+Here we have our office object with three people, two of which share the same name.
 To avoid naming collisions we can use symbols.
 
 ```javascript
@@ -90,7 +90,7 @@ console.log(symbols);
 ​// length: 3
 ```
 
-We retrieved the array but to be able to access the properties we have to use `map`.
+We retrieved the array, but to be able to access the properties we have to use `map`.
 
 ```javascript
 const symbols = Object.getOwnPropertySymbols(office);

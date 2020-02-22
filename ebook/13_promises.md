@@ -1,13 +1,13 @@
 # Chapter 13: Promises
 
 `JavaScript` work **synchronously** which means that each block of code will be executed after the previous one.
-In the example above we are using `fetch` to retrieve data from an url (in this example we are only pretending to be doing so).
+In the example above, we're using `fetch` to retrieve data from a url (in this example we're only pretending to be doing so).
 
-In case of synchronous code we would expect the line subsequent line to be called only after the `fetch` has been complete but in reality what is going to happen is that `fetch` will be called and straight away the subsequent two `console.log` will also be called, resulting in the last one `console.log(data)` to return `undefined`.
+In case of synchronous code we would expect the subsequent line to be called only after the `fetch` has been completed. But in reality, what's going to happen is that `fetch` will be called, and straight away the subsequent two `console.log` will also be called, resulting in the last one `console.log(data)` to return `undefined`.
 
 This happens because `fetch` performs **asynchronously**, which means that the code **won't stop** running once it hits that line but, instead, will continue executing.
 
-What we need, is a way of waiting until `fetch` returns us something before we continue executing our code.
+What we need is a way of waiting until `fetch` returns us something before we continue executing our code.
 
 To avoid this we would use **callbacks** or **promises**.
 
@@ -15,13 +15,13 @@ To avoid this we would use **callbacks** or **promises**.
 
 ### Callback hell
 
-You may have heard of something called **callback hell**, which is something that happens when we try to write **asynchronous** code as if it was **synchronous**, meaning that we try to chain each block of code after the other.
+You may have heard of something called **callback hell**, which is something that happens when we try to write **asynchronous** code as if it were **synchronous**, meaning that we try to chain each block of code after the other.
 
 In simple words it would something like:
 
 **do A, If A do B, if B do C** and so on and so forth.
 
-The following is an example just to showcase the meaning of the **callback hell**. Imagine each step is **asynchronous** meaning that we need to send a request to our server for each step of preparing the pizza and we need to wait for the server to respond.
+The following is an example just to showcase the meaning of **callback hell**. Imagine each step is asynchronous so that we would need to send a request to our server for each step of preparing the pizza. Then we need to wait for the server to respond.
 
 ```javascript
 const makePizza = (ingredients, callback) => {
@@ -33,9 +33,9 @@ const makePizza = (ingredients, callback) => {
 }
 ```
 
-We try to write our code in a way where executions happens visually from top to bottom, causing excessive nesting on functions and result in what you can see above.
+We try to write our code in a way where executions happens visually from top to bottom. This causes excessive nesting on functions and results in what you can see above.
 
-To improve your callbacks you can check out [http://callbackhell.com/](http://callbackhell.com/)
+To improve your callbacks, you can check out [http://callbackhell.com/](http://callbackhell.com/)
 
 Promises will help us escape this "hell" and improve our code.
 
@@ -101,7 +101,7 @@ myPromise.then(
 
 These two examples are very simple but **promises** are very useful when dealing with big requests of data.
 
-In the example above we kept it simple and only resolved our promise but in reality you will also encounter errors so let's see how to deal with them:
+In the example above, we kept it simple and only resolved our promise.  In reality, you will also encounter errors. So let’s see how to deal with them:
 
 ```javascript
 const myPromise = new Promise((resolve, reject) => {
@@ -124,7 +124,7 @@ myPromise
 
 We use `.then()` to grab the value when the promise resolves and `.catch()` when the promise rejects.
 
-Looking at our error log you can see that it tells us where the error occurred, that is because we wrote `reject(Error("this is our error"));` and not simply `reject("this is our error");`.
+Looking at our error log, you can see that it tells us where the error occurred. That’s because we wrote `reject(Error("this is our error"));` and not simply `reject("this is our error");`.
 
 &nbsp;
 
@@ -132,7 +132,7 @@ Looking at our error log you can see that it tells us where the error occurred, 
 
 We can chain promises one after the other, using what was returned from the previous one as the base for the subsequent one, whether the promise was resolved or rejected.
 
-You can chain as many promises as you want and the code will still be more readable and shorter than what we have seen above in the **callback hell**.
+You can chain as many promises as you want and the code will still be more readable and shorter than what we have seen above in **callback hell**.
 
 ```javascript
 const myPromise = new Promise((resolve, reject) => {
@@ -156,9 +156,9 @@ myPromise
   })
 ```
 
-As you can see, the first `then` passed a value down to the second one where we logged it and we also threw an error that was caught in the `catch` clause.
+As you can see, the first `then` passed a value down to the second one where we logged it and also threw an error that was caught in the `catch` clause.
 
-We are not limited to chaining in case of success, we can also chain when we get a `reject`.
+We're not limited to chaining in case of success, we can also chain when we get a `reject`.
 
 ```javascript
 const myPromise = new Promise((resolve, reject) => {
@@ -258,11 +258,11 @@ Promise
 // first value second value
 ```
 
-Our values returned together, after 1000ms (the timeout of the *second* promise) meaning that the first one had to wait for the completion of the second one.
+Our values returned together, after 1000ms (the timeout of the *second* promise). This means that the first one had to wait for the completion of the second one.
 
 If we were to pass an empty iterable then it will return an already resolved promise.
 
-If one of the promises was rejected, all of them would asynchronously reject with the value of that rejection, even if they resolved.
+If one of the promises was rejected, then all of them would asynchronously reject with the value of that rejection even if they resolved.
 
 ```javascript
 const promise1 =  new Promise((resolve,reject) => {
@@ -285,7 +285,7 @@ Promise
   // Error: oooops error
 ```
 
-`Promise.race()` on the other hand returns a promise that resolves or rejects as soon as one of the promises in the iterable resolves or rejects, with the value from that promise.
+`Promise.race()` on the other hand returns a promise that resolves or rejects as soon as one of the promises in the iterable resolves or rejects with the value from that promise.
 
 ```javascript
 const promise1 =  new Promise((resolve,reject) => {

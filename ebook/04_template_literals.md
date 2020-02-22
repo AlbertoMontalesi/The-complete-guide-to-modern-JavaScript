@@ -1,12 +1,12 @@
 # Chapter 4: Template literals
 
-Prior to ES6 they were called *template strings*, now we call them  *template literals*. Let's have a look at what changed in the way we interpolate strings in ES6.
+*Template literals* were called *template strings prior* to ES6.. Let’s have a look at what’s changed in the way we interpolate strings in ES6.
 
 &nbsp;
 
 ## Interpolating strings
 
-In ES5 we used to write this, in order to interpolate strings:
+We used to write the following in ES5 in order to interpolate strings:
 
 ```JavaScript
 var name = "Alberto";
@@ -16,7 +16,7 @@ console.log(greeting);
 // Hello my name is Alberto
 ```
 
-In ES6 we can use backticks to make our lives easier.
+In ES6m we can use backticks to make our lives easier.
 
 ```JavaScript
 let name  = "Alberto";
@@ -40,7 +40,7 @@ console.log('1 * 10 is ' + ( a * b));
 
 ```
 
-In ES6 we can use backticks to reduce our typing:
+In ES6 we simply have to wrap everything inside backticks, so backslashes on each line aren’t needed anymore.
 
 ```JavaScript
 var a = 1;
@@ -100,7 +100,7 @@ console.log(markup);
 // </ul>
 ```
 
-Here we are using the `map` function to loop over each of our `people` and display a `li` tag containing the `name` of the person.
+Here, we're using the `map` function to loop over each of our `people` and display a `li` tag containing the `name` of the person.
 
 &nbsp;
 
@@ -120,7 +120,7 @@ getPrice();
 // $20
 ```
 
-If the condition before the `?` can be converted to `true` then the first value is returned, else it's the value after the `:` that gets returned.
+If the condition before the `?` can be converted to `true` then the first value is returned. Otherwise, it's the value after the `:` that gets returned.
 
 ```javascript
 // create an artist with name and age
@@ -155,7 +155,7 @@ const artist = {
 
 ## Pass a function inside a template literal
 
-Similarly to the example above (line 10 of the code), if we want to, we can pass a function inside a template literal.
+Similarly to the example above (line 10 of the code), we can pass a function inside a template literal.
 
 ```javascript
 const groceries = {
@@ -197,16 +197,16 @@ const markup = `
 //   <div>
 ```
 
-Inside of the last `p` tag we are calling our function `groceryList` passing it all the `others` groceries as an argument.
-Inside of the function we are returning a `p` tag and we are using `map` to loop over each of our items in the grocery list returning an Array of `span` tags containing each grocery. We are then using `.join('\n')` to add a new line after each of those span. 
+Inside of the last `p` tag, we're calling our function `groceryList` and passing it all the `others` groceries as an argument.
+Inside of the function, we're returning a `p` tag and are using `map` to loop over each of our items in the grocery list. This includes returning an array of `span` tags containing each grocery. We're then using `.join('\n')` to add a new line after each of those spans.
 
 &nbsp;
 
 ## Tagged template literals
 
-By tagging a function to a template literal we can run the template literal through the function, providing it with everything that's inside of the template.
+By tagging a function to a template literal, we can run the template literal through the function, providing it with everything that's inside of the template.
 
-The way it works is very simple: you just take the name of your function and put it in front of the template that you want to run it against.
+The way it works is very simple: you take the name of your function and put it in front of the template that you want to run it against.
 
 ```javascript
 let person = "Alberto";
@@ -227,9 +227,9 @@ console.log(sentence);
 ```
 
 We captured the value of the variable age and used a ternary operator to decide what to print.
-`strings` will take all the strings of our `let` sentence whilst the other parameters will hold the variables.
+`strings` will take all the strings of our `let` sentence, while the other parameters will hold the variables.
 
-In our example our string is divided in 3 pieces: `${person}`, `is a` and `${age}`.
+In our example the string is divided into 3 pieces: `${person}`, `is a` and `${age}`.
 We use array notation to access the string in the middle like this:
 
 ```javascript

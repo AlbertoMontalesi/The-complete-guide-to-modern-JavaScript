@@ -1,6 +1,6 @@
 # Chapter 18: ES2017 string padding, `Object.entries()`, `Object.values()` and more
 
-ES2017 introduced many cool new features, which we are going to see here.
+ES2017 introduced many cool new features, which we’ll check out below.
 
 ## String padding (`.padStart()` and `.padEnd()`)
 
@@ -51,7 +51,7 @@ First we grabbed the longest of our strings and measured its length. We then app
 
 ### Add a custom value to the padding
 
-We are not bound to just add a white space as a padding, we can pass both strings and numbers.
+We are not bound to just add a white space as a padding- we can pass both strings and numbers.
 
 ```javascript
 "hello".padEnd(13," Alberto");
@@ -66,7 +66,7 @@ We are not bound to just add a white space as a padding, we can pass both string
 
 ## `Object.entries()` and `Object.values()`
 
-Let's first create an Object.
+Let's first create an object.
 
 ```javascript
 const family = {
@@ -76,7 +76,7 @@ const family = {
 }
 ```
 
-In previous versions of `JavaScript` we would have accessed the values inside the object like this:
+In previous versions of `JavaScript`, we would have accessed the values inside the object like this:
 
 ```javascript
 Object.keys(family);
@@ -99,7 +99,7 @@ Object.entries(family);
 // ["son", "Clark Kent"]
 ```
 
-`Object.values()` returns an array of all the values whilst `Object.entries()` returns an array of arrays containing both keys and values.
+`Object.values()` returns an array of all the values while `Object.entries()` returns an array of arrays containing both keys and values.
 
 &nbsp;
 
@@ -128,7 +128,7 @@ Object.getOwnPropertyDescriptors(myObj);
 
 ## Trailing commas in function parameter lists and calls
 
-This is just a minor change to a syntax. Now, when writing objects we can leave a trailing comma after each parameter, whether or not it is the last one.
+This is just a minor change to a syntax. Now, when writing objects we can leave a trailing comma after each parameter even if it’s not the last one.
 
 ```javascript
 // from this
@@ -144,8 +144,7 @@ const object = {
 }
 ```
 
-Notice how I wrote a comma at the end of the second property.
-It will not throw any error if you don't put it, but it's a better practice to follow as it make your colleague’s or team member’s life easier.
+Notice how I wrote a comma at the end of the second property. It will not throw any error if you don’t add it, but it’s a better practice to follow as it will make your colleague’s or team member’s life easier.
 
 ```javascript
 // I write
@@ -171,7 +170,7 @@ From [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Glo
 
 > When memory is shared, multiple threads can read and write the same data in memory. **Atomic** operations make sure that predictable values are written and read, that operations are finished before the next operation starts and that operations are not interrupted.
 
-`Atomics` is not a constructor, all of its properties and methods are static (just like `Math`) therefore we cannot use it with a new operator or invoke the `Atomics` object as a function.
+`Atomics` is not a constructor. All of its properties and methods are static (just like `Math`) therefore we cannot use it with a new operator or invoke the `Atomics` object as a function.
 
 Examples of its methods are:
 
@@ -205,9 +204,9 @@ console.log(Atomics.load(uint8,0));
 // 15
 ```
 
-As you can see, calling `Atomics.add()` will return the previous value at the array position we are targeting. when we call again `uint8[0]` we see that the addition was performed and we got 15.
+As you can see, calling `Atomics.add()` will return the previous value at the array position we are targeting. When we call `uint8[0]` again we see that the addition was performed and we got 15.
 
-To retrieve a specific value from our array we can use `Atomics.load` and pass two argument, an array and an index.
+To retrieve a specific value from our array we can use `Atomics.load` and pass two arguments- an array and an index.
 
 `Atomics.sub()` works the same way as `Atomics.add()` but it will subtract a value.
 
@@ -231,10 +230,10 @@ console.log(Atomics.load(uint8,0));
 // 3
 ```
 
-Here we are using `Atomics.sub()` to substract 5 from the value at position `uint8[0]` which is equivalent to 10 - 5.
+Here we are using `Atomics.sub()` to substract 5 from the value at position `uint8[0]`, which is equivalent to 10 - 5.
 Same as with `Atomics.add()`, the method will return the previous value at that index, in this case 10.
 
-We are then using `Atomics.store()` to store a specific value, in this case 3, at a specific index of the array, in this case 0, the first position.
+We are then using `Atomics.store()` to store a specific value, in this case 3- at a specific index of the array, or in this case 0, the first position.
 `Atomics.store()` will return the value that we just passed, in this case 3. You can see that when we call `Atomics.load()` on that specific index we get 3 and not 5 anymore.
 
 &nbsp;

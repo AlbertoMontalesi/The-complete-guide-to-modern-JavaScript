@@ -27,7 +27,7 @@ letters.flat(Infinity)
 // ['a', 'b', 'c', 'd', 'e', 'f']
 ```
 
-`Array.prototype.flatMap()` is identical to the previous one with regards to the way it handles the 'depth' argument but instead of simply flattening an array, with `flatMap()` we can also map over it and return the result in the new array.
+`Array.prototype.flatMap()` is identical to the previous one with regards to the way it handles the depth argument, but instead of simply flattening an array, with `flatMap()` we can also map over it and return the result in the new array.
 
 ```javascript
 let greeting = ["Greetings from", " ", "Vietnam"];
@@ -43,7 +43,7 @@ greeting.flatMap(x => x.split(" "))
 // ["Greetings", "from", "", "", "Vietnam"]
 ```
 
-As you can see, if we use `.map()` we will get a multi level array, a problem that we can solve by using `.flatMap()` which will also flatten our array.
+As you can see, if we use `.map()` we will get a multi level array, which is a problem that we can solve by using `.flatMap()`. This will also flatten our array.
 
 &nbsp;
 
@@ -94,7 +94,7 @@ We can also use `.trimLeft()` as an alias of `.trimStart()` and `.trimRight()` a
 
 ## Optional Catch Binding
 
-Prior to ES2019 you had to always include an exception variable in your `catch` clause. E2019 allows you to omit it.
+Prior to ES2019, you had to include an exception variable in your `catch` clause. E2019 allows you to omit it.
 
 ```javascript
 // Before

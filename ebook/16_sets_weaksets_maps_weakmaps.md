@@ -47,7 +47,7 @@ family;
 // Set []
 ```
 
-As you can see a `Set` has a `size` property and we can `delete` an item from it or use `clear` to delete all the items from it.
+As you can see, a `Set` has a `size` property and we can `delete` an item from it or use `clear` to delete all the items from it.
 
 We can also notice that a `Set` does not have keys, so when we call `.keys()` we get the same result as calling `.values()` or `.entries()`.
 
@@ -81,7 +81,8 @@ The method `values()` will return an `Iterator` object on which we can call `nex
 
 ### Remove duplicates from an array
 
-We can use a `Set` to remove duplicates from an Array since we know it can only hold unique values.
+We can use a `Set` to remove duplicates from an array since we know it can only hold unique values.
+As you can see, the new array contains only the unique values from the original array.
 
 ```javascript
 const myArray = ["dad", "mom", "son", "dad", "mom", "daughter"];
@@ -119,7 +120,7 @@ for(const person of family){
 // TypeError: family is not iterable
 ```
 
-We created our new `WeakSet` but when we tried to use a `for of` loop it did not work, we can't iterate over a `WeakSet`.
+We created our new `WeakSet` but when we tried to use a `for of` loop it didn't work, we can't iterate over a `WeakSet`.
 
 A `WeakSet` cleans itself up after we delete an element from it.
 
@@ -138,7 +139,7 @@ console.log(family);
 // WeakSet [ {…} ]
 ```
 
-You can try running the example above in the Dev Tools of your browser, as you can see after a few seconds **dad** was removed and *garbage collected*. That happened because the reference to it was lost when we set the value to `null`.
+You can try running the example above in the Dev Tools of your browser. As you can see after a few seconds, **dad** was removed and *garbage collected*. That happened because the reference to it was lost when we set the value to `null`.
 
 &nbsp;
 
@@ -177,9 +178,9 @@ If you remember, we could iterate over a `Set` only with a `for of` loop, while 
 
 ## What is a `WeakMap`?
 
-A `WeakMap` is a collection of key/value pairs and similarly to a `WeakSet`, even in a `WeakMap` the keys are *weakly* referenced, which means that when the reference is lost, the value will be removed from the `WeakMap` and *garbage collected*.
+A `WeakMap` is a collection of key/value pairs and similarly to a `WeakSet`. Even in a `WeakMap`, the keys are *weakly* referenced, which means that when the reference is lost, the value will be removed from the `WeakMap` and *garbage collected*.
 
-A `WeakMap` is **not** enumerable therefore we cannot loop over it.
+A `WeakMap` is **not** enumerable. Therefore we cannot loop over it.
 
 ```javascript
 let dad = { name: "Daddy" };
@@ -200,4 +201,4 @@ console.log(myWeakMap);
 // WeakMap {}
 ```
 
-As you can see *mom* was garbage collected after we set the its value to `null` whilst *dad* still remains inside our `Map`.
+As you can see *mom* was garbage collected after we set its value to `null` while *dad* still remains inside our `Map`.

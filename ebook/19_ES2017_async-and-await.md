@@ -1,12 +1,12 @@
 # Chapter 19: ES2017 Async and Await
 
-ES2017 introduced a new way of working with promises, called "async/await".
+ES2017 introduced a new way of working with promises, called async and await.
 
 &nbsp;
 
 ## `Promise` review
 
-Before we dive in this new syntax let's quickly review how we would usually write a promise:
+Before we dive into this new strategy, let’s quickly review how we would usually write a promise:
 
 ```javascript
 // fetch a user from github
@@ -67,7 +67,7 @@ Let's see how we can rewrite this `Promise` with the new async/await syntax.
 
 &nbsp;
 
-## Async and Await
+## Async and await
 
 ```javascript
 function walk(amount) {
@@ -121,13 +121,13 @@ function func() {
   let result = await promise; 
 }
 func();
-// SyntaxError: await is only valid in async functions and async generators
+// SyntaxError: await's only valid in async functions and async generators
 
 
 // use await in the top-level code
 let response = Promise.resolve("hi");
 let result = await response;
-// SyntaxError: await is only valid in async functions and async generators
+// SyntaxError: await's only valid in async functions and async generators
 ```
 
 > **Remember**: You can only use `await` inside an `async` function.
@@ -137,7 +137,7 @@ let result = await response;
 ## Error handling
 
 In a normal promise we would use `.catch()` to catch eventual errors returned by the promise.
-Here, it is not much different:
+Here, it's not much different:
 
 ```javascript
 async function asyncFunc() {
@@ -153,7 +153,7 @@ asyncFunc();
 // TypeError: failed to fetch
 ```
 
-We use `try...catch` to grab the error, but in a case where we do not have them we can still catch the error like this:
+We use `try...catch` to grab the error, but in a case where we don't have them we can still catch the error like this:
 
 ```javascript
 async function asyncFunc(){

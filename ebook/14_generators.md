@@ -1,8 +1,8 @@
 # Chapter 14: Generators
 
-## What is a Generator?
+## What is a generator?
 
-A generator function is a function that we can start and stop, for an indefinite amount of time. And, restart with the possibility of passing additional data at a later point in time.
+A generator function is a function that we can start and stop, for an indefinite amount of time. And also restart with the possibility of passing additional data at a later point in time.
 
 To create a generator function we write like this:
 
@@ -113,7 +113,7 @@ myGenerator.throw("ooops");
 // Object { value: undefined, done: true }
 ```
 
-As you can see when we called `.throw()` the `generator` returned us the error and finished even though we still had one more `yield` to execute.
+As you can see when we called `.throw()`, the `generator` returned us the error and finished even though we still had one more `yield` to execute.
 
 &nbsp;
 
@@ -154,4 +154,4 @@ val1.value.then(() => {
 // Object { value: "our value is... 2", done: false }
 ```
 
-The first time we call `.next()` it will call our promise and wait for it to resolve (in our simple example it resolves immediately) and when we call `.next()` again it will utilize the value returned by the promise to do something else (in this case just interpolate a string).
+The first time we call `.next()` at line 15 it will call our promise and wait for it to resolve (in our simple example it resolves immediately). And when we call `.next()` again at line 18 it will utilize the value returned by the promise to do something else (in this case just interpolate a string).

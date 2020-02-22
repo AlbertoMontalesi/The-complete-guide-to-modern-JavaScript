@@ -18,7 +18,7 @@ console.log(menu);
 // Array [ "tomato", "cucumber", "beans", "pasta", "pork", "beef", "chicken" ]
 ```
 
-The `...` is the spread syntax, and it allowed us to grab all the individual values of the arrays veggie and meat and put them inside the array menu and at the same time add a new item in between them.
+The `...` is the spread syntax, and it allowed us to grab all the individual values of the arrays veggie and meat and put them inside the array menu. At the same time, we can add a new item in between them.
 
 &nbsp;
 
@@ -66,14 +66,14 @@ console.log(newVeggie);
 // Array [ "tomato", "cucumber", "beans" ]
 ```
 
-The syntax for the **Spread** operator is the following `...YourArray`. Since we wanted the variable `newVeggie` to be a copy of the array `veggie` we assigned it to an Array and inside of it we spread all the values from the variable `veggie` like so:
+The syntax for the **spread** operator is the following `...YourArray`. Since we wanted the variable `newVeggie` to be a copy of the array `veggie`, we assigned it to an Array. Inside of it we spread all the values from the variable `veggie` like so:
 `[...veggie]`.
 
 &nbsp;
 
 ### Spread into a function
 
-Thanks to the **Spread** operator we have an easier way of calling a function with an Array of arguments.
+Thanks to the spread operator, we have an easier way of calling a function with an array of arguments.
 
 ```javascript
 // OLD WAY
@@ -93,7 +93,7 @@ console.log(args);
 // Array [ 0, 1, 2 ]
 ```
 
-As you can see, in the example, our `doStuff` function accepts 3 parameters and we are passing them by spreading the array `args` into the function like so: `...args` replacing the need of resorting to use `.apply()`.
+As you can see in the example, our `doStuff` function accepts 3 parameters. We are passing them by spreading the array `args` into the function like so: `...args` replacing the need of resorting to use `.apply()`.
 
 Let's look at another example:
 
@@ -122,13 +122,14 @@ greet(...name);
 // Hello Jon Paul
 ```
 
-In the example given above, we provided three values inside the array but we only have two arguments in our function therefore the last one is left out.
+In the example given above, we provided three values inside the array but we only have two arguments in our function. Therefore, the last one is left out.
 
 &nbsp;
 
 ### Spread in Object Literals (ES 2018 / ES9)
 
-This feature is not part of ES6, but as we are already discussing this topic, it is worth mentioning that ES2018 introduced the Spread operator for Objects.
+This feature is not part of ES6, but as we are already discussing this topic, it’s worth mentioning that ES2018 introduced the spread operator for objects.
+
 Let's look at an example:
 
 ```javascript
@@ -150,7 +151,7 @@ You can read more about ES2018 in Chapter 20.
 
 ## The Rest parameter
 
-The **rest** syntax looks exactly the same as the **spread**, 3 dots `...` but it is quite the opposite of it. **Spread** expands an array, while **rest** condenses multiple elements into a single one.
+The **rest** syntax looks exactly the same as the **spread**- 3 dots `...`. But it's quite the opposite of it. **Spread** expands an array, while **rest** condenses multiple elements into a single one.
 
 ```javascript
 
@@ -161,4 +162,4 @@ console.log(...losers);
 // Mark Luke
 ```
 
-We stored the first two values inside the `const` first and second and whatever was left we put it inside losers using the rest parameter.
+We stored the first two values inside the `const` first and second and whatever was left we put inside losers using the rest parameter.

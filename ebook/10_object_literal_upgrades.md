@@ -1,6 +1,6 @@
-# Chapter 10: Object literal upgrades
+# Chapter 10: object literal upgrades
 
-In this article we will look at the many upgrades brought by ES6 to the **Object literal** notation.
+In this chapter we'll look at the many upgrades brought by ES6 to the **object literal** notation.
 
 &nbsp;
 
@@ -51,7 +51,7 @@ As our `const` are named the same way as the properties we are using, we can red
 
 ## Add functions to our Objects
 
-Let's looks at an example from ES5:
+Let's look at an example from ES5:
 
 ```javascript
 const person = {
@@ -65,7 +65,7 @@ person.greet();
 // Hello
 ```
 
-If we wanted to add a function to our Object we had to use the the `function` keyword. In ES6 it got easier, look here:
+If we wanted to add a function to our object, we had to use the `function` keyword. In ES6 it got easier, look here:
 
 ```javascript
 const person = {
@@ -98,9 +98,9 @@ person2.greet()
 
 &nbsp;
 
-## Dynamically define properties of an Object
+## Dynamically define properties of an object
 
-This is how we would dynamically define properties of an Object in ES5:
+This is how we would dynamically define properties of an object in ES5:
 
 ```javascript
 var name = "myname";
@@ -112,7 +112,7 @@ console.log(person.myname);
 // Alberto
 ```
 
-In the example given above, first we created the Object and then we modified it. However, in ES6 we can do both things at the same time. Take a look at the following example:
+In the example given above, first we created the object and then we modified it. However, in ES6 we can do both things at the same time. Take a look at the following example:
 
 ```javascript
 const name = "myname";

@@ -19,7 +19,7 @@ var greeting = (name) => {
 }
 ```
 
-We can go further, if we only have one parameter we can drop the parenthesis and write:
+We can go further if we only have one parameter. We can drop the parentheses and write:
 
 ```JavaScript
 var greeting = name => {
@@ -27,7 +27,7 @@ var greeting = name => {
 }
 ```
 
-If we have no parameter at all we need to write empty parenthesis like this:
+If we have no parameters at all, we need to write empty parenthesis like this:
 
 ```JavaScript
 var greeting = () => {
@@ -39,7 +39,7 @@ var greeting = () => {
 
 ## Implicitly return
 
-With arrow functions we can skip the explicit `return` and return like this:
+With arrow functions, we can skip the explicit `return` and return like this:
 
 ```JavaScript
 const greeting = name => `hello ${name}`;
@@ -64,7 +64,7 @@ const arrowFunction = (name) => {
 }
 ```
 
-Let's say we want to implicitly return an **object literal**, we would do it like this:
+Let’s say we want to implicitly return an object literal. We’d do it like this:
 
 ```JavaScript
 const race = "100m dash";
@@ -78,9 +78,9 @@ console.log(results);
 // {name: "Asafa Powell", race: "100m dash", place: 3}]
 ```
 
-In this example, we are using the `map` function to iterate over the array `runners`. The first argument is the current item in the array and the `i` is the index of it. For each item in the array we are then adding into `results` an Object containing the properties `name`, `race`, and `place`.
+In this example, we're using the `map` function to iterate over the array `runners`. The first argument is the current item in the array, and the `i` is the index of it. For each item in the array we are then adding into `results` an Object containing the properties `name`, `race`, and `place`.
 
-To tell `JavaScript` what's inside the curly braces is an **object literal** we want to implicitly return, we need to wrap everything inside parenthesis.
+To tell `JavaScript` what's inside the curly braces is an **object literal** we want to implicitly return,  so we need to wrap everything inside parentheses. Writing `race` or `race: race` is the same.
 
 Writing `race` or `race: race` is the same.
 
@@ -157,7 +157,7 @@ box.addEventListener("click", function() {
 
 Here, the second `this` will inherit from its parent, and will be set to the `const` box.
 
-Running the example code you should see our `div` turning red for just half a second.
+Running the example code, you should see our `div` turning red for just half a second.
 
 &nbsp;
 
@@ -205,7 +205,7 @@ const person2 = {
 person2.grow();
 ```
 
-Another difference between Arrow functions and normal functions is the access to the `arguments object`.
+Another difference between arrow functions and normal functions is the access to the `arguments object`.
 The `arguments object` is an array-like object that we can access from inside functions and contains the values of the arguments passed to that function.
 
 A quick example:
@@ -221,7 +221,7 @@ example(1,2,3);
 
 As you can see we accessed the first argument using an array notation `arguments[0]`.
 
-Similarly to what we saw with the `this` keyword, Arrow functions inherit the value of the `arguments object` from their parent scope.
+Similarly to what we saw with the `this` keyword, arrow functions inherit the value of the `arguments object` from their parent scope.
 
 Let's have a look at this example with our previous list of runners:
 
@@ -240,7 +240,7 @@ This code will return:
 ReferenceError: arguments is not defined
 ```
 
-To access all the arguments passed to the function we can either use the old function notation or the spread syntax(which we will discuss more in Chapter 9)
+To access all the arguments passed to the function we can either use the old function notation or the spread syntax (which we will discuss more in Chapter 9)
 
 Remember that `arguments` is just a keyword, it's not a variable name.
 

@@ -43,9 +43,9 @@ console.log(dogProxy.breed);
 // "LABRADOR"
 ```
 
-When we call the `get` method we step inside the normal flow and change the value of the breed to uppercase.
+When we call the `get` method, we step inside the normal flow and change the value of the breed to uppercase.
 
-When setting a new value we step in again and log a short message before setting the value.
+When setting a new value, we step in again and log a short message before setting the value.
 
 Proxies can be very useful. For example, we can use them to validate data.
 
@@ -73,9 +73,9 @@ user.age = 21
 // 21
 ```
 
-When we set the `age` property of the `user Object` we pass it through our `validateAge` function which checks if it is more or less than 18 and throws an error if it's less than 18.
+When we set the `age` property of the `user Object`, we pass it through our `validateAge` function which checks if it's more or less than 18 and throws an error if it's less than 18.
 
-Proxies can be very useful if we have many properties that would require a **getter** and **setter** each. By using a `Proxy` we need to define only one **getter** and one **setter**.  Let's look at this example:
+Proxies can be very useful if we have many properties that would require a **getter** and **setter** each. We need to define only one **getter** and one **setter** when using a `Proxy`. Let’s look at this example:
 
 ```javascript
 const dog  = {
@@ -111,8 +111,8 @@ dog.age = 8;
 // 8
 ```
 
-Notice that i'm writing `_name` instead of `name` etc.., the `_` symbol is used in `JavaScript` convention to define **Private** properties, meaning properties that are should not be accessed by instances of the same class.
-That is not something that `JavaScript` enforces, it's just for developers to quickly identify **Private** properties. The reason why i'm using it here is because if i was to call:
+Notice that i'm writing `_name` instead of `name` etc.., the `_` symbol is used in `JavaScript` convention to define **Private** properties, meaning properties that should not be accessed by instances of the same class.
+That is not something that `JavaScript` enforces, it's just for developers to quickly identify **Private** properties. The reason why I’m using it here is because if I were to call:
 
 ```javascript
 set name(newName){
@@ -120,7 +120,7 @@ set name(newName){
 }
 ```
 
-This would cause an infinite loop as `this.name = ` would call the setter again and again. By putting the underscore in front of it it, I achieve the same result that I would get by renaming the setter to something else, such as:
+This would cause an infinite loop as `this.name = ` would call the setter again and again. By putting the underscore in front of it it, I can achieve the same result that I would get by renaming the setter to something else For example:
 
 ```javascript
 set rename(newName){
@@ -128,10 +128,10 @@ set rename(newName){
 }
 ```
 
-As you can see we had two properties: `name` and `age`and for each of them we had to create a **getter** and a **setter**.
-When we try to access a property that does not exist on the Object, such as `breed` we get `undefined`.
+As you can see we had three properties: `name`,`age` and `breed`. For each of them we had to create a **getter** and a **setter**.
+In the case of `breed` we only created a **getter** so when we tried to access the **setter** nothing happened and the property did not change.
 
-With a `Proxy` we can simplify the code by writing the following:
+We can simplify the code with a `Proxy` by writing the following:
 
 ```javascript
 const dog  = {
@@ -162,10 +162,10 @@ dogProxy.breed;
 // property not found
 ```
 
-First, we created our `dog` Object but this time we did not set any **getter** and **setter** inside of it.
+First, we created our `dog` Object but this time we did not set any **getter** or **setter** inside of it.
 We created our `handler` that will handle each possible property with only one **getter** and **setter**.
-In the **getter** what we are doing is check if the `property` is available on the `target` Object. If it is, we log it, otherwise we log a custom message.
-The setter takes three argument, the `target` object, the `property` name and the `value`, nothing special happens here, we set the property to the new value and we log it.
+What we are doing with the **getter** is checking if the `property` is available on the `target` Object. If it's, we log it, otherwise we log a custom message.
+The setter takes three arguments, the `target` object, the `property` name, and the `value`. Nothing special happens here, we set the property to the new value and we log it.
 
 As you can see, by using a `Proxy` we achieved two things:
 
