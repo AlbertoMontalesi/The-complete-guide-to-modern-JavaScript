@@ -129,7 +129,7 @@ for (const index in fruits){
 // gnam gnam
 ```
 
-Since `for in` will return the value and not the value itself, we need to access with the syntax `fruits[index]`.
+Since `for in` will return the index and not the value itself, we need to access with the syntax `fruits[index]`.
 
 As you can see, the `for in` loop returned the value of the property `eat` which we've added after initialization of the variable `fruits`.
 On the other hand, the `for of` loop only returned the values that were in the array when we initialized it.

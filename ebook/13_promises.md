@@ -1,6 +1,13 @@
 # Chapter 13: Promises
 
 `JavaScript` work **synchronously** which means that each block of code will be executed after the previous one.
+
+```javascript
+const data = fetch('your-api-url-goes-here');
+console.log('Finished');
+console.log(data);
+```
+
 In the example above, we're using `fetch` to retrieve data from a url (in this example we're only pretending to be doing so).
 
 In case of synchronous code we would expect the subsequent line to be called only after the `fetch` has been completed. But in reality, what's going to happen is that `fetch` will be called, and straight away the subsequent two `console.log` will also be called, resulting in the last one `console.log(data)` to return `undefined`.
