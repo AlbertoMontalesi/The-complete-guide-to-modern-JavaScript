@@ -104,32 +104,3 @@ for (let i of list) {
 ```
 
 `for in` will return a list of keys whereas the `for of` will return a list of values of the numeric properties of the object being iterated.
-
-The last important difference to cover is the `for in` loop will iterate over new properties added to the object.
-
-```javascript
-const fruits = ["apple","banana", "orange"];
-
-fruit.eat = "gnam gnam";
-
-for (const fruit of fruits){
-  console.log(fruit);
-}
-// apple
-// banana
-// orange
-
-for (const index in fruits){
-  console.log(fruits[index]);
-}
-
-// apple
-// banana
-// orange
-// gnam gnam
-```
-
-Since `for in` will return the index and not the value itself, we need to access with the syntax `fruits[index]`.
-
-As you can see, the `for in` loop returned the value of the property `eat` which we've added after initialization of the variable `fruits`.
-On the other hand, the `for of` loop only returned the values that were in the array when we initialized it.
