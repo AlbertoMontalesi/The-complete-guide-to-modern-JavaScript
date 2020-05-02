@@ -46,7 +46,7 @@ You get the ebook on Amazon, Leanpub and other stores, check the following link 
 - Play Store [Ebook](https://play.google.com/store/books/details/Alberto_Montalesi_The_Complete_Guide_to_Modern_Jav?id=avqrDwAAQBAJ)
 - Kobo [Ebook](https://www.kobo.com/ww/en/ebook/complete-guide-to-modern-javascript)
 - Leanpub: [Ebook](https://leanpub.com/completeguidetomodernjavascript2020)
-- Amazon USA: [Ebook](http://a-fwd.to/jHO6m9t) | [Paperback Black and White](https://https://amzn.to/2z7BfKo) | [Paperback full color](https://www.amazon.com/dp/1099295688)
+- Amazon Global: [Ebook](http://a-fwd.to/jHO6m9t) | [Paperback Black and White](https://https://amzn.to/2z7BfKo) | [Paperback full color](https://www.amazon.com/dp/1099295688)
 
 If you enjoyed the book please leave a review to support me and help other buyers.
 
