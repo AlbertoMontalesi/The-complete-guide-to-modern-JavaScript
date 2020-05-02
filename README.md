@@ -45,21 +45,8 @@ You get the ebook on Amazon, Leanpub and other stores, check the following link 
 
 - Play Store [Ebook](https://play.google.com/store/books/details/Alberto_Montalesi_The_Complete_Guide_to_Modern_Jav?id=avqrDwAAQBAJ)
 - Kobo [Ebook](https://www.kobo.com/ww/en/ebook/complete-guide-to-modern-javascript)
-- Gumroad [Ebook](https://gum.co/completeguidetomodernjavascript)
-- Leanpub: [Ebook](https://leanpub.com/thecompleteguidetomodernjavascript2019)
-- Amazon USA: [Ebook](https://amzn.to/2H76VUz) | [Paperback Black and White](https://https://amzn.to/2z7BfKo) | [Paperback full color](https://www.amazon.com/dp/1099295688)
-- Amazon UK: [Ebook](https://www.amazon.co.uk/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.co.uk/dp/1080031294) | [Paperback full color](https://www.amazon.co.uk/dp/1099295688)
-- Amazon GERMANY: [Ebook](https://www.amazon.de/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.de/dp/1080031294) | [Paperback full color](https://www.amazon.de/dp/1099295688)
-- Amazon FRANCE: [Ebook](https://www.amazon.fr/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.fr/dp/1080031294) | [Paperback full color](https://www.amazon.fr/dp/1099295688)
-- Amazon SPAIN: [Ebook](https://www.amazon.es/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.es/dp/1080031294) | [Paperback full color](https://www.amazon.es/dp/1099295688)
-- Amazon ITALY: [Ebook](https://www.amazon.it/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.it/dp/1080031294) | [Paperback full color](https://www.amazon.it/dp/1099295688)
-- Amazon NETHERLAND: [Ebook](https://www.amazon.nl/dp/B07S2M3FVV)
-- Amazon JAPAN: [Ebook](https://www.amazon.co.jp/dp/B07S2M3FVV) | [Paperback Black and White](https://www.amazon.co.jp/dp/1080031294) | [Paperback full color](https://www.amazon.co.jp/dp/1099295688)
-- Amazon BRASIL: [Ebook](https://www.amazon.com.br/dp/B07S2M3FVV)
-- Amazon CANADA: [Ebook](https://www.amazon.ca/dp/B07S2M3FVV)
-- Amazon MEXICO: [Ebook](https://www.amazon.com.mx/dp/B07S2M3FVV)
-- Amazon AUSTRALIA: [Ebook](https://www.amazon.com.au/dp/B07S2M3FVV)
-- Amazon INDIA: [Ebook](https://www.amazon.in/dp/B07S2M3FVV)
+- Leanpub: [Ebook](https://leanpub.com/completeguidetomodernjavascript2020)
+- Amazon USA: [Ebook](http://a-fwd.to/jHO6m9t) | [Paperback Black and White](https://https://amzn.to/2z7BfKo) | [Paperback full color](https://www.amazon.com/dp/1099295688)
 
 If you enjoyed the book please leave a review to support me and help other buyers.
 
