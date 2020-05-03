@@ -10,7 +10,7 @@
 
 # [The Complete Guide to Modern JavaScript ](https://amzn.to/2H76VUz)
 
-## Discover all the new features introduced to JavaScript from 2015 to 2019
+## Learn everything from the basics of JavaScript to the new ES2020 features. Practice with more than 50 quizzes and dive into the basics of TypeScript.
 
 [![book-cover](/assets/banner.jpg)](http://bit.ly/2VV2LbX)
 
@@ -46,7 +46,7 @@ You get the ebook on Amazon, Leanpub and other stores, check the following link 
 - Play Store [Ebook](https://play.google.com/store/books/details/Alberto_Montalesi_The_Complete_Guide_to_Modern_Jav?id=avqrDwAAQBAJ)
 - Kobo [Ebook](https://www.kobo.com/ww/en/ebook/complete-guide-to-modern-javascript)
 - Leanpub: [Ebook](https://leanpub.com/completeguidetomodernjavascript2020)
-- Amazon Global: [Ebook](http://a-fwd.to/jHO6m9t) | [Paperback Black and White](https://https://amzn.to/2z7BfKo) | [Paperback full color](https://www.amazon.com/dp/1099295688)
+- Amazon Global: [Ebook](http://a-fwd.to/jHO6m9t) | [Paperback](http://a-fwd.to/3BiBhIM)
 
 If you enjoyed the book please leave a review to support me and help other buyers.
 
@@ -85,7 +85,7 @@ If you want to get in touch for any type of collaboration or discussion you can 
 
 Any contributions you make are of book greatly appreciated.
 
-If you enjoy my content and you want to donate a cup of coffee to me, you can do so at [https://www.paypal.me/albertomontalesi](https://www.paypal.me/albertomontalesi).
+If you enjoy my content and you want to donate a cup of coffee to me, you can do so at [https://www.paypal.me/albertomontalesi](https://www.paypal.me/albertomontalesi) or [here](https://ko-fi.com/albertomontalesi).
 
 ## License
 
