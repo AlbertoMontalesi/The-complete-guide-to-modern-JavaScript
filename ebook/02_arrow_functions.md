@@ -80,7 +80,7 @@ console.log(results);
 
 In this example, we're using the `map` function to iterate over the array `runners`. The first argument is the current item in the array, and the `i` is the index of it. For each item in the array we are then adding into `results` an Object containing the properties `name`, `race`, and `place`.
 
-To tell `JavaScript` what's inside the curly braces is an **object literal** we want to implicitly return,  so we need to wrap everything inside parentheses. Writing `race` or `race: race` is the same.
+To tell `JavaScript` what's inside the curly braces is an **object literal** we want to implicitly return,  so we need to wrap everything inside parentheses.
 
 Writing `race` or `race: race` is the same.
 
