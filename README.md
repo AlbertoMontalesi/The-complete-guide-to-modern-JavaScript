@@ -40,6 +40,7 @@ The Paid version gives you access to:
 You can get the course based on this book on:
 
 - [Leanpub](https://leanpub.com/c/completeguidetomodernjavascript)
+- [Educative](https://www.educative.io/courses/complete-guide-to-modern-javascript?aff=BqmB)
 
 You get the ebook on Amazon, Leanpub and other stores, check the following link to find your local amazon store:
 
