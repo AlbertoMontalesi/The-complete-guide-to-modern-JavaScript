@@ -23,7 +23,7 @@ const person = {
   surname: surname,
   age: age,
   nationality: nationality,
-}
+};
 
 console.log(person);
 // { name: 'Alberto',
@@ -40,7 +40,7 @@ const person = {
   surname,
   age,
   nationality,
-}
+};
 console.log(person);
 // {name: "Alberto", surname: "Montalesi", age: 25, nationality: "Italian"}
 ```
@@ -56,10 +56,10 @@ Let's look at an example from ES5:
 ```javascript
 const person = {
   name: "Alberto",
-  greet: function(){
+  greet: function () {
     console.log("Hello");
   },
-}
+};
 
 person.greet();
 // Hello
@@ -70,10 +70,10 @@ If we wanted to add a function to our object, we had to use the `function` keywo
 ```javascript
 const person = {
   name: "Alberto",
-  greet(){
+  greet() {
     console.log("Hello");
   },
-}
+};
 
 person.greet();
 // Hello;
@@ -105,10 +105,10 @@ This is how we would dynamically define properties of an object in ES5:
 ```javascript
 var name = "myname";
 // create empty object
-var person = {}
+var person = {};
 // update the object
 person[name] = "Alberto";
-console.log(person.myname);
+console.log(person.name);
 // Alberto
 ```
 
@@ -117,8 +117,8 @@ In the example given above, first we created the object and then we modified it.
 ```javascript
 const name = "myname";
 const person = {
-  [name]:"Alberto",
+  [name]: "Alberto",
 };
-console.log(person.myname);
+console.log(person.name);
 // Alberto
 ```

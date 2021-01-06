@@ -8,9 +8,9 @@
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/AlbertoMontalesi/JavaScript-es6-and-beyond-ebook/pulls)
 
-# [The Complete Guide to Modern JavaScript ](https://amzn.to/2H76VUz)
+# [The Complete Guide to Modern JavaScript ](https://leanpub.com/completeguidetomodernjavascript2020)
 
-## Learn everything from the basics of JavaScript to the new ES2020 features. Practice with more than 50 quizzes and dive into the basics of TypeScript.
+## Learn everything from the basics of JavaScript to the new ES2021 features. Practice with more than 50 quizzes and dive into the basics of TypeScript.
 
 [![book-cover](/assets/banner.jpg)](http://bit.ly/2VV2LbX)
 
@@ -21,6 +21,10 @@ This book is aimed to developer of every level, from beginner to advanced, who w
 This book is **not** for total beginners, it does **cover** the basics of programming in general and albeit providing an introduction to `JavaScript` I would recommend that you take it only if you have at least a basic understanding of the language.
 
 &nbsp;
+
+## 4th Edition is out
+
+Included a new chapter detailing all the new features introduced by ES2021
 
 ## Free vs Paid Version
 
@@ -45,9 +49,8 @@ You can get the course based on this book on:
 You get the ebook on Amazon, Leanpub and other stores, check the following link to find your local amazon store:
 
 - Play Store [Ebook](https://play.google.com/store/books/details/Alberto_Montalesi_The_Complete_Guide_to_Modern_Jav?id=avqrDwAAQBAJ)
-- Kobo [Ebook](https://www.kobo.com/ww/en/ebook/complete-guide-to-modern-javascript)
 - Leanpub: [Ebook](https://leanpub.com/completeguidetomodernjavascript2020)
-- Amazon Global: [Ebook](http://a-fwd.to/jHO6m9t) | [Paperback](http://a-fwd.to/3BiBhIM)
+- Amazon Global: [Paperback](http://a-fwd.to/3BiBhIM)
 
 If you enjoyed the book please leave a review to support me and help other buyers.
 
@@ -79,7 +82,7 @@ If you want to get in touch for any type of collaboration or discussion you can 
 - [DevTo](https://dev.to/albertomontalesi) at https://dev.to/albertomontalesi
 - [Medium](https://medium.com/@labby92) at https://medium.com/@labby92
 - [Github](https://github.com/AlbertoMontalesi) at https://github.com/AlbertoMontalesi
-  
+
 &nbsp;
 
 ## Contributions & Donations
