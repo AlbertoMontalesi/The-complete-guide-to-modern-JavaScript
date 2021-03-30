@@ -50,7 +50,7 @@ You get the ebook on Amazon, Leanpub and other stores, check the following link 
 
 - Play Store [Ebook](https://play.google.com/store/books/details/Alberto_Montalesi_The_Complete_Guide_to_Modern_Jav?id=avqrDwAAQBAJ)
 - Leanpub: [Ebook](https://leanpub.com/completeguidetomodernjavascript2020)
-- Amazon Global: [Paperback](http://a-fwd.to/3BiBhIM)
+- Amazon Global: [Paperback](https://bit.ly/2QTvHzn)
 
 If you enjoyed the book please leave a review to support me and help other buyers.
 
