@@ -1,8 +1,8 @@
-# Chapter 21: What's new in ES2019?
+# Chapter 21: What's new in ES2019
 
 In this chapter we will look at what is included in the latest version of `ECMAScript`: ES2019.
 
-&nbsp; 
+&nbsp;
 
 ## `Array.prototype.flat()` / `Array.prototype.flatMap()`
 

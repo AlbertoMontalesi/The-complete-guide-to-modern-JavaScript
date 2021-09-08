@@ -1,6 +1,6 @@
-# Chapter 22: What's coming in ES2020
+# Chapter 22: What's new in ES2020
 
-The latest version of ECMAScript, ES2020, includes many new interesting changes and we are going to cover them in this chapter.
+`ES2020` includes many new interesting changes and we are going to cover them in this chapter.
 
 Not all browsers currently support these features so, I recommend you use the latest version of Chrome or Firefox to test the code examples. Otherwise, if you want to use them in your project, be sure to install a compiler like **Babel**, which at their latest version 7.8 already supports ES2020 by default so you don't need to use any plugin.
 
@@ -9,7 +9,7 @@ Not all browsers currently support these features so, I recommend you use the la
 The support for `BigInt` means that we will be able store much larger integers in our `JavaScript`. The current max is 2^53 and you can get it by using `Number.MAX_SAFE_INTEGER`. That does not mean that you cannot store larger integer, but `JavaScript` does not handle them well, let's look at an example:
 
 ```javascript
-let num = Number.MAX_SAFE_INTEGER
+let num = Number.MAX_SAFE_INTEGER;
 // 9007199254740991
 num + 1;
 // 9007199254740992
@@ -41,12 +41,10 @@ As you can see I did not add `1` but I added `1n`, that's because you can't add 
 This will allow you to dynamically import your modules when you need them. Look at the following example:
 
 ```javascript
-if(condition1 && condition2){
-    const module = await import('./path/to/module.js');
-    module.doSomething();
+if (condition1 && condition2) {
+  const module = await import("./path/to/module.js");
+  module.doSomething();
 }
-
-
 ```
 
 If you don't need a module, you don't have to import it and you can just do that when/if it's needed, using `async/await`.
@@ -59,19 +57,18 @@ Let's take these simple `Object` that represent our Users.
 
 ```js
 const user1 = {
- name: 'Alberto',
- age: 27,
- work: {
-  title: 'software developer',
-  location: 'Vietnam'
- }
-}
+  name: "Alberto",
+  age: 27,
+  work: {
+    title: "software developer",
+    location: "Vietnam",
+  },
+};
 
 const user2 = {
- name: 'Tom',
- age: 27
-}
-
+  name: "Tom",
+  age: 27,
+};
 ```
 
 Let's say we want to display the job title of our user.
@@ -79,15 +76,15 @@ As we can see, `work` is an optional property of our `Object` so we would have t
 
 ```js
 let jobTitle;
-if (user.work){
- jobTitle = user.work.title
+if (user.work) {
+  jobTitle = user.work.title;
 }
 ```
 
 or using a ternary operator:
 
 ```js
-const jobTitle = user.work ? user.work.title : ''
+const jobTitle = user.work ? user.work.title : "";
 ```
 
 Before we access the property `title` of `work` we need to check that the user actually has a `work`.
@@ -97,7 +94,7 @@ When we are dealing with simple objects it's not such a big deal but when the da
 This is where the Optional Chaining `?.` operator comes to the rescue. This is how we would rewrite our code with this new operator:
 
 ```js
-const jobTitle = user.work?.title
+const jobTitle = user.work?.title;
 ```
 
 Done! More concise and readable.
@@ -117,31 +114,43 @@ Imagine dealing with a deeply nested object with optional properties such as the
 
 ```js
 const elon = {
- name: 'Elon Musk',
- education: {
-  primary_school: { /*  primary school stuff */ },
-  middle_school: { /* middle school stuff */ },
-  high_school: {/* high school stuff here */},
-  university: {
-   name: 'University of Pennsylvania',
-   graduation: {
-    year: 1995
-   }
-  }
- }
-}
+  name: "Elon Musk",
+  education: {
+    primary_school: {
+      /*  primary school stuff */
+    },
+    middle_school: {
+      /* middle school stuff */
+    },
+    high_school: {
+      /* high school stuff here */
+    },
+    university: {
+      name: "University of Pennsylvania",
+      graduation: {
+        year: 1995,
+      },
+    },
+  },
+};
 
 const mark = {
- name: 'Mark Zuckerberg',
- education: {
-  primary_school: { /*  primary school stuff */ },
-  middle_school: { /* middle school stuff */ },
-  high_school: {/* high school stuff here */},
-  university: {
-   name: 'Harvard University',
-  }
- }
-}
+  name: "Mark Zuckerberg",
+  education: {
+    primary_school: {
+      /*  primary school stuff */
+    },
+    middle_school: {
+      /* middle school stuff */
+    },
+    high_school: {
+      /* high school stuff here */
+    },
+    university: {
+      name: "Harvard University",
+    },
+  },
+};
 ```
 
 Not all of our Users have studied in University so that property is going to be optional and the same goes for the graduation as some have dropped out and didn't finish the study.
@@ -150,8 +159,11 @@ Now imagine wanting to access the graduation year of our two users:
 
 ```js
 let graduationYear;
-if(
- user.education.university && user.education.university.graduation && user.education.university.graduation.year){
+if (
+  user.education.university &&
+  user.education.university.graduation &&
+  user.education.university.graduation.year
+) {
   graduationYear = user.education.university.graduation.year;
 }
 ```
@@ -174,14 +186,13 @@ ES6 added `Promise.all` that let us await until all the promises given to it are
 This means that we will be able to tell easily which one of our promises is failing:
 
 ```javascript
-
 const arrayOfPromises = [
-    new Promise((res, rej) => setTimeout(res, 1000)),
-    new Promise((res, rej) => setTimeout(rej, 1000)),
-    new Promise((res, rej) => setTimeout(res, 1000)),
-]
+  new Promise((res, rej) => setTimeout(res, 1000)),
+  new Promise((res, rej) => setTimeout(rej, 1000)),
+  new Promise((res, rej) => setTimeout(res, 1000)),
+];
 
-Promise.allSettled(arrayOfPromises).then(data => console.log(data));
+Promise.allSettled(arrayOfPromises).then((data) => console.log(data));
 
 // [
 //   Object { status: "fulfilled", value: undefined},
@@ -221,10 +232,10 @@ As you can see, all of these values are falsey. Sometimes we want to distinguish
 The Nullish Coalescing operator (`??`) returns the right-hand side operand when the left-hand side is nullish.
 
 ```javascript
-const x = '' ?? 'empty string';
+const x = "" ?? "empty string";
 console.log(x);
 // ''
-const num = 0 ?? 'zero';
+const num = 0 ?? "zero";
 console.log(num);
 // 0
 const n = null ?? "it's null";
@@ -246,7 +257,7 @@ The `matchAll()` method is a new string method that returns an iterator of all t
 ```javascript
 // regex that matches any character in the range from 'a' to 'd'
 const regEx = /[a-d]/g;
-const str = "Lorem ipsum dolor sit amet"
+const str = "Lorem ipsum dolor sit amet";
 const regExIterator = str.matchAll(regEx);
 
 console.log(Array.from(regExIterator));
@@ -265,19 +276,19 @@ As you can see, we called the `matchAll` method against our string and since our
 We could already do something like this:
 
 ```javascript
-import * as stuff from './test.mjs';
+import * as stuff from "./test.mjs";
 ```
 
 But now we can also do the same for **exports**:
 
 ```javascript
-export * as stuff from './test.mjs';
+export * as stuff from "./test.mjs";
 ```
 
 which would be the same as doing:
 
 ```javascript
-export { stuff }
+export { stuff };
 ```
 
 It's not a game-changer feature, but it adds a better symmetry between import and export statements and their syntax.
@@ -289,7 +300,7 @@ It's not a game-changer feature, but it adds a better symmetry between import an
 The `import.meta` object exposes information about a module, such as its URL.
 
 ```javascript
-<script type="module" src="test.js"></script>
+<script type="module" src="test.js"></script>;
 console.log(import.meta); // { url: "file:///home/user/test.js" }
 ```
 

@@ -10,7 +10,7 @@
 
 # [The Complete Guide to Modern JavaScript ](https://leanpub.com/completeguidetomodernjavascript2020)
 
-## Learn everything from the basics of JavaScript to the new ES2021 features. Practice with more than 50 quizzes and dive into the basics of TypeScript.
+## Learn everything from the basics of JavaScript to the new ES2022 features. Practice with more than 50 quizzes and dive into the basics of TypeScript.
 
 [![book-cover](/assets/banner.jpg)](http://bit.ly/2VV2LbX)
 
@@ -22,9 +22,9 @@ This book is **not** for total beginners, it does **cover** the basics of progra
 
 &nbsp;
 
-## 4th Edition is out
+## 5th Edition is out
 
-Included a new chapter detailing all the new features introduced by ES2021
+Included a new chapter detailing all the new features introduced by ES2022
 
 ## Free vs Paid Version
 
@@ -44,13 +44,13 @@ The Paid version gives you access to:
 You can get the course based on this book on:
 
 - [Leanpub](https://leanpub.com/c/completeguidetomodernjavascript)
-- [Educative](https://www.educative.io/courses/complete-guide-to-modern-javascript?aff=BqmB)
+- [Educative](https://www.educative.io/courses/complete-guide-to-modern-javascript?aff=BqmB) or get the complete path to become a front end develop [here](https://www.educative.io/path/become-front-end-developer?aff=BqmB)
 
 You get the ebook on Amazon, Leanpub and other stores, check the following link to find your local amazon store:
 
 - Play Store [Ebook](https://play.google.com/store/books/details/Alberto_Montalesi_The_Complete_Guide_to_Modern_Jav?id=avqrDwAAQBAJ)
 - Leanpub: [Ebook](https://leanpub.com/completeguidetomodernjavascript2020)
-- Amazon Global: [Paperback](https://bit.ly/2QTvHzn)
+- Amazon: [Paperback](https://www.amazon.com/dp/B09FNNVY1Y?ref=inspiredwebde-20)
 
 If you enjoyed the book please leave a review to support me and help other buyers.
 

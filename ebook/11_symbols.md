@@ -43,12 +43,12 @@ As we mentioned earlier, we can use them to create identifiers for object proper
 
 ```javascript
 const office = {
-  "Tom" : "CEO",
-  "Mark": "CTO",
-  "Mark": "CIO",
-}
+  Tom: "CEO",
+  Mark: "CTO",
+  Mark: "CIO",
+};
 
-for (person in office){
+for (person in office) {
   console.log(person);
 }
 // Tom
@@ -60,12 +60,12 @@ To avoid naming collisions we can use symbols.
 
 ```javascript
 const office = {
-  [Symbol("Tom")] : "CEO",
-  [Symbol("Mark")] : "CTO",
-  [Symbol("Mark")] : "CIO",
-}
+  [Symbol("Tom")]: "CEO",
+  [Symbol("Mark")]: "CTO",
+  [Symbol("Mark")]: "CIO",
+};
 
-for(person in office) {
+for (person in office) {
   console.log(person);
 }
 // undefined
@@ -93,6 +93,12 @@ console.log(symbols);
 We retrieved the array, but to be able to access the properties we have to use `map`.
 
 ```javascript
+const office = {
+  [Symbol("Tom")] : "CEO",
+  [Symbol("Mark")] : "CTO",
+  [Symbol("Mark")] : "CIO",
+};
+
 const symbols = Object.getOwnPropertySymbols(office);
 const value = symbols.map(symbol => office[symbol]);
 console.log(value);

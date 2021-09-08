@@ -112,6 +112,13 @@ Cannot destructure property `total` of 'undefined' or 'null'.
 By writing `= {}` we default our argument to an `Object` and no matter what argument we pass in the function, it will be an `Object`:
 
 ```javascript
+function calculatePrice({
+  total = 0,
+  tax = 0.1,
+  tip = 0.05} = {}){
+  return total + (total * tax) + (total * tip);
+}
+
 calculatePrice({});
 // 0
 calculatePrice();

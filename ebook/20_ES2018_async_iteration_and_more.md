@@ -1,4 +1,4 @@
-# Chapter 20: ES2018 Async Iteration and more?
+# Chapter 20: ES2018 Async Iteration and more
 
 In this chapter we will look at what was introduced with ES2018.
 
