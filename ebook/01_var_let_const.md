@@ -77,8 +77,8 @@ constant = " I can't be reassigned";
 // Uncaught TypeError: Assignment to constant variable
 ```
 
->**Important**:
-This **does not** mean that variables declared with `const` are immutable.
+> **Important**:
+> This **does not** mean that variables declared with `const` are immutable.
 
 &nbsp;
 
@@ -95,11 +95,11 @@ console.log(person.age);
 // 26
 ```
 
-In this case we are not reassigning the whole variable but just one of its properties, which works fine fine.
+In this case we are not reassigning the whole variable but just one of its properties, which works fine.
 
 ---
 
->Note: We can still freeze the `const` object, which will not change the contents of the object (but trying to change the values of object `JavaScript` will not throw any error).
+> Note: We can still freeze the `const` object, which will not change the contents of the object (but trying to change the values of object `JavaScript` will not throw any error).
 
 ```JavaScript
 const person = {
@@ -129,12 +129,12 @@ First let's have a look at a simple example:
 
 ```javascript
 console.log(i);
-var i = "I am a variable";
+var i = 'I am a variable';
 
 //  expected output: undefined
 
 console.log(j);
-let j = "I am a let";
+let j = 'I am a let';
 
 // expected output: ReferenceError: can't access lexical declaration `j' before initialization
 ```
@@ -147,19 +147,20 @@ Despite what you may read on other sources, both `var` and `let`(and `const`) ar
 The main differences lie in the fact that `var` can still be accessed before they are defined. This causes the value to be `undefined`. While on the other hand, `let` lets the variables sit in a **temporal dead zone** until they are declared. And this causes an error when accessed before initialization, which makes it easier to debug code rather than having an `undefined` as the result.
 
 ---
+
 &nbsp;
 
 ## When to use `Var`, `Let` and `Const`
 
 There is no rule stating where to use each of them, and people have different opinions. Here I am going to present to you two opinions from popular developers in the `JavaScript` community.
 
-The first opinion comes from [Mathias Bynes:](https://mathiasbynens.be/notes/es6-const)
+The first opinion comes from [Mathias Bynes](https://mathiasbynens.be/notes/es6-const):
 
 - Use `const` by default
 - Use `let` only if rebinding is needed.
 - `var` should never be used in ES6.
 
-The second opinion comes from [Kyle Simpson:](https://me.getify.com/)
+The second opinion comes from [Kyle Simpson](https://me.getify.com/):
 
 - Use `var` for top-level variables that are shared across many (especially larger) scopes.
 - Use `let` for localized variables in smaller scopes.
