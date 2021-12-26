@@ -108,7 +108,7 @@ Now, instead, we can define them directly inside of the `class` body with the us
 ```js
 class ButtonToggle extends HTMLElement {
    
-    #value = true;
+    static #value = true;
 
     static toggle(){
         this.#value = !this.#value
@@ -129,7 +129,7 @@ We can use the `static` keyword in front of fields and methods (both private and
 ```js
 class ButtonToggle extends HTMLElement {
    
-    #value = true;
+    static #value = true;
 
     static #toggle(){
         this.#value = !this.#value
